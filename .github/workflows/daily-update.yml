@@ -1,0 +1,40 @@
+name: 每日更新 RFI 學習摘要
+
+on:
+  schedule:
+    # 04:00 UTC = 台灣時間中午 12:00
+    - cron: "0 4 * * *"
+  workflow_dispatch: {}   # 允許手動在 GitHub 網頁上點按鈕測試執行
+
+permissions:
+  contents: write   # 需要寫入權限，才能把 today.json 的更新推回 repo
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 簽出 repo
+        uses: actions/checkout@v4
+
+      - name: 設定 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: 安裝相依套件
+        working-directory: scripts
+        run: npm install
+
+      - name: 執行抓取 + 摘要腳本
+        working-directory: scripts
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node fetch-and-summarize.mjs
+
+      - name: 提交更新後的 today.json
+        run: |
+          git config user.name "rfi-daily-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/data/today.json
+          git diff --staged --quiet && echo "內容沒有變化，略過提交" || git commit -m "每日更新：$(date -u +'%Y-%m-%d')"
+          git push

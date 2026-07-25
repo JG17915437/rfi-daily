@@ -1,0 +1,16 @@
+{
+  "date": "尚未執行",
+  "source_url": "",
+  "audio_url": "",
+  "page_title": "Journal en français facile",
+  "items": [
+    {
+      "title_zh": "範例：等待第一次自動更新",
+      "fr": "Ceci est un exemple. Le contenu du jour apparaîtra ici après la première exécution automatique du script.",
+      "zh": "這是一則範例內容。當自動化腳本第一次成功執行後，當天的新聞摘要就會顯示在這裡。",
+      "vocab": "exemple（範例）／ contenu（內容）／ apparaître（出現）",
+      "time": 0
+    }
+  ],
+  "generated_at": null
+}

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RFI 每日法語新聞學習</title>
+<style>
+  :root{
+    --bleu:#1b3a6b;
+    --bleu-clair:#3f6bb0;
+    --rouge:#b3272d;
+    --creme:#f7f4ee;
+    --encre:#22262b;
+    --gris:#6b7178;
+    --ligne:#e2ddd2;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--creme);
+    color:var(--encre);
+    font-family:"Noto Serif TC","Georgia",serif;
+    line-height:1.6;
+    padding-bottom:80px;
+  }
+  header{
+    background:var(--bleu);
+    color:#fff;
+    padding:28px 20px 22px;
+    position:relative;
+    overflow:hidden;
+  }
+  header::after{
+    content:"";
+    position:absolute;
+    right:-40px; top:-40px;
+    width:160px;height:160px;
+    border-radius:50%;
+    background:var(--rouge);
+    opacity:0.18;
+  }
+  header .eyebrow{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    font-size:12px;
+    color:#c9d6ea;
+    margin-bottom:6px;
+  }
+  header h1{margin:0 0 6px;font-size:24px;font-weight:700;}
+  header .date{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:14px;
+    color:#dfe6f2;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:0 16px;}
+  .toolbar{
+    display:flex;
+    gap:10px;
+    margin:18px 0;
+    font-family:"Helvetica Neue",Arial,sans-serif;
+  }
+  .toolbar select, .toolbar button{
+    font-family:inherit;
+    font-size:13px;
+    padding:6px 10px;
+    border-radius:8px;
+    border:1px solid var(--ligne);
+    background:#fff;
+    color:var(--encre);
+  }
+  .segment{
+    background:#fff;
+    border:1px solid var(--ligne);
+    border-radius:12px;
+    padding:20px 20px 18px;
+    margin-bottom:18px;
+  }
+  .segment-head{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    margin-bottom:12px;
+    border-bottom:2px solid var(--bleu);
+    padding-bottom:10px;
+  }
+  .segment-title{font-size:18px;font-weight:700;color:var(--bleu);}
+  .read-btn{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:13px;
+    font-weight:600;
+    color:#fff;
+    background:var(--rouge);
+    border:none;
+    border-radius:20px;
+    padding:8px 16px;
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  .read-btn:active{transform:scale(0.96);}
+  .read-btn.speaking{background:var(--bleu);}
+  .play-btn{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:13px;
+    font-weight:600;
+    color:var(--bleu);
+    background:#fff;
+    border:1px solid var(--bleu);
+    border-radius:20px;
+    padding:8px 14px;
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  .play-btn.playing{background:var(--bleu);color:#fff;}
+  .btn-row{display:flex;gap:8px;flex-wrap:wrap;}
+  .player-bar{
+    background:#fff;
+    border:1px solid var(--ligne);
+    border-radius:12px;
+    margin:0 0 20px;
+    padding:14px 16px;
+  }
+  .player-bar audio{width:100%;display:block;}
+  .label{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:11.5px;
+    font-weight:700;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    margin:14px 0 6px;
+  }
+  .label.fr{color:var(--bleu-clair);}
+  .label.zh{color:var(--rouge);}
+  .fr-text, .zh-text{font-size:15.5px;}
+  .vocab{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:12.5px;
+    color:#3d7a3f;
+    background:#eef6ee;
+    border-radius:8px;
+    padding:8px 10px;
+    margin-top:10px;
+  }
+  .vocab b{color:#2c5c2e;}
+  .state{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    color:var(--gris);
+    font-size:13px;
+    text-align:center;
+    padding:40px 20px;
+  }
+  footer{
+    max-width:720px;
+    margin:24px auto 0;
+    padding:0 20px;
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:12px;
+    color:var(--gris);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Journal en français facile · RFI</div>
+    <h1>每日法語新聞學習</h1>
+    <div class="date" id="date-line">載入中...</div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="player-bar" id="player-bar" style="display:none;">
+    <audio id="player" controls preload="metadata"></audio>
+  </div>
+
+  <div class="toolbar">
+    <label style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;color:var(--gris);align-self:center;">朗讀語速：</label>
+    <select id="rate">
+      <option value="0.7">慢速</option>
+      <option value="1" selected>正常</option>
+      <option value="1.2">較快</option>
+    </select>
+  </div>
+  <div id="segments"><div class="state">載入今日內容中...</div></div>
+</div>
+
+<footer>
+  <p>內容每日自動更新，僅顯示當天摘要（依語音改寫，非原文逐字轉載）。朗讀功能使用瀏覽器內建語音合成，發音品質依裝置與瀏覽器而異。</p>
+</footer>
+
+<script>
+async function loadToday(){
+  const container = document.getElementById('segments');
+  const dateLine = document.getElementById('date-line');
+  try{
+    const res = await fetch('./data/today.json', { cache: 'no-store' });
+    if(!res.ok) throw new Error('讀取失敗');
+    const data = await res.json();
+
+    dateLine.textContent = data.date || '';
+    container.innerHTML = '';
+
+    if(!data.items || data.items.length === 0){
+      container.innerHTML = '<div class="state">今天還沒有內容，請稍後再試。</div>';
+      return;
+    }
+
+    const playerBar = document.getElementById('player-bar');
+    const player = document.getElementById('player');
+    if (data.audio_url) {
+      player.src = data.audio_url;
+      playerBar.style.display = 'block';
+    }
+
+    data.items.forEach((item, idx) => {
+      const seg = document.createElement('div');
+      seg.className = 'segment';
+      const hasTime = data.audio_url && typeof item.time === 'number';
+      seg.innerHTML = `
+        <div class="segment-head">
+          <div class="segment-title">${idx + 1}. ${item.title_zh || ''}</div>
+          <div class="btn-row">
+            ${hasTime ? `<button class="play-btn" data-time="${item.time}">▶ 播放原音</button>` : ''}
+            <button class="read-btn" data-idx="${idx}">🔊 朗讀法文</button>
+          </div>
+        </div>
+        <div class="label fr">🇫🇷 法文摘要</div>
+        <div class="fr-text">${item.fr}</div>
+        <div class="label zh">🇹🇼 繁體中文翻譯</div>
+        <div class="zh-text">${item.zh}</div>
+        <div class="vocab"><b>📘 關鍵詞彙：</b>${item.vocab || ''}</div>
+      `;
+      container.appendChild(seg);
+    });
+
+    setupPlaySegment(player);
+    setupReadAloud(data.items);
+  }catch(e){
+    container.innerHTML = '<div class="state">目前無法載入今日內容，請稍後再試。</div>';
+    console.error(e);
+  }
+}
+
+function setupPlaySegment(player){
+  const buttons = Array.from(document.querySelectorAll('.play-btn'));
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const t = parseFloat(btn.getAttribute('data-time'));
+      player.currentTime = t;
+      player.play();
+      buttons.forEach(b => b.classList.remove('playing'));
+      btn.classList.add('playing');
+    });
+  });
+  player.addEventListener('pause', () => {
+    buttons.forEach(b => b.classList.remove('playing'));
+  });
+}
+
+function setupReadAloud(items){
+  const buttons = Array.from(document.querySelectorAll('.read-btn'));
+  const rateSelect = document.getElementById('rate');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const idx = parseInt(btn.getAttribute('data-idx'));
+      const text = items[idx].fr;
+
+      if(!('speechSynthesis' in window)){
+        alert('您的瀏覽器不支援語音朗讀功能。');
+        return;
+      }
+
+      window.speechSynthesis.cancel();
+      buttons.forEach(b => b.classList.remove('speaking'));
+
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = 'fr-FR';
+      utter.rate = parseFloat(rateSelect.value);
+
+      utter.onstart = () => btn.classList.add('speaking');
+      utter.onend = () => btn.classList.remove('speaking');
+      utter.onerror = () => btn.classList.remove('speaking');
+
+      window.speechSynthesis.speak(utter);
+    });
+  });
+}
+
+loadToday();
+</script>
+
+</body>
+</html>

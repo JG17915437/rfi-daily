@@ -1,0 +1,17 @@
+{
+  "name": "rfi-daily-scripts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "每日抓取 RFI Journal en français facile 並用 Claude API 產出學習摘要",
+  "scripts": {
+    "start": "node fetch-and-summarize.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.0",
+    "cheerio": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
