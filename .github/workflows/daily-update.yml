@@ -31,6 +31,14 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node fetch-and-summarize.mjs
 
+      - name: 若失敗，上傳除錯用的網頁截取內容
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-fetched-page
+          path: debug-fetched-page.html
+          if-no-files-found: ignore
+
       - name: 提交更新後的 today.json
         run: |
           git config user.name "rfi-daily-bot"
