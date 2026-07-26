@@ -28,11 +28,41 @@ const OUTPUT_PATH = new URL("../docs/data/today.json", import.meta.url);
 // ------------------------------------------------------------
 async function getEpisodeData() {
   const res = await fetch(PODCAST_LIST_URL, {
-    headers: { "User-Agent": "Mozilla/5.0 (compatible; RFI-daily-bot/1.0)" },
+    headers: {
+      "User-Agent":
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "Accept":
+        "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+      "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8",
+      "Referer": "https://francaisfacile.rfi.fr/fr/",
+      "Cache-Control": "no-cache",
+    },
+    redirect: "follow",
   });
+
+  console.log(`   → HTTP 狀態碼：${res.status}`);
   if (!res.ok) throw new Error(`無法讀取節目頁面：HTTP ${res.status}`);
+
   const html = await res.text();
+  console.log(`   → 抓到的 HTML 長度：${html.length} 字元`);
+
+  // 除錯用：把抓到的原始 HTML 開頭存起來，方便判斷是不是被擋（例如拿到的是防護頁面/空殼頁）
+  try {
+    await fs.writeFile(
+      new URL("../debug-fetched-page.html", import.meta.url),
+      html.slice(0, 20000),
+      "utf-8"
+    );
+    console.log("   → 已將抓到內容的前 20000 字存成 debug-fetched-page.html（供除錯用）");
+  } catch {
+    // 存檔失敗不影響主流程
+  }
+
   const $ = cheerio.load(html);
+
+  const transcriptNodeCount = $(".m-transcription .m-box-expand__content p").length;
+  console.log(`   → .m-transcription .m-box-expand__content p 找到 ${transcriptNodeCount} 個節點`);
+  console.log(`   → 頁面 <title>：${$("title").text().trim()}`);
 
   // --- 這一集真正的網址（供記錄用）：從 canonical 連結拿 ---
   const episodeUrl =
