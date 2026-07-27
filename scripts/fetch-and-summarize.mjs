@@ -46,55 +46,23 @@ async function getEpisodeData() {
   const html = await res.text();
   console.log(`   → 抓到的 HTML 長度：${html.length} 字元`);
 
-  const $ = cheerio.load(html);
-
-  const transcriptNodeCount = $(".m-transcription .m-box-expand__content p").length;
-  const pageTitleDebug = $("title").text().trim();
-  const canonicalDebug = $('link[rel="canonical"]').attr("href") || "(無)";
-  console.log(`   → .m-transcription .m-box-expand__content p 找到 ${transcriptNodeCount} 個節點`);
-  console.log(`   → 頁面 <title>：${pageTitleDebug}`);
-  console.log(`   → canonical 網址：${canonicalDebug}`);
-
-  // 除錯用：不再存開頭（幾乎都是巨大的 CSS），改成鎖定關鍵字附近的原始內容，
-  // 這樣才看得出「有沒有抓到逐字稿區塊」「拿到的是不是別種頁面」
+  // 除錯用：把抓到的原始 HTML 開頭存起來，方便判斷是不是被擋（例如拿到的是防護頁面/空殼頁）
   try {
-    const markers = [
-      "m-transcription",
-      "m-box-expand__content",
-      "m-chapters",
-      "canonical",
-      "m-podcast-item__infos__edition",
-      "didomi",
-    ];
-    const chunks = [];
-    chunks.push(`=== 基本資訊 ===`);
-    chunks.push(`HTML 總長度：${html.length}`);
-    chunks.push(`<title>：${pageTitleDebug}`);
-    chunks.push(`canonical：${canonicalDebug}`);
-    chunks.push(`.m-transcription .m-box-expand__content p 節點數：${transcriptNodeCount}`);
-    chunks.push("");
-
-    for (const marker of markers) {
-      const idx = html.indexOf(marker);
-      chunks.push(`=== 關鍵字「${marker}」 ===`);
-      if (idx === -1) {
-        chunks.push("（在整份 HTML 裡完全找不到這個關鍵字）");
-      } else {
-        chunks.push(`第一次出現在第 ${idx} 個字元，附近內容：`);
-        chunks.push(html.slice(Math.max(0, idx - 300), idx + 1500));
-      }
-      chunks.push("");
-    }
-
     await fs.writeFile(
       new URL("../debug-fetched-page.html", import.meta.url),
-      chunks.join("\n"),
+      html.slice(0, 20000),
       "utf-8"
     );
-    console.log("   → 已將關鍵除錯資訊存成 debug-fetched-page.html");
+    console.log("   → 已將抓到內容的前 20000 字存成 debug-fetched-page.html（供除錯用）");
   } catch {
     // 存檔失敗不影響主流程
   }
+
+  const $ = cheerio.load(html);
+
+  const transcriptNodeCount = $(".m-transcription .m-box-expand__content p").length;
+  console.log(`   → .m-transcription .m-box-expand__content p 找到 ${transcriptNodeCount} 個節點`);
+  console.log(`   → 頁面 <title>：${$("title").text().trim()}`);
 
   // --- 這一集真正的網址（供記錄用）：從 canonical 連結拿 ---
   const episodeUrl =
