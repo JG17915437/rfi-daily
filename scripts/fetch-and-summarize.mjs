@@ -1,174 +1,108 @@
 /**
- * fetch-and-summarize.mjs
- * ------------------------------------------------------------
- * 每天由 GitHub Actions 自動執行：
- *  1. 直接抓取 francaisfacile.rfi.fr 的節目列表頁網址
- *     （這個網址本身就會直接顯示「最新一集」的完整內容——
- *      已用兩天的實際頁面原始碼驗證過，不需要另外找「最新一集連結」）
- *  2. 取得逐字稿、音檔網址、以及 RFI 官方提供的「章節時間軸」（每個主題的精準開始秒數）
- *  3. 呼叫 Claude API，依照官方章節切分，把每個主題改寫成 60 字內摘要 + 繁中翻譯 + 關鍵詞彙
- *  4. 輸出成 docs/data/today.json，給前端網頁讀取顯示
- *
- * 這一版的 selector 是根據實際下載的兩份頁面原始碼寫的
- * （2026-07-22 與 2026-07-23 兩集，結構一致），相對可靠。
- * ------------------------------------------------------------
+ * fetch-and-summarize.mjs  v4 — 2026-07-27
  */
-
-import * as cheerio from "cheerio";
 import fs from "node:fs/promises";
 import Anthropic from "@anthropic-ai/sdk";
 
-const PODCAST_LIST_URL =
-  "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/";
+const TRANSCRIPT_PDF_URL = (guid) =>
+  `https://francaisfacile.rfi.fr/fr/transcription/editions/${guid}/pdf`;
+
+const AUDIO_URL_BY_DATE = (date) => {
+  const ym = date.slice(0, 7).replace("-", "");
+  const ymd = date.replace(/-/g, "");
+  return `https://aod-fle.akamaized.net/rfi/francais/audio/jff/${ym}/journal_francais_facile_16h00_-_16h10_gmt_${ymd}.mp3?dl=1`;
+};
 
 const OUTPUT_PATH = new URL("../docs/data/today.json", import.meta.url);
 
-// ------------------------------------------------------------
-// 1+2. 抓取「節目列表頁」（＝目前最新一集），取出逐字稿、音檔網址、章節時間軸
-// ------------------------------------------------------------
-async function getEpisodeData() {
-  const res = await fetch(PODCAST_LIST_URL, {
-    headers: {
-      "User-Agent":
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
-      "Accept":
-        "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-      "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8",
-      "Referer": "https://francaisfacile.rfi.fr/fr/",
-      "Cache-Control": "no-cache",
-    },
-    redirect: "follow",
-  });
+const FETCH_HEADERS = {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+  Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+  "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8",
+};
 
-  console.log(`   → HTTP 狀態碼：${res.status}`);
-  if (!res.ok) throw new Error(`無法讀取節目頁面：HTTP ${res.status}`);
-
-  const html = await res.text();
-  console.log(`   → 抓到的 HTML 長度：${html.length} 字元`);
-
-  // 除錯用：把抓到的原始 HTML 開頭存起來，方便判斷是不是被擋（例如拿到的是防護頁面/空殼頁）
-  try {
-    await fs.writeFile(
-      new URL("../debug-fetched-page.html", import.meta.url),
-      html.slice(0, 20000),
-      "utf-8"
-    );
-    console.log("   → 已將抓到內容的前 20000 字存成 debug-fetched-page.html（供除錯用）");
-  } catch {
-    // 存檔失敗不影響主流程
-  }
-
-  const $ = cheerio.load(html);
-
-  const transcriptNodeCount = $(".m-transcription .m-box-expand__content p").length;
-  console.log(`   → .m-transcription .m-box-expand__content p 找到 ${transcriptNodeCount} 個節點`);
-  console.log(`   → 頁面 <title>：${$("title").text().trim()}`);
-
-  // --- 這一集真正的網址（供記錄用）：從 canonical 連結拿 ---
-  const episodeUrl =
-    $('link[rel="canonical"]').attr("href") || PODCAST_LIST_URL;
-
-  // --- 逐字稿：每一段新聞是一個 <p>，位於 .m-transcription .m-box-expand__content ---
-  const transcript = $(".m-transcription .m-box-expand__content p")
-    .map((_, el) => $(el).text().replace(/\s+/g, " ").trim())
-    .get()
-    .filter(Boolean)
-    .join("\n\n");
-
-  if (!transcript || transcript.length < 200) {
-    throw new Error(
-      "抓到的逐字稿內容太短或是空的，請檢查 .m-transcription .m-box-expand__content 這個 selector 是否還適用，" +
-        "或確認節目列表頁是否還是直接顯示最新一集內容（RFI 有可能改版）。"
-    );
-  }
-
-  // --- 頁面標題 ---
-  const pageTitle = $("h1.a-page-title").first().text().trim() || "Journal en français facile";
-
-  // --- 音檔網址：從 JSON-LD 區塊拿（比較穩定，不受版面調整影響）---
-  let audioUrl = null;
-  $('script[type="application/ld+json"]').each((_, el) => {
+async function getLatestEpisodeFromRSS() {
+  const candidates = [
+    "https://www.rfi.fr/rss/fr/podcasts/journal-fran%C3%A7ais-facile",
+    "https://www.rfi.fr/fr/podcasts/journal-fran%C3%A7ais-facile/rss",
+    "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/rss",
+  ];
+  for (const url of candidates) {
     try {
-      const data = JSON.parse($(el).contents().text());
-      if (data && data.audio && data.audio.contentUrl) {
-        audioUrl = data.audio.contentUrl;
+      const res = await fetch(url, { headers: FETCH_HEADERS, redirect: "follow" });
+      console.log(`   → ${url} → HTTP ${res.status}`);
+      if (!res.ok) continue;
+      const xml = await res.text();
+      if (!xml.includes("<item") && !xml.includes("<entry")) continue;
+      const episode = parseRSSFirstItem(xml);
+      if (episode && episode.guid) {
+        console.log(`   → RSS 成功！guid: ${episode.guid}`);
+        return episode;
       }
-    } catch {
-      // 忽略無法解析的區塊
+    } catch (e) {
+      console.log(`   → ${url} 失敗: ${e.message}`);
     }
-  });
-  if (!audioUrl) {
-    // 備援：直接找 <audio>/<source> 標籤
-    audioUrl =
-      $("audio source").attr("src") ||
-      $("audio").attr("src") ||
-      null;
   }
-
-  // --- 官方章節時間軸：每個 .a-chapter 裡有 v-bind:init-time=秒數 + 標題文字 ---
-  const chapters = [];
-  $(".m-chapters .a-chapter").each((_, el) => {
-    const raw = $.html(el);
-    const timeMatch = raw.match(/v-bind:init-time=(\d+)/);
-    const label = $(el).find(".a-chapter__label").text().replace(/\s+/g, " ").trim();
-    if (timeMatch && label) {
-      chapters.push({ time: parseInt(timeMatch[1], 10), label });
-    }
-  });
-
-  // 第一個章節通常是「Les titres」(開場提要)，不是獨立新聞，跳過它
-  const newsChapters = chapters.length > 1 ? chapters.slice(1) : chapters;
-
-  if (newsChapters.length === 0) {
-    throw new Error(
-      "找不到章節時間軸，請檢查 .m-chapters .a-chapter 這個 selector 是否還適用；" +
-        "如果 RFI 改版拿掉了章節功能，需要改回用逐字稿字數比例估算時間點。"
-    );
-  }
-
-  return { episodeUrl, transcript, audioUrl, pageTitle, newsChapters };
+  return null;
 }
 
-// ------------------------------------------------------------
-// 3. 呼叫 Claude API：依照官方章節切分做摘要 + 翻譯
-// ------------------------------------------------------------
-async function summarizeWithClaude(transcript, newsChapters) {
+function parseRSSFirstItem(xml) {
+  const itemMatch = xml.match(/<item[\s>]([\s\S]*?)<\/item>/i);
+  if (!itemMatch) return null;
+  const item = itemMatch[1];
+  const title = (item.match(/<title[^>]*>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?<\/title>/is) || [])[1]?.trim();
+  const guid = (item.match(/<guid[^>]*>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?<\/guid>/is) || [])[1]?.trim();
+  const enclosureUrl = (item.match(/enclosure[^>]*url="([^"]+)"/i) || [])[1];
+  const link = (item.match(/<link[^>]*>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?<\/link>/is) || [])[1]?.trim();
+  if (!guid) return null;
+  const uuidMatch = guid.match(/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/i);
+  return { title, guid: uuidMatch ? uuidMatch[0] : guid, audioUrl: enclosureUrl || null, link };
+}
+
+function extractTextFromPDF(buf) {
+  const raw = Buffer.from(buf).toString("latin1");
+  const chunks = [];
+  for (const m of raw.matchAll(/\(([^\)]{2,})\)\s*Tj/g)) {
+    const s = m[1].replace(/\\n/g, "\n").replace(/\\\(/g, "(").replace(/\\\)/g, ")");
+    if (/[a-zA-ZÀ-ÿ]{3,}/.test(s)) chunks.push(s);
+  }
+  const joined = chunks.join(" ").replace(/\s+/g, " ").trim();
+  if (joined.length > 200) return joined;
+  const utf = Buffer.from(buf).toString("utf-8");
+  return utf.length > 200 ? utf : null;
+}
+
+async function getTranscriptFromPDF(guid) {
+  const url = TRANSCRIPT_PDF_URL(guid);
+  console.log(`   → PDF: ${url}`);
+  const res = await fetch(url, { headers: FETCH_HEADERS, redirect: "follow" });
+  console.log(`   → HTTP ${res.status}, Content-Type: ${res.headers.get("content-type")}`);
+  if (!res.ok) throw new Error(`PDF API HTTP ${res.status}`);
+  const buf = await res.arrayBuffer();
+  console.log(`   → ${buf.byteLength} bytes`);
+  const text = extractTextFromPDF(buf);
+  if (!text || text.length < 200) throw new Error("PDF 文字萃取失敗或內容太短");
+  return text;
+}
+
+async function summarizeWithClaude(transcript, episodeTitle) {
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+  const prompt = `你會收到一份法文新聞節目「Journal en français facile」的逐字稿全文。
+節目標題：${episodeTitle || "Journal en français facile"}
 
-  const chapterList = newsChapters
-    .map((c, i) => `${i + 1}. ${c.label}`)
-    .join("\n");
-
-  const prompt = `你會收到一份法文新聞節目「Journal en français facile」的逐字稿全文，
-以及 RFI 官方提供的章節標題列表（依照節目播出順序排列，每個標題對應一則獨立新聞）。
-
-官方章節標題（依序）：
-${chapterList}
-
-請針對「每一個」上述章節標題，依序完成：
-1. 用法文寫一段約 60 個單字（不超過 70 字）的摘要，內容須為改寫，不可整段照抄原文語句。
-2. 附上對應的繁體中文翻譯。
-3. 從該則新聞中挑出 4-6 個對學習者有幫助的法文詞彙或片語，附上繁體中文意思。
-4. 幫這則新聞下一個簡短的繁體中文標題（10 字以內）。
-
-輸出順序必須跟上面章節標題列表的順序完全一致，數量也要完全一致（共 ${newsChapters.length} 則）。
+請完成以下任務：
+1. 找出這一集裡的獨立新聞條目（通常 4 到 6 則，忽略開場白、片頭標題預告、結尾語）。
+2. 針對每一則新聞，用法文寫一段約 60 個單字（不超過 70 字）的摘要，內容須為改寫，不可整段照抄原文語句。
+3. 每段法文摘要附上對應的繁體中文翻譯。
+4. 從該則新聞中挑出 4-6 個對學習者有幫助的法文詞彙或片語，附上繁體中文意思。
+5. 幫每則新聞下一個簡短的繁體中文標題（10 字以內）。
 
 請「只」輸出以下 JSON 格式（不要有任何額外文字、不要用 markdown code fence）：
-
-{
-  "items": [
-    {
-      "title_zh": "...",
-      "fr": "...",
-      "zh": "...",
-      "vocab": "詞彙1（翻譯）／詞彙2（翻譯）／..."
-    }
-  ]
-}
+{"items":[{"title_zh":"...","fr":"...","zh":"...","vocab":"詞彙1（翻譯）／詞彙2（翻譯）"}]}
 
 逐字稿全文如下：
 ---
-${transcript}
+${transcript.slice(0, 12000)}
 ---`;
 
   const msg = await client.messages.create({
@@ -176,61 +110,46 @@ ${transcript}
     max_tokens: 4000,
     messages: [{ role: "user", content: prompt }],
   });
-
-  const text = msg.content
-    .filter((b) => b.type === "text")
-    .map((b) => b.text)
-    .join("\n")
-    .trim();
-
+  const text = msg.content.filter(b => b.type === "text").map(b => b.text).join("\n").trim();
   const cleaned = text.replace(/^```json\s*/i, "").replace(/```$/, "").trim();
-  const parsed = JSON.parse(cleaned);
-
-  if (!parsed.items || parsed.items.length !== newsChapters.length) {
-    throw new Error(
-      `Claude 回傳的則數（${parsed.items?.length}）跟官方章節數（${newsChapters.length}）不一致，請檢查 prompt 或重試。`
-    );
-  }
-
-  return parsed.items;
+  return JSON.parse(cleaned);
 }
 
-// ------------------------------------------------------------
-// 主流程
-// ------------------------------------------------------------
 async function main() {
-  console.log("① 抓取節目頁面（＝最新一集）...");
-  const { episodeUrl, transcript, audioUrl, pageTitle, newsChapters } = await getEpisodeData();
-  console.log("   → 這一集的網址：", episodeUrl);
-  console.log(`   → 逐字稿長度：${transcript.length} 字元`);
-  console.log(`   → 音檔：${audioUrl}`);
-  console.log(`   → 找到 ${newsChapters.length} 個新聞章節：`);
-  newsChapters.forEach((c) => console.log(`      ${c.time}s - ${c.label}`));
-
-  console.log("② 呼叫 Claude API 摘要 + 翻譯...");
-  const items = await summarizeWithClaude(transcript, newsChapters);
-
-  // 把官方章節的精準時間點（time）合併進每一則摘要，前端可以直接用來跳轉播放
-  const itemsWithTime = items.map((item, i) => ({
-    ...item,
-    time: newsChapters[i].time,
-  }));
-
   const today = new Date().toISOString().slice(0, 10);
+  console.log(`\n===== RFI 每日更新 v4 — ${today} =====`);
+
+  console.log("\n① 從 RSS 取得最新集資訊...");
+  const episode = await getLatestEpisodeFromRSS();
+  const guid = episode?.guid || null;
+  const audioUrl = episode?.audioUrl || AUDIO_URL_BY_DATE(today);
+  const episodeTitle = episode?.title || `Journal en français facile ${today}`;
+  const sourceUrl = episode?.link || "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/";
+
+  console.log(`   → guid: ${guid}`);
+  console.log(`   → 音檔: ${audioUrl}`);
+
+  if (!guid) throw new Error("RSS 沒有取得有效 guid，請確認 RSS 網址是否正確");
+
+  console.log("\n② 取得逐字稿 PDF...");
+  const transcript = await getTranscriptFromPDF(guid);
+  console.log(`   → 逐字稿長度: ${transcript.length} 字元`);
+
+  console.log("\n③ 呼叫 Claude API...");
+  const { items } = await summarizeWithClaude(transcript, episodeTitle);
+  console.log(`   → 產出 ${items.length} 則`);
+
   const output = {
     date: today,
-    source_url: episodeUrl,
+    source_url: sourceUrl,
     audio_url: audioUrl,
-    page_title: pageTitle,
-    items: itemsWithTime,
+    page_title: episodeTitle,
+    items: items.map(item => ({ ...item, time: null })),
     generated_at: new Date().toISOString(),
   };
 
   await fs.writeFile(OUTPUT_PATH, JSON.stringify(output, null, 2), "utf-8");
-  console.log("③ 已寫入 docs/data/today.json");
+  console.log("\n④ 已寫入 docs/data/today.json ✓");
 }
 
-main().catch((err) => {
-  console.error("執行失敗：", err.message);
-  process.exit(1);
-});
+main().catch(err => { console.error("\n執行失敗：", err.message); process.exit(1); });
