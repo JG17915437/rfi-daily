@@ -24,7 +24,11 @@ jobs:
       - name: 安裝相依套件
         working-directory: scripts
         run: npm install
+        - name: 安裝 ffmpeg
+        run: sudo apt-get install -y ffmpeg
 
+      - name: 安裝 openai-whisper
+        run: pip install -U openai-whisper
       - name: 執行抓取 + 摘要腳本
         working-directory: scripts
         env:
