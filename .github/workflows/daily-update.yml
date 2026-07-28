@@ -2,16 +2,16 @@ name: 每日更新 RFI 學習摘要
 
 on:
   schedule:
-    # 04:00 UTC = 台灣時間中午 12:00
     - cron: "0 4 * * *"
-  workflow_dispatch: {}   # 允許手動在 GitHub 網頁上點按鈕測試執行
+  workflow_dispatch: {}
 
 permissions:
-  contents: write   # 需要寫入權限，才能把 today.json 的更新推回 repo
+  contents: write
 
 jobs:
   update-news:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: 簽出 repo
         uses: actions/checkout@v4
@@ -21,27 +21,21 @@ jobs:
         with:
           node-version: "20"
 
-      - name: 安裝相依套件
+      - name: 安裝 Node 相依套件
         working-directory: scripts
         run: npm install
-        - name: 安裝 ffmpeg
+
+      - name: 安裝 ffmpeg
         run: sudo apt-get install -y ffmpeg
 
       - name: 安裝 openai-whisper
         run: pip install -U openai-whisper
-      - name: 執行抓取 + 摘要腳本
+
+      - name: 執行抓取 + 轉錄 + 摘要腳本
         working-directory: scripts
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node fetch-and-summarize.mjs
-
-      - name: 若失敗，上傳除錯用的網頁截取內容
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: debug-fetched-page
-          path: debug-fetched-page.html
-          if-no-files-found: ignore
 
       - name: 提交更新後的 today.json
         run: |
