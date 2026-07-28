@@ -1,90 +1,149 @@
-# RFI 每日法語新聞學習工具（最小可行骨架）
+/**
+ * fetch-and-summarize.mjs  v5b — 2026-07-28
+ */
+import fs from "node:fs/promises";
+import { createWriteStream } from "node:fs";
+import { pipeline } from "node:stream/promises";
+import { execSync } from "node:child_process";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import Anthropic from "@anthropic-ai/sdk";
 
-自動每天抓取 RFI「Journal en français facile」最新一集，把新聞改寫成 60 字內的
-法文摘要 + 繁體中文翻譯，並提供瀏覽器朗讀功能（Web Speech API）練習聽力與發音。
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const OUTPUT_PATH = path.join(__dirname, "../docs/data/today.json");
+const TMP_DIR = path.join(__dirname, "../tmp");
+const TMP_AUDIO = path.join(TMP_DIR, "audio.mp3");
 
-## 專案結構
+const AUDIO_URL_BY_DATE = (date) => {
+  const ym = date.slice(0, 7).replace("-", "");
+  const ymd = date.replace(/-/g, "");
+  return `https://aod-fle.akamaized.net/rfi/francais/audio/jff/${ym}/journal_francais_facile_16h00_-_16h10_gmt_${ymd}.mp3?dl=1`;
+};
 
-```
-rfi-daily/
-├── scripts/
-│   ├── fetch-and-summarize.mjs   ← 抓取 + 呼叫 Claude API 摘要，核心邏輯
-│   └── package.json
-├── .github/workflows/
-│   └── daily-update.yml          ← 每天定時自動執行、更新內容
-├── docs/
-│   ├── index.html                ← 前端頁面（GitHub Pages 會直接發布這個資料夾）
-│   └── data/today.json           ← 每天被自動覆蓋的當日內容
-└── README.md
-```
+const FETCH_HEADERS = {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+  Accept: "*/*",
+  "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8",
+};
 
-## 部署步驟
+async function getLatestEpisodeFromRSS() {
+  const candidates = [
+    "https://www.rfi.fr/fr/podcasts/journal-fran%C3%A7ais-facile/rss",
+    "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/rss",
+  ];
+  for (const url of candidates) {
+    try {
+      const res = await fetch(url, { headers: FETCH_HEADERS, redirect: "follow" });
+      console.log(`   → ${url} → HTTP ${res.status}`);
+      if (!res.ok) continue;
+      const xml = await res.text();
+      if (!xml.includes("<item")) continue;
+      const episode = parseRSSFirstItem(xml);
+      if (episode) { console.log(`   → RSS 成功！`); return episode; }
+    } catch (e) { console.log(`   → 失敗: ${e.message}`); }
+  }
+  return null;
+}
 
-1. **建立 GitHub repo**，把這個資料夾整個推上去（`git init` → `git add .` →
-   `git commit` → `git remote add origin ...` → `git push`）。
+function parseRSSFirstItem(xml) {
+  const itemMatch = xml.match(/<item[\s>]([\s\S]*?)<\/item>/i);
+  if (!itemMatch) return null;
+  const item = itemMatch[1];
+  const title = (item.match(/<title[^>]*>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?<\/title>/is) || [])[1]?.trim();
+  const enclosureUrl = (item.match(/enclosure[^>]*url="([^"]+)"/i) || [])[1];
+  const link = (item.match(/<link[^>]*>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?<\/link>/is) || [])[1]?.trim();
+  if (!enclosureUrl) return null;
+  return { title, audioUrl: enclosureUrl, link };
+}
 
-2. **申請 Anthropic API 金鑰**（https://console.anthropic.com），
-   在 repo 的 `Settings → Secrets and variables → Actions → New repository secret`
-   新增一個名為 `ANTHROPIC_API_KEY` 的 secret，貼上金鑰。
+async function downloadAudio(audioUrl, destPath) {
+  console.log(`   → 下載: ${audioUrl}`);
+  const res = await fetch(audioUrl, { headers: FETCH_HEADERS, redirect: "follow" });
+  console.log(`   → HTTP ${res.status}`);
+  if (!res.ok) throw new Error(`音檔下載失敗 HTTP ${res.status}`);
+  await pipeline(res.body, createWriteStream(destPath));
+  const stat = await fs.stat(destPath);
+  console.log(`   → ${(stat.size/1024/1024).toFixed(1)} MB 已下載`);
+}
 
-3. **開啟 GitHub Pages**：
-   `Settings → Pages → Source` 選擇 `Deploy from a branch`，
-   Branch 選 `main`，資料夾選 `/docs`，儲存。
-   幾分鐘後就會有一個公開網址，例如
-   `https://你的帳號.github.io/你的repo名稱/`。
+async function transcribeWithLocalWhisper(audioPath, outputDir) {
+  console.log(`   → 執行 Whisper（small 模型，法文）...`);
+  const cmd = `whisper "${audioPath}" --model small --language fr --output_format txt --output_dir "${outputDir}"`;
+  execSync(cmd, { stdio: "inherit", timeout: 20 * 60 * 1000 });
+  const txtPath = path.join(outputDir, "audio.txt");
+  const transcript = await fs.readFile(txtPath, "utf-8");
+  console.log(`   → 轉錄完成：${transcript.length} 字元`);
+  return transcript.trim();
+}
 
-4. **手動測試排程腳本**：
-   到 repo 的 `Actions` 分頁，選「每日更新 RFI 學習摘要」這個 workflow，
-   點右上角 `Run workflow` 手動觸發一次，看執行紀錄有沒有成功。
+async function summarizeWithClaude(transcript, episodeTitle) {
+  const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+  const prompt = `你會收到一份法文新聞節目「Journal en français facile」的逐字稿全文。
+節目標題：${episodeTitle || "Journal en français facile"}
 
-5. 之後就會照 `.github/workflows/daily-update.yml` 裡設定的時間
-   （目前是台灣時間每天中午 12:00）自動執行，把 `docs/data/today.json`
-   更新並推回 repo，GitHub Pages 網頁打開時就會顯示當天內容。
+請完成：
+1. 找出 4-6 則獨立新聞（忽略開場白與結尾）。
+2. 每則用法文寫約 60 字摘要（改寫，不照抄）。
+3. 每則附繁體中文翻譯。
+4. 每則挑 4-6 個法文詞彙附繁中意思。
+5. 每則下 10 字以內繁體中文標題。
 
-## 目前的可靠程度
+只輸出 JSON，不要任何其他文字：
+{"items":[{"title_zh":"...","fr":"...","zh":"...","vocab":"詞1（譯）／詞2（譯）"}]}
 
-多虧你提供了兩天（7/22、7/23）實際下載的頁面原始碼，這一版已經用「真的看過、
-比對過兩天結構是否一致的 HTML」重寫過，可靠度比第一版高很多：
+逐字稿：
+---
+${transcript.slice(0, 12000)}
+---`;
 
-- ✅ **不需要另外找「最新一集連結」了**：節目列表頁網址本身（不帶日期那個）
-  就會直接顯示最新一集的完整內容，兩天的原始碼都證實了這件事。腳本直接抓
-  這個固定網址即可，省掉一整個容易出錯的步驟。
-- ✅ **逐字稿**：`.m-transcription .m-box-expand__content p`，兩天都驗證一致。
-- ✅ **音檔網址**：從頁面裡的 JSON-LD（`<script type="application/ld+json">`）
-  取 `audio.contentUrl`，這是 schema.org 標準格式，比較不容易因改版而失效。
-- ✅ **章節時間軸**：RFI 官方本身就有幫每則新聞標記精準的開始秒數
-  （`.m-chapters .a-chapter` 裡的 `v-bind:init-time`），已經直接拿來用，
-  不再需要用逐字稿字數比例去估算時間點——這比第一版準確很多。
+  const msg = await client.messages.create({
+    model: "claude-sonnet-4-6",
+    max_tokens: 4000,
+    messages: [{ role: "user", content: prompt }],
+  });
+  const text = msg.content.filter(b => b.type === "text").map(b => b.text).join("\n").trim();
+  return JSON.parse(text.replace(/^```json\s*/i, "").replace(/```$/, "").trim());
+}
 
-## 如果腳本執行失敗，怎麼修
+async function main() {
+  const today = new Date().toISOString().slice(0, 10);
+  console.log(`\n===== RFI 每日更新 v5b — ${today} =====`);
 
-1. 打開 Actions 執行紀錄，看錯誤訊息（腳本裡有寫清楚的中文錯誤提示）。
-2. 最可能失效的情境：RFI 改版，換了 CSS class 名稱。用瀏覽器打開
-   https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/，
-   `F12` 開發者工具（Mac 上是 `Cmd+Option+I`）檢查對應的區塊現在叫什麼 class。
-3. 把該段 HTML 貼給 Claude（或 Claude Code），請它把 `fetch-and-summarize.mjs`
-   裡對應的 selector 改成正確的即可，其餘邏輯不用動。
+  await fs.mkdir(TMP_DIR, { recursive: true });
 
-## 每則摘要的則數
+  console.log("\n① RSS 取得音檔網址...");
+  const episode = await getLatestEpisodeFromRSS();
+  const audioUrl = episode?.audioUrl || AUDIO_URL_BY_DATE(today);
+  const episodeTitle = episode?.title || `Journal en français facile ${today}`;
+  const sourceUrl = episode?.link || "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/";
+  console.log(`   → 音檔: ${audioUrl}`);
 
-不再固定寫死 6 則——腳本會依照 RFI 官方當天實際標記的章節數量（通常
-4~8 則，扣掉開場的「Les titres」提要）自動決定，這樣比較貼近每天新聞的
-真實結構。
+  console.log("\n② 下載音檔...");
+  await downloadAudio(audioUrl, TMP_AUDIO);
 
-## 每則摘要的則數
+  console.log("\n③ Whisper 語音轉文字...");
+  const transcript = await transcribeWithLocalWhisper(TMP_AUDIO, TMP_DIR);
+  await fs.rm(TMP_DIR, { recursive: true, force: true }).catch(() => {});
 
-不再固定寫死 6 則——腳本會依照 RFI 官方當天實際標記的章節數量（通常
-4~6 則，扣掉開場的「Les titres」提要）自動決定，這樣比較貼近每天新聞的
-真實結構。
+  if (!transcript || transcript.length < 100)
+    throw new Error("Whisper 轉錄結果太短，請確認音檔正常");
 
-## 其他可調整的地方
+  console.log("\n④ Claude API 摘要...");
+  const { items } = await summarizeWithClaude(transcript, episodeTitle);
+  console.log(`   → 產出 ${items.length} 則`);
 
-- **排程時間**：改 `.github/workflows/daily-update.yml` 裡的 `cron: "0 4 * * *"`
-  （時間是 UTC，台灣時間 = UTC+8）。
-- **摘要則數 / 字數**：改 `fetch-and-summarize.mjs` 裡呼叫 Claude API 的 prompt 文字。
-- **朗讀語速選項**：改 `docs/index.html` 裡的 `<select id="rate">`。
+  const output = {
+    date: today,
+    source_url: sourceUrl,
+    audio_url: audioUrl,
+    page_title: episodeTitle,
+    items: items.map(item => ({ ...item, time: null })),
+    generated_at: new Date().toISOString(),
+  };
 
-## 著作權提醒
+  await fs.mkdir(path.dirname(OUTPUT_PATH), { recursive: true });
+  await fs.writeFile(OUTPUT_PATH, JSON.stringify(output, null, 2), "utf-8");
+  console.log("\n⑤ 已寫入 docs/data/today.json ✓");
+}
 
-腳本的 prompt 已要求 Claude 做「改寫摘要」而非逐字轉載原文，這是刻意設計的，
-請不要修改成「原文照抄」，以避免侵犯 RFI 的著作權。
+main().catch(err => { console.error("\n執行失敗：", err.message); process.exit(1); });
