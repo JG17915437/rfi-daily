@@ -1,5 +1,5 @@
 /**
- * fetch-and-summarize.mjs  v5b — 2026-07-28
+ * fetch-and-summarize.mjs  v6 (Gemini) — 2026-07-29
  */
 import fs from "node:fs/promises";
 import { createWriteStream } from "node:fs";
@@ -7,7 +7,6 @@ import { pipeline } from "node:stream/promises";
 import { execSync } from "node:child_process";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import Anthropic from "@anthropic-ai/sdk";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const OUTPUT_PATH = path.join(__dirname, "../docs/data/today.json");
@@ -58,8 +57,6 @@ function parseRSSFirstItem(xml) {
 
 async function downloadAudio(audioUrl, destPath) {
   const urlsToTry = [audioUrl];
-
-  // 若今天音檔還沒上線（404），自動備援嘗試前一天
   const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
   const fallbackUrl = AUDIO_URL_BY_DATE(yesterday);
   if (fallbackUrl !== audioUrl) urlsToTry.push(fallbackUrl);
@@ -74,10 +71,12 @@ async function downloadAudio(audioUrl, destPath) {
       console.log(`   → ${(stat.size/1024/1024).toFixed(1)} MB 已下載`);
       return url;
     }
-    console.log(`   → ${url} 失敗，嘗試下一個...`);
+    console.log(`   → 失敗，嘗試下一個...`);
   }
-  throw new Error(`所有音檔網址都下載失敗（今天與昨天都試過了）`);
-}async function transcribeWithLocalWhisper(audioPath, outputDir) {
+  throw new Error(`所有音檔網址都下載失敗`);
+}
+
+async function transcribeWithLocalWhisper(audioPath, outputDir) {
   console.log(`   → 執行 Whisper（small 模型，法文）...`);
   const cmd = `whisper "${audioPath}" --model small --language fr --output_format txt --output_dir "${outputDir}"`;
   execSync(cmd, { stdio: "inherit", timeout: 20 * 60 * 1000 });
@@ -87,8 +86,10 @@ async function downloadAudio(audioUrl, destPath) {
   return transcript.trim();
 }
 
-async function summarizeWithClaude(transcript, episodeTitle) {
-  const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+async function summarizeWithGemini(transcript, episodeTitle) {
+  const apiKey = process.env.GEMINI_API_KEY;
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+
   const prompt = `你會收到一份法文新聞節目「Journal en français facile」的逐字稿全文。
 節目標題：${episodeTitle || "Journal en français facile"}
 
@@ -99,7 +100,7 @@ async function summarizeWithClaude(transcript, episodeTitle) {
 4. 每則挑 4-6 個法文詞彙附繁中意思。
 5. 每則下 10 字以內繁體中文標題。
 
-只輸出 JSON，不要任何其他文字：
+只輸出 JSON，不要任何其他文字或 markdown：
 {"items":[{"title_zh":"...","fr":"...","zh":"...","vocab":"詞1（譯）／詞2（譯）"}]}
 
 逐字稿：
@@ -107,18 +108,30 @@ async function summarizeWithClaude(transcript, episodeTitle) {
 ${transcript.slice(0, 12000)}
 ---`;
 
-  const msg = await client.messages.create({
-    model: "claude-sonnet-4-6",
-    max_tokens: 4000,
-    messages: [{ role: "user", content: prompt }],
+  const res = await fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      contents: [{ parts: [{ text: prompt }] }],
+      generationConfig: { temperature: 0.3, maxOutputTokens: 4000 },
+    }),
   });
-  const text = msg.content.filter(b => b.type === "text").map(b => b.text).join("\n").trim();
-  return JSON.parse(text.replace(/^```json\s*/i, "").replace(/```$/, "").trim());
+
+  if (!res.ok) {
+    const err = await res.text();
+    throw new Error(`Gemini API 失敗 HTTP ${res.status}: ${err}`);
+  }
+
+  const data = await res.json();
+  const text = data.candidates?.[0]?.content?.parts?.[0]?.text || "";
+  console.log(`   → Gemini 回應長度：${text.length} 字元`);
+  const cleaned = text.replace(/^```json\s*/i, "").replace(/```$/m, "").trim();
+  return JSON.parse(cleaned);
 }
 
 async function main() {
   const today = new Date().toISOString().slice(0, 10);
-  console.log(`\n===== RFI 每日更新 v5b — ${today} =====`);
+  console.log(`\n===== RFI 每日更新 v6 (Gemini) — ${today} =====`);
 
   await fs.mkdir(TMP_DIR, { recursive: true });
 
@@ -130,23 +143,23 @@ async function main() {
   console.log(`   → 音檔: ${audioUrl}`);
 
   console.log("\n② 下載音檔...");
-  await downloadAudio(audioUrl, TMP_AUDIO);
+  const usedUrl = await downloadAudio(audioUrl, TMP_AUDIO);
 
   console.log("\n③ Whisper 語音轉文字...");
   const transcript = await transcribeWithLocalWhisper(TMP_AUDIO, TMP_DIR);
   await fs.rm(TMP_DIR, { recursive: true, force: true }).catch(() => {});
 
   if (!transcript || transcript.length < 100)
-    throw new Error("Whisper 轉錄結果太短，請確認音檔正常");
+    throw new Error("Whisper 轉錄結果太短");
 
-  console.log("\n④ Claude API 摘要...");
-  const { items } = await summarizeWithClaude(transcript, episodeTitle);
+  console.log("\n④ Gemini API 摘要...");
+  const { items } = await summarizeWithGemini(transcript, episodeTitle);
   console.log(`   → 產出 ${items.length} 則`);
 
   const output = {
     date: today,
     source_url: sourceUrl,
-    audio_url: audioUrl,
+    audio_url: usedUrl || audioUrl,
     page_title: episodeTitle,
     items: items.map(item => ({ ...item, time: null })),
     generated_at: new Date().toISOString(),
