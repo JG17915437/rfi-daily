@@ -1,11 +1,18 @@
 /**
- * fetch-and-summarize.mjs  v4 — 2026-07-27
+ * fetch-and-summarize.mjs  v5b — 2026-07-28
  */
 import fs from "node:fs/promises";
+import { createWriteStream } from "node:fs";
+import { pipeline } from "node:stream/promises";
+import { execSync } from "node:child_process";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import Anthropic from "@anthropic-ai/sdk";
 
-const TRANSCRIPT_PDF_URL = (guid) =>
-  `https://francaisfacile.rfi.fr/fr/transcription/editions/${guid}/pdf`;
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const OUTPUT_PATH = path.join(__dirname, "../docs/data/today.json");
+const TMP_DIR = path.join(__dirname, "../tmp");
+const TMP_AUDIO = path.join(TMP_DIR, "audio.mp3");
 
 const AUDIO_URL_BY_DATE = (date) => {
   const ym = date.slice(0, 7).replace("-", "");
@@ -13,17 +20,14 @@ const AUDIO_URL_BY_DATE = (date) => {
   return `https://aod-fle.akamaized.net/rfi/francais/audio/jff/${ym}/journal_francais_facile_16h00_-_16h10_gmt_${ymd}.mp3?dl=1`;
 };
 
-const OUTPUT_PATH = new URL("../docs/data/today.json", import.meta.url);
-
 const FETCH_HEADERS = {
   "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
-  Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+  Accept: "*/*",
   "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8",
 };
 
 async function getLatestEpisodeFromRSS() {
   const candidates = [
-    "https://www.rfi.fr/rss/fr/podcasts/journal-fran%C3%A7ais-facile",
     "https://www.rfi.fr/fr/podcasts/journal-fran%C3%A7ais-facile/rss",
     "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/rss",
   ];
@@ -33,15 +37,10 @@ async function getLatestEpisodeFromRSS() {
       console.log(`   → ${url} → HTTP ${res.status}`);
       if (!res.ok) continue;
       const xml = await res.text();
-      if (!xml.includes("<item") && !xml.includes("<entry")) continue;
+      if (!xml.includes("<item")) continue;
       const episode = parseRSSFirstItem(xml);
-      if (episode && episode.guid) {
-        console.log(`   → RSS 成功！guid: ${episode.guid}`);
-        return episode;
-      }
-    } catch (e) {
-      console.log(`   → ${url} 失敗: ${e.message}`);
-    }
+      if (episode) { console.log(`   → RSS 成功！`); return episode; }
+    } catch (e) { console.log(`   → 失敗: ${e.message}`); }
   }
   return null;
 }
@@ -51,38 +50,30 @@ function parseRSSFirstItem(xml) {
   if (!itemMatch) return null;
   const item = itemMatch[1];
   const title = (item.match(/<title[^>]*>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?<\/title>/is) || [])[1]?.trim();
-  const guid = (item.match(/<guid[^>]*>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?<\/guid>/is) || [])[1]?.trim();
   const enclosureUrl = (item.match(/enclosure[^>]*url="([^"]+)"/i) || [])[1];
   const link = (item.match(/<link[^>]*>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?<\/link>/is) || [])[1]?.trim();
-  if (!guid) return null;
-  const uuidMatch = guid.match(/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/i);
-  return { title, guid: uuidMatch ? uuidMatch[0] : guid, audioUrl: enclosureUrl || null, link };
+  if (!enclosureUrl) return null;
+  return { title, audioUrl: enclosureUrl, link };
 }
 
-function extractTextFromPDF(buf) {
-  const raw = Buffer.from(buf).toString("latin1");
-  const chunks = [];
-  for (const m of raw.matchAll(/\(([^\)]{2,})\)\s*Tj/g)) {
-    const s = m[1].replace(/\\n/g, "\n").replace(/\\\(/g, "(").replace(/\\\)/g, ")");
-    if (/[a-zA-ZÀ-ÿ]{3,}/.test(s)) chunks.push(s);
-  }
-  const joined = chunks.join(" ").replace(/\s+/g, " ").trim();
-  if (joined.length > 200) return joined;
-  const utf = Buffer.from(buf).toString("utf-8");
-  return utf.length > 200 ? utf : null;
+async function downloadAudio(audioUrl, destPath) {
+  console.log(`   → 下載: ${audioUrl}`);
+  const res = await fetch(audioUrl, { headers: FETCH_HEADERS, redirect: "follow" });
+  console.log(`   → HTTP ${res.status}`);
+  if (!res.ok) throw new Error(`音檔下載失敗 HTTP ${res.status}`);
+  await pipeline(res.body, createWriteStream(destPath));
+  const stat = await fs.stat(destPath);
+  console.log(`   → ${(stat.size/1024/1024).toFixed(1)} MB 已下載`);
 }
 
-async function getTranscriptFromPDF(guid) {
-  const url = TRANSCRIPT_PDF_URL(guid);
-  console.log(`   → PDF: ${url}`);
-  const res = await fetch(url, { headers: FETCH_HEADERS, redirect: "follow" });
-  console.log(`   → HTTP ${res.status}, Content-Type: ${res.headers.get("content-type")}`);
-  if (!res.ok) throw new Error(`PDF API HTTP ${res.status}`);
-  const buf = await res.arrayBuffer();
-  console.log(`   → ${buf.byteLength} bytes`);
-  const text = extractTextFromPDF(buf);
-  if (!text || text.length < 200) throw new Error("PDF 文字萃取失敗或內容太短");
-  return text;
+async function transcribeWithLocalWhisper(audioPath, outputDir) {
+  console.log(`   → 執行 Whisper（small 模型，法文）...`);
+  const cmd = `whisper "${audioPath}" --model small --language fr --output_format txt --output_dir "${outputDir}"`;
+  execSync(cmd, { stdio: "inherit", timeout: 20 * 60 * 1000 });
+  const txtPath = path.join(outputDir, "audio.txt");
+  const transcript = await fs.readFile(txtPath, "utf-8");
+  console.log(`   → 轉錄完成：${transcript.length} 字元`);
+  return transcript.trim();
 }
 
 async function summarizeWithClaude(transcript, episodeTitle) {
@@ -90,17 +81,17 @@ async function summarizeWithClaude(transcript, episodeTitle) {
   const prompt = `你會收到一份法文新聞節目「Journal en français facile」的逐字稿全文。
 節目標題：${episodeTitle || "Journal en français facile"}
 
-請完成以下任務：
-1. 找出這一集裡的獨立新聞條目（通常 4 到 6 則，忽略開場白、片頭標題預告、結尾語）。
-2. 針對每一則新聞，用法文寫一段約 60 個單字（不超過 70 字）的摘要，內容須為改寫，不可整段照抄原文語句。
-3. 每段法文摘要附上對應的繁體中文翻譯。
-4. 從該則新聞中挑出 4-6 個對學習者有幫助的法文詞彙或片語，附上繁體中文意思。
-5. 幫每則新聞下一個簡短的繁體中文標題（10 字以內）。
+請完成：
+1. 找出 4-6 則獨立新聞（忽略開場白與結尾）。
+2. 每則用法文寫約 60 字摘要（改寫，不照抄）。
+3. 每則附繁體中文翻譯。
+4. 每則挑 4-6 個法文詞彙附繁中意思。
+5. 每則下 10 字以內繁體中文標題。
 
-請「只」輸出以下 JSON 格式（不要有任何額外文字、不要用 markdown code fence）：
-{"items":[{"title_zh":"...","fr":"...","zh":"...","vocab":"詞彙1（翻譯）／詞彙2（翻譯）"}]}
+只輸出 JSON，不要任何其他文字：
+{"items":[{"title_zh":"...","fr":"...","zh":"...","vocab":"詞1（譯）／詞2（譯）"}]}
 
-逐字稿全文如下：
+逐字稿：
 ---
 ${transcript.slice(0, 12000)}
 ---`;
@@ -111,31 +102,33 @@ ${transcript.slice(0, 12000)}
     messages: [{ role: "user", content: prompt }],
   });
   const text = msg.content.filter(b => b.type === "text").map(b => b.text).join("\n").trim();
-  const cleaned = text.replace(/^```json\s*/i, "").replace(/```$/, "").trim();
-  return JSON.parse(cleaned);
+  return JSON.parse(text.replace(/^```json\s*/i, "").replace(/```$/, "").trim());
 }
 
 async function main() {
   const today = new Date().toISOString().slice(0, 10);
-  console.log(`\n===== RFI 每日更新 v4 — ${today} =====`);
+  console.log(`\n===== RFI 每日更新 v5b — ${today} =====`);
 
-  console.log("\n① 從 RSS 取得最新集資訊...");
+  await fs.mkdir(TMP_DIR, { recursive: true });
+
+  console.log("\n① RSS 取得音檔網址...");
   const episode = await getLatestEpisodeFromRSS();
-  const guid = episode?.guid || null;
   const audioUrl = episode?.audioUrl || AUDIO_URL_BY_DATE(today);
   const episodeTitle = episode?.title || `Journal en français facile ${today}`;
   const sourceUrl = episode?.link || "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/";
-
-  console.log(`   → guid: ${guid}`);
   console.log(`   → 音檔: ${audioUrl}`);
 
-  if (!guid) throw new Error("RSS 沒有取得有效 guid，請確認 RSS 網址是否正確");
+  console.log("\n② 下載音檔...");
+  await downloadAudio(audioUrl, TMP_AUDIO);
 
-  console.log("\n② 取得逐字稿 PDF...");
-  const transcript = await getTranscriptFromPDF(guid);
-  console.log(`   → 逐字稿長度: ${transcript.length} 字元`);
+  console.log("\n③ Whisper 語音轉文字...");
+  const transcript = await transcribeWithLocalWhisper(TMP_AUDIO, TMP_DIR);
+  await fs.rm(TMP_DIR, { recursive: true, force: true }).catch(() => {});
 
-  console.log("\n③ 呼叫 Claude API...");
+  if (!transcript || transcript.length < 100)
+    throw new Error("Whisper 轉錄結果太短，請確認音檔正常");
+
+  console.log("\n④ Claude API 摘要...");
   const { items } = await summarizeWithClaude(transcript, episodeTitle);
   console.log(`   → 產出 ${items.length} 則`);
 
@@ -148,8 +141,9 @@ async function main() {
     generated_at: new Date().toISOString(),
   };
 
+  await fs.mkdir(path.dirname(OUTPUT_PATH), { recursive: true });
   await fs.writeFile(OUTPUT_PATH, JSON.stringify(output, null, 2), "utf-8");
-  console.log("\n④ 已寫入 docs/data/today.json ✓");
+  console.log("\n⑤ 已寫入 docs/data/today.json ✓");
 }
 
 main().catch(err => { console.error("\n執行失敗：", err.message); process.exit(1); });
