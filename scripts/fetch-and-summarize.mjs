@@ -57,16 +57,27 @@ function parseRSSFirstItem(xml) {
 }
 
 async function downloadAudio(audioUrl, destPath) {
-  console.log(`   → 下載: ${audioUrl}`);
-  const res = await fetch(audioUrl, { headers: FETCH_HEADERS, redirect: "follow" });
-  console.log(`   → HTTP ${res.status}`);
-  if (!res.ok) throw new Error(`音檔下載失敗 HTTP ${res.status}`);
-  await pipeline(res.body, createWriteStream(destPath));
-  const stat = await fs.stat(destPath);
-  console.log(`   → ${(stat.size/1024/1024).toFixed(1)} MB 已下載`);
-}
+  const urlsToTry = [audioUrl];
 
-async function transcribeWithLocalWhisper(audioPath, outputDir) {
+  // 若今天音檔還沒上線（404），自動備援嘗試前一天
+  const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+  const fallbackUrl = AUDIO_URL_BY_DATE(yesterday);
+  if (fallbackUrl !== audioUrl) urlsToTry.push(fallbackUrl);
+
+  for (const url of urlsToTry) {
+    console.log(`   → 嘗試下載: ${url}`);
+    const res = await fetch(url, { headers: FETCH_HEADERS, redirect: "follow" });
+    console.log(`   → HTTP ${res.status}`);
+    if (res.ok) {
+      await pipeline(res.body, createWriteStream(destPath));
+      const stat = await fs.stat(destPath);
+      console.log(`   → ${(stat.size/1024/1024).toFixed(1)} MB 已下載`);
+      return url;
+    }
+    console.log(`   → ${url} 失敗，嘗試下一個...`);
+  }
+  throw new Error(`所有音檔網址都下載失敗（今天與昨天都試過了）`);
+}async function transcribeWithLocalWhisper(audioPath, outputDir) {
   console.log(`   → 執行 Whisper（small 模型，法文）...`);
   const cmd = `whisper "${audioPath}" --model small --language fr --output_format txt --output_dir "${outputDir}"`;
   execSync(cmd, { stdio: "inherit", timeout: 20 * 60 * 1000 });
