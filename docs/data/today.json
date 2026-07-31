@@ -1,16 +1,51 @@
 {
-  "date": "尚未執行",
-  "source_url": "",
-  "audio_url": "",
-  "page_title": "Journal en français facile",
+  "date": "2026-07-31",
+  "source_url": "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/",
+  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202607/journal_francais_facile_16h00_-_16h10_gmt_20260730.mp3?dl=1",
+  "page_title": "Journal en français facile 2026-07-31",
   "items": [
     {
-      "title_zh": "範例：等待第一次自動更新",
-      "fr": "Ceci est un exemple. Le contenu du jour apparaîtra ici après la première exécution automatique du script.",
-      "zh": "這是一則範例內容。當自動化腳本第一次成功執行後，當天的新聞摘要就會顯示在這裡。",
-      "vocab": "exemple（範例）／ contenu（內容）／ apparaître（出現）",
-      "time": 0
+      "title_zh": "法國火災",
+      "fr": "Les incendies de forêt font rage en France",
+      "zh": "法國發生大規模森林火災",
+      "vocab": "incendie（火災）／forêt（森林）／ravage（破壞）／pompier（消防員）／département（省）",
+      "time": null
+    },
+    {
+      "title_zh": "土耳其火災",
+      "fr": "La Turquie est confrontée à plusieurs feux de forêts",
+      "zh": "土耳其發生多起森林火災",
+      "vocab": "feu（火災）／forêt（森林）／côte（海岸）／sécheresse（乾旱）／vent（風）",
+      "time": null
+    },
+    {
+      "title_zh": "移民事件",
+      "fr": "Des centaines de migrants entrent illégalement à Ceuta",
+      "zh": "數百名移民非法進入西班牙領土",
+      "vocab": "migrant（移民）／illégal（非法）／frontière（邊境）／Maroc（摩洛哥）／Espagne（西班牙）",
+      "time": null
+    },
+    {
+      "title_zh": "漁民驅逐",
+      "fr": "Des pêcheurs zambiens sont expulsés de leur île",
+      "zh": "尚比亞漁民被趕出島嶼",
+      "vocab": "pêcheur（漁民）／île（島嶼）／expulser（驅逐）／entreprise（公司）／chinois（中國人）",
+      "time": null
+    },
+    {
+      "title_zh": "友誼日",
+      "fr": "La journée mondiale de l'amitié",
+      "zh": "世界友誼日",
+      "vocab": "amitié（友誼）／écoute（傾聽）／bénévole（志願者）／solitude（孤獨）／détresse（痛苦）",
+      "time": null
+    },
+    {
+      "title_zh": "足球爭議",
+      "fr": "L'UEFA menace de boycotter les prochaines Coupes du monde",
+      "zh": "歐足聯威脅杯賽",
+      "vocab": "football（足球）／UEFA（歐足聯）／FIFA（國際足球協會）／boycotter（杯葛）／investisseur（投資者）",
+      "time": null
     }
   ],
-  "generated_at": null
+  "generated_at": "2026-07-31T12:05:39.397Z"
 }
