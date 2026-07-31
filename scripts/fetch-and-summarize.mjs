@@ -1,5 +1,5 @@
 /**
- * fetch-and-summarize.mjs  v6 (Gemini) — 2026-07-29
+ * fetch-and-summarize.mjs  v7 (Groq) — 2026-07-31
  */
 import fs from "node:fs/promises";
 import { createWriteStream } from "node:fs";
@@ -86,11 +86,24 @@ async function transcribeWithLocalWhisper(audioPath, outputDir) {
   return transcript.trim();
 }
 
-async function summarizeWithGemini(transcript, episodeTitle) {
-  const apiKey = process.env.GEMINI_API_KEY;
+async function summarizeWithGroq(transcript, episodeTitle) {
+  const apiKey = process.env.GROQ_API_KEY;
   console.log(`   → API 金鑰前8字元: ${apiKey ? apiKey.slice(0,8) : '(空的)'}`);
-const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-  const prompt = `你會收到一份法文新聞節目「Journal en français facile」的逐字稿全文。
+
+  const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify({
+      model: "llama-3.3-70b-versatile",
+      temperature: 0.3,
+      max_tokens: 4000,
+      messages: [
+        {
+          role: "user",
+          content: `你會收到一份法文新聞節目「Journal en français facile」的逐字稿全文。
 節目標題：${episodeTitle || "Journal en français facile"}
 
 請完成：
@@ -106,32 +119,27 @@ const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-
 逐字稿：
 ---
 ${transcript.slice(0, 12000)}
----`;
-
-  const res = await fetch(url, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      contents: [{ parts: [{ text: prompt }] }],
-      generationConfig: { temperature: 0.3, maxOutputTokens: 4000 },
+---`
+        }
+      ],
     }),
   });
 
   if (!res.ok) {
     const err = await res.text();
-    throw new Error(`Gemini API 失敗 HTTP ${res.status}: ${err}`);
+    throw new Error(`Groq API 失敗 HTTP ${res.status}: ${err}`);
   }
 
   const data = await res.json();
-  const text = data.candidates?.[0]?.content?.parts?.[0]?.text || "";
-  console.log(`   → Gemini 回應長度：${text.length} 字元`);
+  const text = data.choices?.[0]?.message?.content || "";
+  console.log(`   → Groq 回應長度：${text.length} 字元`);
   const cleaned = text.replace(/^```json\s*/i, "").replace(/```$/m, "").trim();
   return JSON.parse(cleaned);
 }
 
 async function main() {
   const today = new Date().toISOString().slice(0, 10);
-  console.log(`\n===== RFI 每日更新 v6 (Gemini) — ${today} =====`);
+  console.log(`\n===== RFI 每日更新 v7 (Groq) — ${today} =====`);
 
   await fs.mkdir(TMP_DIR, { recursive: true });
 
@@ -152,8 +160,8 @@ async function main() {
   if (!transcript || transcript.length < 100)
     throw new Error("Whisper 轉錄結果太短");
 
-  console.log("\n④ Gemini API 摘要...");
-  const { items } = await summarizeWithGemini(transcript, episodeTitle);
+  console.log("\n④ Groq API 摘要...");
+  const { items } = await summarizeWithGroq(transcript, episodeTitle);
   console.log(`   → 產出 ${items.length} 則`);
 
   const output = {
