@@ -1,4 +1,4 @@
-name: 每日更新 RFI 學習摘要
+name: daily-update
 
 on:
   schedule:
@@ -13,32 +13,34 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - name: 簽出 repo
+      - name: checkout
         uses: actions/checkout@v4
 
-      - name: 設定 Node.js
+      - name: setup-node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
-      - name: 安裝 Node 相依套件
+      - name: install-node-deps
         working-directory: scripts
         run: npm install
 
-      - name: 安裝 ffmpeg
+      - name: install-ffmpeg
         run: sudo apt-get install -y ffmpeg
 
-      - name: 安裝 openai-whisper
+      - name: install-whisper
         run: pip install -U openai-whisper
 
-      - name: 執行抓取 + 轉錄 + 摘要腳本
+      - name: run-script
         working-directory: scripts
         env:
-          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}        run: node fetch-and-summarize.mjs
-      - name: 提交更新後的 today.json
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: node fetch-and-summarize.mjs
+
+      - name: commit-results
         run: |
           git config user.name "rfi-daily-bot"
           git config user.email "actions@users.noreply.github.com"
           git add docs/data/today.json
-          git diff --staged --quiet && echo "內容沒有變化，略過提交" || git commit -m "每日更新：$(date -u +'%Y-%m-%d')"
+          git diff --staged --quiet && echo "no changes" || git commit -m "daily update $(date -u +'%Y-%m-%d')"
           git push
