@@ -88,8 +88,8 @@ async function transcribeWithLocalWhisper(audioPath, outputDir) {
 
 async function summarizeWithGemini(transcript, episodeTitle) {
   const apiKey = process.env.GEMINI_API_KEY;
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
-
+  console.log(`   → API 金鑰前8字元: ${apiKey ? apiKey.slice(0,8) : '(空的)'}`);
+const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
   const prompt = `你會收到一份法文新聞節目「Journal en français facile」的逐字稿全文。
 節目標題：${episodeTitle || "Journal en français facile"}
 
