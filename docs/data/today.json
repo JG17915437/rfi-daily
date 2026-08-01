@@ -5,47 +5,47 @@
   "page_title": "Journal en français facile 2026-08-01",
   "items": [
     {
-      "title_zh": "移民危機",
-      "fr": "Au moins 34 personnes sont mortes en tentant de rejoindre Cehuta",
-      "zh": "至少34人死於試圖進入西班牙領土塞烏塔",
-      "vocab": "Cehuta（塞烏塔）／migrants（移民）／frontières（邊界）／débordés（不堪重負）／interpellations（拘留）",
+      "title_zh": "移民事件",
+      "fr": "Des dizaines de milliers de personnes ont franchi les frontières de l'enclave espagnole",
+      "zh": "數萬人非法入境西班牙",
+      "vocab": "enclave（飛地）／frontière（邊境）／débordé（不堪重負）／interpellation（拘留）／refoulement（驅逐）",
       "time": null
     },
     {
       "title_zh": "哈馬斯停火",
-      "fr": "Le Hamas accepte de déposer les armes pour que l'armée israélienne se retire de Gaza",
-      "zh": "哈馬斯同意放下武器，以換取以軍撤出加沙",
-      "vocab": "Hamas（哈馬斯）／armée（軍隊）／Gaza（加沙）／désarmement（裁軍）／occupation（佔領）",
+      "fr": "Le Hamas confirme accepter un accord pour rendre ses armes dans la bande de Gaza",
+      "zh": "哈馬斯同意放棄武器",
+      "vocab": "accord（協議）／désarmer（放棄武器）／occupation（佔領）／réaction（反應）／inacceptable（不能接受）",
       "time": null
     },
     {
-      "title_zh": "野火蔓延",
-      "fr": "Un feu menace la banlieue d'Athènes en Grèce",
-      "zh": "希臘雅典郊區發生大火",
-      "vocab": "incendies（野火）／banlieue（郊區）／Athènes（雅典）／précautions（預防措施）／éviter（避免）",
+      "title_zh": "希臘火災",
+      "fr": "Un feu menace à l'heure actuelle la banlieue d'Athènes",
+      "zh": "希臘發生大火",
+      "vocab": "banlieue（郊區）／incendie（火災）／précaution（預防措施）／évacuation（撤離）／viticole（葡萄酒產區）",
       "time": null
     },
     {
       "title_zh": "足球爭議",
-      "fr": "La FIFA et l'UEFA se disputent sur l'idée d'ouvrir la fédération internationale à des investisseurs privés",
-      "zh": "國際足球協會與歐洲足球協會就開放私人投資的問題發生爭議",
-      "vocab": "FIFA（國際足球協會）／UEFA（歐洲足球協會）／investisseurs（投資者）／privatiser（私有化）／boycott（抵制）",
+      "fr": "La FIFA et l'UEFA se rendent coup pour coup depuis que l'instance du football mondial a révélé son plan",
+      "zh": "足球組織爭議",
+      "vocab": "instance（組織）／plan（計畫）／investisseur（投資者）／privatiser（私有化）／boycott（抵制）",
       "time": null
     },
     {
-      "title_zh": "俄羅斯導彈",
-      "fr": "Un missile russe est tombé en Pologne, sans faire de blessés",
-      "zh": "俄羅斯導彈墜落波蘭，未造成傷亡",
-      "vocab": "missile（導彈）／Pologne（波蘭）／Russie（俄羅斯）／frontière（邊界）／cratère（坑洞）",
+      "title_zh": "俄羅斯事件",
+      "fr": "L'ambassadeur de Russie en Pologne a été convoquée",
+      "zh": "俄羅斯大使被召見",
+      "vocab": "ambassadeur（大使）／convoquer（召見）／missile（導彈）／frontière（邊境）／cratère（坑）",
       "time": null
     },
     {
-      "title_zh": "南非歌手",
-      "fr": "La chanteuse sud-africaine Tila annule son concert au Nigeria",
-      "zh": "南非歌手蒂拉取消在尼日利亞的演唱會",
-      "vocab": "chanteuse（歌手）／Tila（蒂拉）／Nigeria（尼日利亞）／Afrique du Sud（南非）／manifestations（示威）",
+      "title_zh": "南非事件",
+      "fr": "La chanteuse Tila a décidé de retirer de sa tournée un concert prévu au Nigeria",
+      "zh": "南非歌手取消演唱會",
+      "vocab": "chanteuse（歌手）／tournée（巡演）／concert（演唱會）／contexte（情境）／manifestation（示威）",
       "time": null
     }
   ],
-  "generated_at": "2026-08-01T02:39:34.774Z"
+  "generated_at": "2026-08-01T10:31:52.328Z"
 }
