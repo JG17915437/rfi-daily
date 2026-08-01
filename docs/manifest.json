@@ -1,0 +1,15 @@
+{
+  "name": "RFI 每日法語新聞",
+  "short_name": "法語新聞",
+  "description": "每日自動更新的 RFI Journal en français facile 學習摘要",
+  "start_url": "/rfi-daily/",
+  "scope": "/rfi-daily/",
+  "display": "standalone",
+  "background_color": "#1b3a6b",
+  "theme_color": "#1b3a6b",
+  "lang": "zh-TW",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
