@@ -1,51 +1,51 @@
 {
-  "date": "2026-07-31",
+  "date": "2026-08-01",
   "source_url": "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/",
-  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202607/journal_francais_facile_16h00_-_16h10_gmt_20260730.mp3?dl=1",
-  "page_title": "Journal en français facile 2026-07-31",
+  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202607/journal_francais_facile_16h00_-_16h10_gmt_20260731.mp3?dl=1",
+  "page_title": "Journal en français facile 2026-08-01",
   "items": [
     {
-      "title_zh": "法國火災",
-      "fr": "Les incendies de forêt font rage en France",
-      "zh": "法國發生大規模森林火災",
-      "vocab": "incendie（火災）／forêt（森林）／ravage（破壞）／pompier（消防員）／département（省）",
+      "title_zh": "移民危機",
+      "fr": "Au moins 34 personnes sont mortes en tentant de rejoindre Cehuta",
+      "zh": "至少34人死於試圖進入西班牙領土塞烏塔",
+      "vocab": "Cehuta（塞烏塔）／migrants（移民）／frontières（邊界）／débordés（不堪重負）／interpellations（拘留）",
       "time": null
     },
     {
-      "title_zh": "土耳其火災",
-      "fr": "La Turquie est confrontée à plusieurs feux de forêts",
-      "zh": "土耳其發生多起森林火災",
-      "vocab": "feu（火災）／forêt（森林）／côte（海岸）／sécheresse（乾旱）／vent（風）",
+      "title_zh": "哈馬斯停火",
+      "fr": "Le Hamas accepte de déposer les armes pour que l'armée israélienne se retire de Gaza",
+      "zh": "哈馬斯同意放下武器，以換取以軍撤出加沙",
+      "vocab": "Hamas（哈馬斯）／armée（軍隊）／Gaza（加沙）／désarmement（裁軍）／occupation（佔領）",
       "time": null
     },
     {
-      "title_zh": "移民事件",
-      "fr": "Des centaines de migrants entrent illégalement à Ceuta",
-      "zh": "數百名移民非法進入西班牙領土",
-      "vocab": "migrant（移民）／illégal（非法）／frontière（邊境）／Maroc（摩洛哥）／Espagne（西班牙）",
-      "time": null
-    },
-    {
-      "title_zh": "漁民驅逐",
-      "fr": "Des pêcheurs zambiens sont expulsés de leur île",
-      "zh": "尚比亞漁民被趕出島嶼",
-      "vocab": "pêcheur（漁民）／île（島嶼）／expulser（驅逐）／entreprise（公司）／chinois（中國人）",
-      "time": null
-    },
-    {
-      "title_zh": "友誼日",
-      "fr": "La journée mondiale de l'amitié",
-      "zh": "世界友誼日",
-      "vocab": "amitié（友誼）／écoute（傾聽）／bénévole（志願者）／solitude（孤獨）／détresse（痛苦）",
+      "title_zh": "野火蔓延",
+      "fr": "Un feu menace la banlieue d'Athènes en Grèce",
+      "zh": "希臘雅典郊區發生大火",
+      "vocab": "incendies（野火）／banlieue（郊區）／Athènes（雅典）／précautions（預防措施）／éviter（避免）",
       "time": null
     },
     {
       "title_zh": "足球爭議",
-      "fr": "L'UEFA menace de boycotter les prochaines Coupes du monde",
-      "zh": "歐足聯威脅杯賽",
-      "vocab": "football（足球）／UEFA（歐足聯）／FIFA（國際足球協會）／boycotter（杯葛）／investisseur（投資者）",
+      "fr": "La FIFA et l'UEFA se disputent sur l'idée d'ouvrir la fédération internationale à des investisseurs privés",
+      "zh": "國際足球協會與歐洲足球協會就開放私人投資的問題發生爭議",
+      "vocab": "FIFA（國際足球協會）／UEFA（歐洲足球協會）／investisseurs（投資者）／privatiser（私有化）／boycott（抵制）",
+      "time": null
+    },
+    {
+      "title_zh": "俄羅斯導彈",
+      "fr": "Un missile russe est tombé en Pologne, sans faire de blessés",
+      "zh": "俄羅斯導彈墜落波蘭，未造成傷亡",
+      "vocab": "missile（導彈）／Pologne（波蘭）／Russie（俄羅斯）／frontière（邊界）／cratère（坑洞）",
+      "time": null
+    },
+    {
+      "title_zh": "南非歌手",
+      "fr": "La chanteuse sud-africaine Tila annule son concert au Nigeria",
+      "zh": "南非歌手蒂拉取消在尼日利亞的演唱會",
+      "vocab": "chanteuse（歌手）／Tila（蒂拉）／Nigeria（尼日利亞）／Afrique du Sud（南非）／manifestations（示威）",
       "time": null
     }
   ],
-  "generated_at": "2026-07-31T12:05:39.397Z"
+  "generated_at": "2026-08-01T02:39:34.774Z"
 }
