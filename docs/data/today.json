@@ -1,51 +1,51 @@
 {
-  "date": "2026-08-01",
+  "date": "2026-08-05",
   "source_url": "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/",
-  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202607/journal_francais_facile_16h00_-_16h10_gmt_20260731.mp3?dl=1",
-  "page_title": "Journal en français facile 2026-08-01",
+  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202608/journal_francais_facile_16h00_-_16h10_gmt_20260804.mp3?dl=1",
+  "page_title": "Journal en français facile 2026-08-05",
   "items": [
     {
-      "title_zh": "移民事件",
-      "fr": "Des dizaines de milliers de personnes ont franchi les frontières de l'enclave espagnole",
-      "zh": "數萬人非法入境西班牙",
-      "vocab": "enclave（飛地）／frontière（邊境）／débordé（不堪重負）／interpellation（拘留）／refoulement（驅逐）",
+      "title_zh": "移民危機",
+      "fr": "La crise migratoire à Ceuta a fait 75 morts",
+      "zh": "西班牙的塞uta移民危機已造成75人死亡",
+      "vocab": "crise（危機）／migratoire（移民的）／Ceuta（塞uta）／mort（死亡）／désaccords（分歧）",
       "time": null
     },
     {
-      "title_zh": "哈馬斯停火",
-      "fr": "Le Hamas confirme accepter un accord pour rendre ses armes dans la bande de Gaza",
-      "zh": "哈馬斯同意放棄武器",
-      "vocab": "accord（協議）／désarmer（放棄武器）／occupation（佔領）／réaction（反應）／inacceptable（不能接受）",
+      "title_zh": "獄中死亡",
+      "fr": "Un salvadorien est décédé dans un centre de l'ICE",
+      "zh": "一名薩爾瓦多人在美國移民局的拘留中心死亡",
+      "vocab": "salvadorien（薩爾瓦多人）／centre（中心）／ICE（移民局）／décédé（死亡）／détention（拘留）",
       "time": null
     },
     {
-      "title_zh": "希臘火災",
-      "fr": "Un feu menace à l'heure actuelle la banlieue d'Athènes",
-      "zh": "希臘發生大火",
-      "vocab": "banlieue（郊區）／incendie（火災）／précaution（預防措施）／évacuation（撤離）／viticole（葡萄酒產區）",
+      "title_zh": "石油出口",
+      "fr": "Les profits d'Aramco ont augmenté de 44% malgré le blocage du détroit d'Hormuz",
+      "zh": "沙特阿拉伯國家石油公司的利潤增加了44%，儘管荷姆茲海峽被封鎖",
+      "vocab": "profits（利潤）／Aramco（沙特阿拉伯國家石油公司）／blocage（封鎖）／détroit（海峽）／Hormuz（荷姆茲）",
       "time": null
     },
     {
-      "title_zh": "足球爭議",
-      "fr": "La FIFA et l'UEFA se rendent coup pour coup depuis que l'instance du football mondial a révélé son plan",
-      "zh": "足球組織爭議",
-      "vocab": "instance（組織）／plan（計畫）／investisseur（投資者）／privatiser（私有化）／boycott（抵制）",
+      "title_zh": "動物死亡",
+      "fr": "Trois lions sont décédés dans un zoo de Tokyo à cause de la chaleur",
+      "zh": "東京一家動物園的三頭獅子因熱死",
+      "vocab": "lions（獅子）／zoo（動物園）／Tokyo（東京）／chaleur（熱）／décédés（死亡）",
       "time": null
     },
     {
-      "title_zh": "俄羅斯事件",
-      "fr": "L'ambassadeur de Russie en Pologne a été convoquée",
-      "zh": "俄羅斯大使被召見",
-      "vocab": "ambassadeur（大使）／convoquer（召見）／missile（導彈）／frontière（邊境）／cratère（坑）",
+      "title_zh": "足球新聞",
+      "fr": "R.V. Ronard, nouveau sélectionneur de la Côte d'Ivoire",
+      "zh": "羅納德成為象牙海岸的新任足球教練",
+      "vocab": "sélectionneur（教練）／Côte d'Ivoire（象牙海岸）／football（足球）／Ronard（羅納德）／nouveau（新任）",
       "time": null
     },
     {
-      "title_zh": "南非事件",
-      "fr": "La chanteuse Tila a décidé de retirer de sa tournée un concert prévu au Nigeria",
-      "zh": "南非歌手取消演唱會",
-      "vocab": "chanteuse（歌手）／tournée（巡演）／concert（演唱會）／contexte（情境）／manifestation（示威）",
+      "title_zh": "野火新聞",
+      "fr": "Le feu qui s'est déclaré dans la Drôme a déjà parcouru 150 hectares",
+      "zh": "法國多姆山省的一場野火已經蔓延到150公頃",
+      "vocab": "feu（野火）／Drôme（多姆山省）／hectares（公頃）／déclaré（發生）／parcouru（蔓延）",
       "time": null
     }
   ],
-  "generated_at": "2026-08-01T10:31:52.328Z"
+  "generated_at": "2026-08-05T11:52:10.523Z"
 }
