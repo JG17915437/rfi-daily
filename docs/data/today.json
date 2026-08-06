@@ -1,51 +1,51 @@
 {
-  "date": "2026-08-05",
+  "date": "2026-08-06",
   "source_url": "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/",
-  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202608/journal_francais_facile_16h00_-_16h10_gmt_20260804.mp3?dl=1",
-  "page_title": "Journal en français facile 2026-08-05",
+  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202608/journal_francais_facile_16h00_-_16h10_gmt_20260805.mp3?dl=1",
+  "page_title": "Journal en français facile 2026-08-06",
   "items": [
     {
-      "title_zh": "移民危機",
-      "fr": "La crise migratoire à Ceuta a fait 75 morts",
-      "zh": "西班牙的塞uta移民危機已造成75人死亡",
-      "vocab": "crise（危機）／migratoire（移民的）／Ceuta（塞uta）／mort（死亡）／désaccords（分歧）",
+      "title_zh": "也門",
+      "fr": "Les rebelles yéménites soutenus par l'Iran ont revendiqué une huitième attaque contre les navires d'Arabie Saoudite.",
+      "zh": "伊朗支持的也門叛軍對沙特阿拉伯船隻發動第八次襲擊。",
+      "vocab": "rebelles（叛軍）／soutenus（支持）／revendiqué（聲稱）／attaque（襲擊）／navires（船隻）",
       "time": null
     },
     {
-      "title_zh": "獄中死亡",
-      "fr": "Un salvadorien est décédé dans un centre de l'ICE",
-      "zh": "一名薩爾瓦多人在美國移民局的拘留中心死亡",
-      "vocab": "salvadorien（薩爾瓦多人）／centre（中心）／ICE（移民局）／décédé（死亡）／détention（拘留）",
+      "title_zh": "德國",
+      "fr": "Un drone muni d'un engin explosif a été découvert à l'aéroport de l'Epsic en Allemagne.",
+      "zh": "德國一機場發現一架攜帶爆炸裝置的無人機。",
+      "vocab": "drone（無人機）／engin（裝置）／explosif（爆炸）／aéroport（機場）／Epsic（機場名稱）",
       "time": null
     },
     {
-      "title_zh": "石油出口",
-      "fr": "Les profits d'Aramco ont augmenté de 44% malgré le blocage du détroit d'Hormuz",
-      "zh": "沙特阿拉伯國家石油公司的利潤增加了44%，儘管荷姆茲海峽被封鎖",
-      "vocab": "profits（利潤）／Aramco（沙特阿拉伯國家石油公司）／blocage（封鎖）／détroit（海峽）／Hormuz（荷姆茲）",
+      "title_zh": "美國",
+      "fr": "Le président américain Donald Trump est accusé de corruption pour avoir vendu un accès prioritaire à ses messages.",
+      "zh": "美國總統特朗普被指控因出售優先訪問其訊息而涉嫌腐敗。",
+      "vocab": "président（總統）／accusé（指控）／corruption（腐敗）／accès（訪問）／prioritaire（優先）",
       "time": null
     },
     {
-      "title_zh": "動物死亡",
-      "fr": "Trois lions sont décédés dans un zoo de Tokyo à cause de la chaleur",
-      "zh": "東京一家動物園的三頭獅子因熱死",
-      "vocab": "lions（獅子）／zoo（動物園）／Tokyo（東京）／chaleur（熱）／décédés（死亡）",
+      "title_zh": "伊朗",
+      "fr": "L'ONU se dit alarmé par la hausse des exécutions en Iran.",
+      "zh": "聯合國對伊朗處決人數增加表示擔憂。",
+      "vocab": "ONU（聯合國）／alarmé（擔憂）／hausse（增加）／exécutions（處決）／Iran（伊朗）",
       "time": null
     },
     {
-      "title_zh": "足球新聞",
-      "fr": "R.V. Ronard, nouveau sélectionneur de la Côte d'Ivoire",
-      "zh": "羅納德成為象牙海岸的新任足球教練",
-      "vocab": "sélectionneur（教練）／Côte d'Ivoire（象牙海岸）／football（足球）／Ronard（羅納德）／nouveau（新任）",
+      "title_zh": "烏克蘭",
+      "fr": "Au moins 17 personnes ont été tuées à Kiev dans la nuit de mardi à mercredi.",
+      "zh": "烏克蘭基輔週二晚上至週三至少17人死亡。",
+      "vocab": "tuées（死亡）／Kiev（基輔）／nuit（晚上）／mardi（週二）／mercredi（週三）",
       "time": null
     },
     {
-      "title_zh": "野火新聞",
-      "fr": "Le feu qui s'est déclaré dans la Drôme a déjà parcouru 150 hectares",
-      "zh": "法國多姆山省的一場野火已經蔓延到150公頃",
-      "vocab": "feu（野火）／Drôme（多姆山省）／hectares（公頃）／déclaré（發生）／parcouru（蔓延）",
+      "title_zh": "台灣",
+      "fr": "Taiwan continue de se préparer à une potentielle invasion chinoise.",
+      "zh": "台灣持續為可能的中國入侵做準備。",
+      "vocab": "Taiwan（台灣）／préparer（準備）／invasion（入侵）／chinoise（中國）",
       "time": null
     }
   ],
-  "generated_at": "2026-08-05T11:52:10.523Z"
+  "generated_at": "2026-08-06T12:05:56.217Z"
 }
