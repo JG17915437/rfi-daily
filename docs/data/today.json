@@ -1,51 +1,51 @@
 {
-  "date": "2026-08-06",
+  "date": "2026-08-07",
   "source_url": "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/",
-  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202608/journal_francais_facile_16h00_-_16h10_gmt_20260805.mp3?dl=1",
-  "page_title": "Journal en français facile 2026-08-06",
+  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202608/journal_francais_facile_16h00_-_16h10_gmt_20260806.mp3?dl=1",
+  "page_title": "Journal en français facile 2026-08-07",
   "items": [
     {
-      "title_zh": "也門",
-      "fr": "Les rebelles yéménites soutenus par l'Iran ont revendiqué une huitième attaque contre les navires d'Arabie Saoudite.",
-      "zh": "伊朗支持的也門叛軍對沙特阿拉伯船隻發動第八次襲擊。",
-      "vocab": "rebelles（叛軍）／soutenus（支持）／revendiqué（聲稱）／attaque（襲擊）／navires（船隻）",
+      "title_zh": "約旦河西岸",
+      "fr": "La violence des colons israéliens en Jordanie occupée ne cesse de s'aggraver",
+      "zh": "約旦河西岸的以色列殖民地居民暴力事件持續升級",
+      "vocab": "violence（暴力）／colon（殖民地居民）／israélien（以色列人）／Jordanie（約旦）／occupée（被佔領）",
       "time": null
     },
     {
-      "title_zh": "德國",
-      "fr": "Un drone muni d'un engin explosif a été découvert à l'aéroport de l'Epsic en Allemagne.",
-      "zh": "德國一機場發現一架攜帶爆炸裝置的無人機。",
-      "vocab": "drone（無人機）／engin（裝置）／explosif（爆炸）／aéroport（機場）／Epsic（機場名稱）",
+      "title_zh": "荷姆茲海峽",
+      "fr": "Un accord pour la réouverture du détroit d'Hormuz pourrait être imminent",
+      "zh": "荷姆茲海峽可能即將重開",
+      "vocab": "accord（協議）／détroit（海峽）／Hormuz（荷姆茲）／imminent（即將發生）／Iran（伊朗）",
       "time": null
     },
     {
-      "title_zh": "美國",
-      "fr": "Le président américain Donald Trump est accusé de corruption pour avoir vendu un accès prioritaire à ses messages.",
-      "zh": "美國總統特朗普被指控因出售優先訪問其訊息而涉嫌腐敗。",
-      "vocab": "président（總統）／accusé（指控）／corruption（腐敗）／accès（訪問）／prioritaire（優先）",
+      "title_zh": "韓國基地",
+      "fr": "La Corée du Sud demande aux États-Unis de restituer ses anciennes bases militaires",
+      "zh": "韓國要求美國歸還其軍事基地",
+      "vocab": "base（基地）／militaire（軍事）／Corée（韓國）／États-Unis（美國）／restituer（歸還）",
       "time": null
     },
     {
-      "title_zh": "伊朗",
-      "fr": "L'ONU se dit alarmé par la hausse des exécutions en Iran.",
-      "zh": "聯合國對伊朗處決人數增加表示擔憂。",
-      "vocab": "ONU（聯合國）／alarmé（擔憂）／hausse（增加）／exécutions（處決）／Iran（伊朗）",
+      "title_zh": "法國黑手黨",
+      "fr": "Un chef présumé de la DZ Mafia a été interpellé en France",
+      "zh": "法國黑手黨頭目被捕",
+      "vocab": "chef（頭目）／DZ（組織名稱）／Mafia（黑手黨）／interpellé（被捕）／France（法國）",
       "time": null
     },
     {
-      "title_zh": "烏克蘭",
-      "fr": "Au moins 17 personnes ont été tuées à Kiev dans la nuit de mardi à mercredi.",
-      "zh": "烏克蘭基輔週二晚上至週三至少17人死亡。",
-      "vocab": "tuées（死亡）／Kiev（基輔）／nuit（晚上）／mardi（週二）／mercredi（週三）",
+      "title_zh": "德國恐怖",
+      "fr": "Un homme a été condamné à perpétuité pour un attentat en Allemagne",
+      "zh": "德國恐怖襲擊兇手被判無期徒刑",
+      "vocab": "condamné（被判刑）／perpétuité（無期徒刑）／attentat（恐怖襲擊）／Allemagne（德國）",
       "time": null
     },
     {
-      "title_zh": "台灣",
-      "fr": "Taiwan continue de se préparer à une potentielle invasion chinoise.",
-      "zh": "台灣持續為可能的中國入侵做準備。",
-      "vocab": "Taiwan（台灣）／préparer（準備）／invasion（入侵）／chinoise（中國）",
+      "title_zh": "法國科西嘉",
+      "fr": "Le parquet anti-terroriste ouvre une enquête après les menaces du FLNC en Corse",
+      "zh": "法國科西嘉島恐怖組織發出威脅，反恐部門展開調查",
+      "vocab": "parquet（檢察官）／anti-terroriste（反恐）／enquête（調查）／FLNC（科西嘉民族解放陣線）／Corse（科西嘉島）",
       "time": null
     }
   ],
-  "generated_at": "2026-08-06T12:05:56.217Z"
+  "generated_at": "2026-08-07T08:29:42.531Z"
 }
