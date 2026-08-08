@@ -1,51 +1,51 @@
 {
-  "date": "2026-08-07",
+  "date": "2026-08-08",
   "source_url": "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/",
-  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202608/journal_francais_facile_16h00_-_16h10_gmt_20260806.mp3?dl=1",
-  "page_title": "Journal en français facile 2026-08-07",
+  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202608/journal_francais_facile_16h00_-_16h10_gmt_20260807.mp3?dl=1",
+  "page_title": "Journal en français facile 2026-08-08",
   "items": [
     {
-      "title_zh": "約旦河西岸",
-      "fr": "La violence des colons israéliens en Jordanie occupée ne cesse de s'aggraver",
-      "zh": "約旦河西岸的以色列殖民地居民暴力事件持續升級",
-      "vocab": "violence（暴力）／colon（殖民地居民）／israélien（以色列人）／Jordanie（約旦）／occupée（被佔領）",
+      "title_zh": "剛果和平",
+      "fr": "Les autorités congolaises ont transféré 15 prisonniers de l'AFC M23.",
+      "zh": "剛果民主共和國政府將15名囚犯移交給AFC M23組織。",
+      "vocab": "autorités（政府）／prisonniers（囚犯）／AFC M23（AFC M23組織）／République démocratique du Congo（剛果民主共和國）／Croix-Rouge（紅十字會）",
       "time": null
     },
     {
-      "title_zh": "荷姆茲海峽",
-      "fr": "Un accord pour la réouverture du détroit d'Hormuz pourrait être imminent",
-      "zh": "荷姆茲海峽可能即將重開",
-      "vocab": "accord（協議）／détroit（海峽）／Hormuz（荷姆茲）／imminent（即將發生）／Iran（伊朗）",
+      "title_zh": "也門戰爭",
+      "fr": "Le groupe Probelle, soutenu par l'Iran, avait déjà lancé hier son offensive la plus meurtrière depuis 4 ans.",
+      "zh": "由伊朗支持的Probelle組織昨天發動了四年來最致命的攻勢。",
+      "vocab": "groupe（組織）／offensive（攻勢）／meurtrière（致命的）／Iran（伊朗）／Yémen（也門）",
       "time": null
     },
     {
-      "title_zh": "韓國基地",
-      "fr": "La Corée du Sud demande aux États-Unis de restituer ses anciennes bases militaires",
-      "zh": "韓國要求美國歸還其軍事基地",
-      "vocab": "base（基地）／militaire（軍事）／Corée（韓國）／États-Unis（美國）／restituer（歸還）",
+      "title_zh": "足球風波",
+      "fr": "La Fédération norvégienne de demander la démission de Gianni Infantino.",
+      "zh": "挪威足球協會要求Gianni Infantino辭去職務。",
+      "vocab": "Fédération（協會）／démission（辭職）／Gianni Infantino（吉安尼·因凡蒂諾）／FIFA（國際足球協會）／CONCACAF（中北美及加勒比足球協會）",
       "time": null
     },
     {
-      "title_zh": "法國黑手黨",
-      "fr": "Un chef présumé de la DZ Mafia a été interpellé en France",
-      "zh": "法國黑手黨頭目被捕",
-      "vocab": "chef（頭目）／DZ（組織名稱）／Mafia（黑手黨）／interpellé（被捕）／France（法國）",
+      "title_zh": "埃博拉疫情",
+      "fr": "Le nombre de cas confirmé d'Ebola a dépassé des 4000.",
+      "zh": "埃博拉病例數已超過4000。",
+      "vocab": "cas（病例）／confirmé（確診）／Ebola（埃博拉病毒）／vaccin（疫苗）／Organisation mondiale de la santé（世界衛生組織）",
       "time": null
     },
     {
-      "title_zh": "德國恐怖",
-      "fr": "Un homme a été condamné à perpétuité pour un attentat en Allemagne",
-      "zh": "德國恐怖襲擊兇手被判無期徒刑",
-      "vocab": "condamné（被判刑）／perpétuité（無期徒刑）／attentat（恐怖襲擊）／Allemagne（德國）",
+      "title_zh": "中東局勢",
+      "fr": "L'Arabie Saoudite, le Pakistan et la Turquie ont conclu un pacte de défense.",
+      "zh": "沙特阿拉伯、巴基斯坦和土耳其簽署了防禦協議。",
+      "vocab": "pacte（協議）／défense（防禦）／Arabie Saoudite（沙特阿拉伯）／Pakistan（巴基斯坦）／Turquie（土耳其）",
       "time": null
     },
     {
-      "title_zh": "法國科西嘉",
-      "fr": "Le parquet anti-terroriste ouvre une enquête après les menaces du FLNC en Corse",
-      "zh": "法國科西嘉島恐怖組織發出威脅，反恐部門展開調查",
-      "vocab": "parquet（檢察官）／anti-terroriste（反恐）／enquête（調查）／FLNC（科西嘉民族解放陣線）／Corse（科西嘉島）",
+      "title_zh": "墨西哥外交",
+      "fr": "Le Mexique et le Pérou ont rétabli leur relation diplomatique.",
+      "zh": "墨西哥和祕魯恢復了外交關係。",
+      "vocab": "relation（關係）／diplomatique（外交）／Mexique（墨西哥）／Pérou（祕魯）／ambassade（大使館）",
       "time": null
     }
   ],
-  "generated_at": "2026-08-07T08:29:42.531Z"
+  "generated_at": "2026-08-08T06:16:30.220Z"
 }
