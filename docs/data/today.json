@@ -1,51 +1,51 @@
 {
-  "date": "2026-08-08",
+  "date": "2026-08-11",
   "source_url": "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/",
-  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202608/journal_francais_facile_16h00_-_16h10_gmt_20260807.mp3?dl=1",
-  "page_title": "Journal en français facile 2026-08-08",
+  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202608/journal_francais_facile_16h00_-_16h10_gmt_20260810.mp3?dl=1",
+  "page_title": "Journal en français facile 2026-08-11",
   "items": [
     {
-      "title_zh": "剛果和平",
-      "fr": "Les autorités congolaises ont transféré 15 prisonniers de l'AFC M23.",
-      "zh": "剛果民主共和國政府將15名囚犯移交給AFC M23組織。",
-      "vocab": "autorités（政府）／prisonniers（囚犯）／AFC M23（AFC M23組織）／République démocratique du Congo（剛果民主共和國）／Croix-Rouge（紅十字會）",
+      "title_zh": "地震",
+      "fr": "Un séisme de magnitude 7,4 a frappé la Colombie, faisant au moins 20 morts.",
+      "zh": "哥倫比亞發生7.4級地震，至少20人死亡",
+      "vocab": "séisme（地震）／magnitude（震度）／Colombie（哥倫比亞）／morts（死亡人數）",
       "time": null
     },
     {
-      "title_zh": "也門戰爭",
-      "fr": "Le groupe Probelle, soutenu par l'Iran, avait déjà lancé hier son offensive la plus meurtrière depuis 4 ans.",
-      "zh": "由伊朗支持的Probelle組織昨天發動了四年來最致命的攻勢。",
-      "vocab": "groupe（組織）／offensive（攻勢）／meurtrière（致命的）／Iran（伊朗）／Yémen（也門）",
+      "title_zh": "貿易",
+      "fr": "L'accord de libre échange entre les États-Unis et une trentaine de pays africains a été renouvelé.",
+      "zh": "美國與30多個非洲國家的自由貿易協定已經續簽",
+      "vocab": "accord（協定）／libre échange（自由貿易）／États-Unis（美國）／pays africains（非洲國家）",
       "time": null
     },
     {
-      "title_zh": "足球風波",
-      "fr": "La Fédération norvégienne de demander la démission de Gianni Infantino.",
-      "zh": "挪威足球協會要求Gianni Infantino辭去職務。",
-      "vocab": "Fédération（協會）／démission（辭職）／Gianni Infantino（吉安尼·因凡蒂諾）／FIFA（國際足球協會）／CONCACAF（中北美及加勒比足球協會）",
+      "title_zh": "軍事",
+      "fr": "Les stocks américains d'armement s'épuisent après 5 mois de guerre en Iran.",
+      "zh": "美國在伊朗5個月的戰爭後軍火儲備即將耗盡",
+      "vocab": "stocks（儲備）／armement（軍火）／guerre（戰爭）／Iran（伊朗）",
       "time": null
     },
     {
-      "title_zh": "埃博拉疫情",
-      "fr": "Le nombre de cas confirmé d'Ebola a dépassé des 4000.",
-      "zh": "埃博拉病例數已超過4000。",
-      "vocab": "cas（病例）／confirmé（確診）／Ebola（埃博拉病毒）／vaccin（疫苗）／Organisation mondiale de la santé（世界衛生組織）",
+      "title_zh": "足球",
+      "fr": "Les confédérations européennes, nord-américaines et asiatiques critiquent le président de la FIFA.",
+      "zh": "歐洲、北美和亞洲足球協會批評國際足球協會主席",
+      "vocab": "confédérations（協會）／président（主席）／FIFA（國際足球協會）／critiquent（批評）",
       "time": null
     },
     {
-      "title_zh": "中東局勢",
-      "fr": "L'Arabie Saoudite, le Pakistan et la Turquie ont conclu un pacte de défense.",
-      "zh": "沙特阿拉伯、巴基斯坦和土耳其簽署了防禦協議。",
-      "vocab": "pacte（協議）／défense（防禦）／Arabie Saoudite（沙特阿拉伯）／Pakistan（巴基斯坦）／Turquie（土耳其）",
+      "title_zh": "氣候",
+      "fr": "900 millions de personnes ont vécu leur mois de juillet le plus chaud jamais enregistré.",
+      "zh": "9億人經歷了有史以來最熱的七月",
+      "vocab": "mois（月）／juillet（七月）／chaud（熱）／enregistré（記錄）",
       "time": null
     },
     {
-      "title_zh": "墨西哥外交",
-      "fr": "Le Mexique et le Pérou ont rétabli leur relation diplomatique.",
-      "zh": "墨西哥和祕魯恢復了外交關係。",
-      "vocab": "relation（關係）／diplomatique（外交）／Mexique（墨西哥）／Pérou（祕魯）／ambassade（大使館）",
+      "title_zh": "火災",
+      "fr": "Les incendies en Espagne s'aggravent notamment en Andalousie.",
+      "zh": "西班牙的火災，特別是在安達魯西亞，正在惡化",
+      "vocab": "incendies（火災）／Espagne（西班牙）／Andalousie（安達魯西亞）／s'aggravent（惡化）",
       "time": null
     }
   ],
-  "generated_at": "2026-08-08T06:16:30.220Z"
+  "generated_at": "2026-08-11T08:11:05.540Z"
 }
