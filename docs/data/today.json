@@ -1,51 +1,44 @@
 {
-  "date": "2026-08-11",
+  "date": "2026-08-12",
   "source_url": "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/",
-  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202608/journal_francais_facile_16h00_-_16h10_gmt_20260810.mp3?dl=1",
-  "page_title": "Journal en français facile 2026-08-11",
+  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202608/journal_francais_facile_16h00_-_16h10_gmt_20260811.mp3?dl=1",
+  "page_title": "Journal en français facile 2026-08-12",
   "items": [
     {
       "title_zh": "地震",
-      "fr": "Un séisme de magnitude 7,4 a frappé la Colombie, faisant au moins 20 morts.",
-      "zh": "哥倫比亞發生7.4級地震，至少20人死亡",
-      "vocab": "séisme（地震）／magnitude（震度）／Colombie（哥倫比亞）／morts（死亡人數）",
+      "fr": "La Colombie a été frappée par un séisme qui a fait au moins 224 morts.",
+      "zh": "哥倫比亞發生地震，造成至少224人死亡。",
+      "vocab": "séisme（地震）／morts（死亡）／blessés（受傷）／hôpital（醫院）／patients（病人）",
       "time": null
     },
     {
-      "title_zh": "貿易",
-      "fr": "L'accord de libre échange entre les États-Unis et une trentaine de pays africains a été renouvelé.",
-      "zh": "美國與30多個非洲國家的自由貿易協定已經續簽",
-      "vocab": "accord（協定）／libre échange（自由貿易）／États-Unis（美國）／pays africains（非洲國家）",
+      "title_zh": "移民",
+      "fr": "Un bateau gonflable transportant 232 migrants a été repéré dans la Manche.",
+      "zh": "一艘載有232名移民的充氣船在英吉利海峽被發現。",
+      "vocab": "migrants（移民）／bateau（船）／Manche（英吉利海峽）／passeurs（走私者）／canots（充氣船）",
       "time": null
     },
     {
-      "title_zh": "軍事",
-      "fr": "Les stocks américains d'armement s'épuisent après 5 mois de guerre en Iran.",
-      "zh": "美國在伊朗5個月的戰爭後軍火儲備即將耗盡",
-      "vocab": "stocks（儲備）／armement（軍火）／guerre（戰爭）／Iran（伊朗）",
+      "title_zh": "總統",
+      "fr": "Le Parlement libanais a voté en faveur de l'abolition de la peine de mort.",
+      "zh": "黎巴嫩議會投票通過廢除死刑。",
+      "vocab": "président（總統）／Parlement（議會）／peine（刑罰）／mort（死亡）／abolition（廢除）",
       "time": null
     },
     {
-      "title_zh": "足球",
-      "fr": "Les confédérations européennes, nord-américaines et asiatiques critiquent le président de la FIFA.",
-      "zh": "歐洲、北美和亞洲足球協會批評國際足球協會主席",
-      "vocab": "confédérations（協會）／président（主席）／FIFA（國際足球協會）／critiquent（批評）",
+      "title_zh": "疫情",
+      "fr": "L'épidémie de fièvre Ebola a franchi le cap des 2000 morts en RDC.",
+      "zh": "剛果民主共和國的埃博拉病毒疫情已經造成2000多人死亡。",
+      "vocab": "épidémie（疫情）／fièvre（發燒）／Ebola（埃博拉病毒）／morts（死亡）／RDC（剛果民主共和國）",
       "time": null
     },
     {
-      "title_zh": "氣候",
-      "fr": "900 millions de personnes ont vécu leur mois de juillet le plus chaud jamais enregistré.",
-      "zh": "9億人經歷了有史以來最熱的七月",
-      "vocab": "mois（月）／juillet（七月）／chaud（熱）／enregistré（記錄）",
-      "time": null
-    },
-    {
-      "title_zh": "火災",
-      "fr": "Les incendies en Espagne s'aggravent notamment en Andalousie.",
-      "zh": "西班牙的火災，特別是在安達魯西亞，正在惡化",
-      "vocab": "incendies（火災）／Espagne（西班牙）／Andalousie（安達魯西亞）／s'aggravent（惡化）",
+      "title_zh": "垃圾",
+      "fr": "Les autorités mauritaniennes veulent améliorer la gestion des déchets dans la capitale.",
+      "zh": "茅利塔尼亞政府希望改善首都的垃圾管理。",
+      "vocab": "déchets（垃圾）／gestion（管理）／capitale（首都）／nettoyage（清潔）／ordures（垃圾）",
       "time": null
     }
   ],
-  "generated_at": "2026-08-11T08:11:05.540Z"
+  "generated_at": "2026-08-12T09:01:00.318Z"
 }
