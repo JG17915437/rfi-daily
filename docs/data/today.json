@@ -1,44 +1,51 @@
 {
-  "date": "2026-08-12",
+  "date": "2026-08-13",
   "source_url": "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/",
-  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202608/journal_francais_facile_16h00_-_16h10_gmt_20260811.mp3?dl=1",
-  "page_title": "Journal en français facile 2026-08-12",
+  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202608/journal_francais_facile_16h00_-_16h10_gmt_20260812.mp3?dl=1",
+  "page_title": "Journal en français facile 2026-08-13",
   "items": [
     {
-      "title_zh": "地震",
-      "fr": "La Colombie a été frappée par un séisme qui a fait au moins 224 morts.",
-      "zh": "哥倫比亞發生地震，造成至少224人死亡。",
-      "vocab": "séisme（地震）／morts（死亡）／blessés（受傷）／hôpital（醫院）／patients（病人）",
+      "title_zh": "日食",
+      "fr": "Une éclipse totale c'est un événement émotionnel.",
+      "zh": "日全食是一件令人感動的事件",
+      "vocab": "éclipse（日食）／soleil（太陽）／lune（月亮）／émotion（情感）／événement（事件）",
       "time": null
     },
     {
-      "title_zh": "移民",
-      "fr": "Un bateau gonflable transportant 232 migrants a été repéré dans la Manche.",
-      "zh": "一艘載有232名移民的充氣船在英吉利海峽被發現。",
-      "vocab": "migrants（移民）／bateau（船）／Manche（英吉利海峽）／passeurs（走私者）／canots（充氣船）",
+      "title_zh": "加沙",
+      "fr": "La situation dans les hôpitaux Gazaouis reste dramatique.",
+      "zh": "加沙的醫院情況仍然嚴峻",
+      "vocab": "hôpital（醫院）／Gaza（加沙）／situation（情況）／dramatique（嚴峻）／néphrologie（腎臟學）",
       "time": null
     },
     {
-      "title_zh": "總統",
-      "fr": "Le Parlement libanais a voté en faveur de l'abolition de la peine de mort.",
-      "zh": "黎巴嫩議會投票通過廢除死刑。",
-      "vocab": "président（總統）／Parlement（議會）／peine（刑罰）／mort（死亡）／abolition（廢除）",
+      "title_zh": "黎巴嫩",
+      "fr": "Le Parlement vote une loi d'amnistie générale.",
+      "zh": "黎巴嫩國會通過大赦法",
+      "vocab": "Parlement（國會）／loi（法律）／amnistie（大赦）／général（一般）／prisonnier（囚犯）",
       "time": null
     },
     {
-      "title_zh": "疫情",
-      "fr": "L'épidémie de fièvre Ebola a franchi le cap des 2000 morts en RDC.",
-      "zh": "剛果民主共和國的埃博拉病毒疫情已經造成2000多人死亡。",
-      "vocab": "épidémie（疫情）／fièvre（發燒）／Ebola（埃博拉病毒）／morts（死亡）／RDC（剛果民主共和國）",
+      "title_zh": "模里西斯",
+      "fr": "L'envie de partir progresse chez les jeunes Mauriciens.",
+      "zh": "模里西斯年輕人出國的意願增加",
+      "vocab": "envie（意願）／partir（出國）／jeune（年輕）／Mauricien（模里西斯人）／émigration（移民）",
       "time": null
     },
     {
-      "title_zh": "垃圾",
-      "fr": "Les autorités mauritaniennes veulent améliorer la gestion des déchets dans la capitale.",
-      "zh": "茅利塔尼亞政府希望改善首都的垃圾管理。",
-      "vocab": "déchets（垃圾）／gestion（管理）／capitale（首都）／nettoyage（清潔）／ordures（垃圾）",
+      "title_zh": "希臘",
+      "fr": "La Grèce est un pays particulièrement touché par les incendies.",
+      "zh": "希臘是火災頻發的國家",
+      "vocab": "Grèce（希臘）／incendie（火災）／pays（國家）／touché（影響）／négligence（疏忽）",
+      "time": null
+    },
+    {
+      "title_zh": "足球",
+      "fr": "Le Paris Saint-Germain affronte Aston Villa.",
+      "zh": "巴黎聖日耳曼對戰阿斯頓維拉",
+      "vocab": "football（足球）／Paris（巴黎）／Saint-Germain（聖日耳曼）／Aston（阿斯頓）／Villa（維拉）",
       "time": null
     }
   ],
-  "generated_at": "2026-08-12T09:01:00.318Z"
+  "generated_at": "2026-08-13T09:04:03.626Z"
 }
