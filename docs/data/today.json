@@ -1,51 +1,51 @@
 {
-  "date": "2026-08-14",
+  "date": "2026-08-15",
   "source_url": "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/",
-  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202608/journal_francais_facile_16h00_-_16h10_gmt_20260813.mp3?dl=1",
-  "page_title": "Journal en français facile 2026-08-14",
+  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202608/journal_francais_facile_16h00_-_16h10_gmt_20260814.mp3?dl=1",
+  "page_title": "Journal en français facile 2026-08-15",
   "items": [
     {
-      "title_zh": "地震",
-      "fr": "Trois jours après le séisme en Colombie, les secours continuent de rechercher des survivants.",
-      "zh": "哥倫比亞地震後三天，救援人員仍在尋找生存者。",
-      "vocab": "séisme（地震）／secours（救援）／survivants（生存者）／colère（憤怒）／détruits（毀壞）",
+      "title_zh": "移民危機",
+      "fr": "L'Espagne se prépare à une éventuelle arrivée massive de migrants",
+      "zh": "西班牙為可能的移民潮做準備",
+      "vocab": "migrants（移民）／frontière（邊境）／désastreuses（災難性的）／enclave（飛地）／isolement（孤立）",
       "time": null
     },
     {
-      "title_zh": "黎巴嫩",
-      "fr": "Au Liban, 800 000 personnes déplacées par la guerre sont rentrées dans leur région d'origine depuis le mois de juin.",
-      "zh": "黎巴嫩戰爭導致八十萬人流離失所，六月以來已有八十萬人返回家鄉。",
-      "vocab": "déplacées（流離失所）／guerre（戰爭）／région（地區）／détruits（毀壞）／retour（返回）",
+      "title_zh": "經濟制裁",
+      "fr": "L'administration américaine a menacé l'Iran d'un isolement économique",
+      "zh": "美國威脅對伊朗實施經濟孤立",
+      "vocab": "isolement（孤立）／économique（經濟的）／sanctions（制裁）／détroit（海峽）／accord（協議）",
       "time": null
     },
     {
-      "title_zh": "乾旱",
-      "fr": "La sécheresse touche presque toute la France et une bonne partie de l'Europe.",
-      "zh": "法國和歐洲大部分地區受到乾旱的影響。",
-      "vocab": "sécheresse（乾旱）／France（法國）／Europe（歐洲）／conséquences（後果）／agriculteurs（農民）",
+      "title_zh": "暗殺陰謀",
+      "fr": "Un ressortissant russe a été arrêté pour tentative d'exécution d'un homme américano-ukrainien",
+      "zh": "俄羅斯人因謀殺美國-烏克蘭人而被捕",
+      "vocab": "ressortissant（公民）／exécution（處決）／américano-ukrainien（美籍烏克蘭人）／attentat（暗殺）／sabotage（破壞）",
       "time": null
     },
     {
-      "title_zh": "以巴衝突",
-      "fr": "À Gaza, deux Palestiniens ont été tués dans deux frappes israéliennes distinctes.",
-      "zh": "加沙地帶發生兩次以色列空襲，造成兩名巴勒斯坦人死亡。",
-      "vocab": "frappes（空襲）／israéliennes（以色列的）／Palestiniens（巴勒斯坦人）／tués（被殺）／Gaza（加沙）",
+      "title_zh": "LGBT節",
+      "fr": "La scène queer célèbre la première édition post-Victor Orban du Zighet Festival",
+      "zh": "酷兒藝術家在Zighet Festival上慶祝",
+      "vocab": "scène（場景）／queer（酷兒）／festival（節日）／discriminée（歧視）／libération（解放）",
       "time": null
     },
     {
-      "title_zh": "英國選舉",
-      "fr": "Au Royaume-Uni, le chef du Parti anti-immigration réforme UK Nigel Farage espère être largement réélu.",
-      "zh": "英國反移民改革黨領袖奈吉爾·法拉奇希望在即將舉行的選舉中贏得大量選票。",
-      "vocab": "Parti（黨）／anti-immigration（反移民）／réforme（改革）／UK（英國）／élection（選舉）",
+      "title_zh": "洪水",
+      "fr": "Au moins cinq morts dans de très fortes pluies près de Tokyo",
+      "zh": "東京近郊大雨至少五人死亡",
+      "vocab": "pluies（雨）／diluviennes（氾濫的）／victimes（受害者）／aéroport（機場）／routine（例行公事）",
       "time": null
     },
     {
-      "title_zh": "足球新聞",
-      "fr": "Fabien Barthès, l'ancien gardien français, champion du monde en 1998, va travailler au côté du nouveau sélectionneur de l'équipe de France.",
-      "zh": "法國前足球守門員法比安·巴特斯將與新任法國國家隊主教練合作。",
-      "vocab": "football（足球）／gardien（守門員）／champion（冠軍）／sélectionneur（主教練）／équipe（隊伍）",
+      "title_zh": "無人機",
+      "fr": "Des avions de l'OTAN ont abattu un drone dans l'espace aérien de la Lettonie",
+      "zh": "北約戰機在拉脫維亞上空擊落無人機",
+      "vocab": "drone（無人機）／espace（空間）／aérien（空中的）／OTAN（北約）／sabotage（破壞）",
       "time": null
     }
   ],
-  "generated_at": "2026-08-14T08:54:30.145Z"
+  "generated_at": "2026-08-15T05:12:16.707Z"
 }
