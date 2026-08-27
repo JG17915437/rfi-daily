@@ -130,11 +130,12 @@ ${transcript.slice(0, 12000)}
   }
 
   const data = await res.json();
-  const text = data.choices?.[0]?.message?.content || "";
+    const text = data.choices?.[0]?.message?.content || "";
   console.log(`   → Groq 回應長度：${text.length} 字元`);
-  const cleaned = text.replace(/^```json\s*/i, "").replace(/```$/m, "").trim();
-  return JSON.parse(cleaned);
-}
+  // 移除 <think>...</think> 思考過程區塊（部分模型會輸出）
+  const noThink = text.replace(/<think>[\s\S]*?<\/think>/gi, "").trim();
+  const cleaned = noThink.replace(/^```json\s*/i, "").replace(/```$/m, "").trim();
+  return JSON.parse(cleaned);}
 
 async function main() {
   const today = new Date().toISOString().slice(0, 10);
