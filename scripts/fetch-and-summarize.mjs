@@ -97,7 +97,7 @@ async function summarizeWithGroq(transcript, episodeTitle) {
       "Authorization": `Bearer ${apiKey}`,
     },
     body: JSON.stringify({
-model: "llama-3.1-8b-instant",temperature: 0.3,
+model: "openai/gpt-oss-20b",temperature: 0.3,
       max_tokens: 4000,
       messages: [
         {
