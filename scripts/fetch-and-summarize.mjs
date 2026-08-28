@@ -97,8 +97,7 @@ async function summarizeWithGroq(transcript, episodeTitle) {
       "Authorization": `Bearer ${apiKey}`,
     },
     body: JSON.stringify({
-      model: "moonshotai/kimi-k2-instruct",
-      temperature: 0.3,
+      model: "moonshotai/kimi-k2-instruct-0905",      temperature: 0.3,
       max_tokens: 4000,
       messages: [
         {
