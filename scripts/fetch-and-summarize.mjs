@@ -97,7 +97,8 @@ async function summarizeWithGroq(transcript, episodeTitle) {
       "Authorization": `Bearer ${apiKey}`,
     },
     body: JSON.stringify({
-model: "openai/gpt-oss-20b",temperature: 0.3,
+      model: "moonshotai/kimi-k2-instruct",
+      temperature: 0.3,
       max_tokens: 4000,
       messages: [
         {
@@ -130,14 +131,16 @@ ${transcript.slice(0, 12000)}
   }
 
   const data = await res.json();
-    const text = data.choices?.[0]?.message?.content || "";
+  // 同時嘗試 content 和 reasoning_content（不同模型位置不同）
+  const text = data.choices?.[0]?.message?.content
+    || data.choices?.[0]?.message?.reasoning_content
+    || "";
   console.log(`   → Groq 回應長度：${text.length} 字元`);
-  // 移除 <think>...</think> 思考過程區塊（部分模型會輸出）
+  // 移除 <think>...</think> 思考過程（部分模型會輸出）
   const noThink = text.replace(/<think>[\s\S]*?<\/think>/gi, "").trim();
   const cleaned = noThink.replace(/^```json\s*/i, "").replace(/```$/m, "").trim();
-  return JSON.parse(cleaned);}
-
-async function main() {
+  return JSON.parse(cleaned);
+}async function main() {
   const today = new Date().toISOString().slice(0, 10);
   console.log(`\n===== RFI 每日更新 v7 (Groq) — ${today} =====`);
 
