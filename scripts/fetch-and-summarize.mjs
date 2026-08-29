@@ -86,9 +86,33 @@ async function transcribeWithLocalWhisper(audioPath, outputDir) {
   return transcript.trim();
 }
 
+async function getGroqModel(apiKey) {
+  // 直接查詢 Groq API 取得當前可用模型，自動選第一個文字生成模型
+  const res = await fetch("https://api.groq.com/openai/v1/models", {
+    headers: { "Authorization": `Bearer ${apiKey}` },
+  });
+  if (!res.ok) throw new Error(`無法取得模型列表 HTTP ${res.status}`);
+  const data = await res.json();
+  // 過濾出文字生成模型（排除 whisper、guard 等）
+  const textModels = data.data.filter(m =>
+    !m.id.includes('whisper') &&
+    !m.id.includes('guard') &&
+    !m.id.includes('safeguard')
+  );
+  console.log(`   → 可用文字模型：${textModels.map(m => m.id).join(', ')}`);
+  // 優先選 kimi 或 minimax，否則選第一個
+  const preferred = textModels.find(m =>
+    m.id.includes('kimi') || m.id.includes('minimax') || m.id.includes('compound')
+  ) || textModels[0];
+  console.log(`   → 選用模型：${preferred.id}`);
+  return preferred.id;
+}
+
 async function summarizeWithGroq(transcript, episodeTitle) {
   const apiKey = process.env.GROQ_API_KEY;
   console.log(`   → API 金鑰前8字元: ${apiKey ? apiKey.slice(0,8) : '(空的)'}`);
+
+  const model = await getGroqModel(apiKey);
 
   const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
     method: "POST",
@@ -97,7 +121,8 @@ async function summarizeWithGroq(transcript, episodeTitle) {
       "Authorization": `Bearer ${apiKey}`,
     },
     body: JSON.stringify({
-model: "minimaxai/minimax-m2.7",temperature: 0.3,
+      model,
+      temperature: 0.3,
       max_tokens: 4000,
       messages: [
         {
@@ -130,12 +155,9 @@ ${transcript.slice(0, 12000)}
   }
 
   const data = await res.json();
-  // 同時嘗試 content 和 reasoning_content（不同模型位置不同）
-  const text = data.choices?.[0]?.message?.content
-    || data.choices?.[0]?.message?.reasoning_content
-    || "";
+  const text = data.choices?.[0]?.message?.content || "";
   console.log(`   → Groq 回應長度：${text.length} 字元`);
-  // 移除 <think>...</think> 思考過程（部分模型會輸出）
+  // 移除 <think>...</think> 思考過程
   const noThink = text.replace(/<think>[\s\S]*?<\/think>/gi, "").trim();
   const cleaned = noThink.replace(/^```json\s*/i, "").replace(/```$/m, "").trim();
   return JSON.parse(cleaned);
