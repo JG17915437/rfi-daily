@@ -1,51 +1,44 @@
 {
-  "date": "2026-08-15",
+  "date": "2026-08-29",
   "source_url": "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/",
-  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202608/journal_francais_facile_16h00_-_16h10_gmt_20260814.mp3?dl=1",
-  "page_title": "Journal en français facile 2026-08-15",
+  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202608/journal_francais_facile_16h00_-_16h10_gmt_20260828.mp3?dl=1",
+  "page_title": "Journal en français facile 2026-08-29",
   "items": [
     {
-      "title_zh": "移民危機",
-      "fr": "L'Espagne se prépare à une éventuelle arrivée massive de migrants",
-      "zh": "西班牙為可能的移民潮做準備",
-      "vocab": "migrants（移民）／frontière（邊境）／désastreuses（災難性的）／enclave（飛地）／isolement（孤立）",
+      "title_zh": "尼泊爾洪災救援",
+      "fr": "Des inondations meurtrières ont fait près de 600 morts au Népal et au Tibet, 2 500 disparus ; plus de 1 400 secouristes sont mobilisés malgré les routes coupées.",
+      "zh": "尼泊爾與西藏發生致命洪水，死亡人數接近600人，失踪約2500人，超過1400名救援人員在道路受阻的情況下投入救援。",
+      "vocab": "inondation（洪水）／déluge（災洪）／secouristes（救援人員）／débris（碎屑）／lac（湖泊）",
       "time": null
     },
     {
-      "title_zh": "經濟制裁",
-      "fr": "L'administration américaine a menacé l'Iran d'un isolement économique",
-      "zh": "美國威脅對伊朗實施經濟孤立",
-      "vocab": "isolement（孤立）／économique（經濟的）／sanctions（制裁）／détroit（海峽）／accord（協議）",
+      "title_zh": "烏克蘭撤離警告",
+      "fr": "À Kershon, les frappes russes intensifient les pannes d’électricité ; le gouverneur ordonne l’évacuation des civils, surtout les personnes âgées.",
+      "zh": "在克爾松，俄羅斯空襲加劇電力中斷，地方長官下令平民撤離，特別是老年人。",
+      "vocab": "frappes（空襲）／évacuer（撤離）／infrastructures（基礎設施）／pannes（停電）／drones（無人機）",
       "time": null
     },
     {
-      "title_zh": "暗殺陰謀",
-      "fr": "Un ressortissant russe a été arrêté pour tentative d'exécution d'un homme américano-ukrainien",
-      "zh": "俄羅斯人因謀殺美國-烏克蘭人而被捕",
-      "vocab": "ressortissant（公民）／exécution（處決）／américano-ukrainien（美籍烏克蘭人）／attentat（暗殺）／sabotage（破壞）",
+      "title_zh": "丹麥賠償決議",
+      "fr": "Le Parlement danois a voté une indemnisation de 40 000 € pour les femmes groenlandaises stérilisées de force entre les années 1960 et 1990.",
+      "zh": "丹麥議會通過對1960至1990年間被強制絕育的格陵蘭女性提供4萬歐元賠償的決議。",
+      "vocab": "indemnisation（賠償）／stérilisation（強制絕育）／parlement（議會）／victimes（受害者）／compensation（補償）",
       "time": null
     },
     {
-      "title_zh": "LGBT節",
-      "fr": "La scène queer célèbre la première édition post-Victor Orban du Zighet Festival",
-      "zh": "酷兒藝術家在Zighet Festival上慶祝",
-      "vocab": "scène（場景）／queer（酷兒）／festival（節日）／discriminée（歧視）／libération（解放）",
+      "title_zh": "印尼防火行動",
+      "fr": "L’Indonésie renforce ses efforts contre les incendies de forêt ; 13 500 personnes ont reçu des soins pour des infections respiratoires et 5  millions de masques distribués.",
+      "zh": "印尼加大對森林火災的防控力度，已有13 500人因呼吸道感染接受治療，並向全國發放了500萬個口罩。",
+      "vocab": "incendies（火災）／masques（口罩）／infections respiratoires（呼吸道感染）／efforts（努力）／distribution（發放）",
       "time": null
     },
     {
-      "title_zh": "洪水",
-      "fr": "Au moins cinq morts dans de très fortes pluies près de Tokyo",
-      "zh": "東京近郊大雨至少五人死亡",
-      "vocab": "pluies（雨）／diluviennes（氾濫的）／victimes（受害者）／aéroport（機場）／routine（例行公事）",
-      "time": null
-    },
-    {
-      "title_zh": "無人機",
-      "fr": "Des avions de l'OTAN ont abattu un drone dans l'espace aérien de la Lettonie",
-      "zh": "北約戰機在拉脫維亞上空擊落無人機",
-      "vocab": "drone（無人機）／espace（空間）／aérien（空中的）／OTAN（北約）／sabotage（破壞）",
+      "title_zh": "冰島公投歐盟",
+      "fr": "Les Islandais voteront demain sur l’adhésion à l’Union européenne ; le scrutin est serré entre partisans de l’Europe et ceux qui veulent rester indépendants.",
+      "zh": "冰島人明天將投票決定是否加入歐盟，投票形勢緊張，支持歐洲與保持獨立的聲音勢均力敵。",
+      "vocab": "référendum（公投）／adhésion（加入）／union européenne（歐盟）／sceptiques（懷疑者）／soutiens（支持者）",
       "time": null
     }
   ],
-  "generated_at": "2026-08-15T05:12:16.707Z"
+  "generated_at": "2026-08-29T02:31:21.570Z"
 }
