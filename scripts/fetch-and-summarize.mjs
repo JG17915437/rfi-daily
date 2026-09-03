@@ -94,11 +94,12 @@ async function getGroqModel(apiKey) {
   if (!res.ok) throw new Error(`無法取得模型列表 HTTP ${res.status}`);
   const data = await res.json();
   // 過濾出文字生成模型（排除 whisper、guard 等）
-  const textModels = data.data.filter(m =>
+    const textModels = data.data.filter(m =>
     !m.id.includes('whisper') &&
     !m.id.includes('guard') &&
-    !m.id.includes('safeguard')
-  );
+    !m.id.includes('safeguard') &&
+    !m.id.includes('compound')   // compound 模型 token 上限太低
+  );  
   console.log(`   → 可用文字模型：${textModels.map(m => m.id).join(', ')}`);
   // 優先選 kimi 或 minimax，否則選第一個
   const preferred = textModels.find(m =>
@@ -142,7 +143,7 @@ async function summarizeWithGroq(transcript, episodeTitle) {
 
 逐字稿：
 ---
-${transcript.slice(0, 12000)}
+${transcript.slice(0, 8000)}
 ---`
         }
       ],
