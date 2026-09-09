@@ -1,44 +1,44 @@
 {
-  "date": "2026-08-29",
+  "date": "2026-09-09",
   "source_url": "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/",
-  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202608/journal_francais_facile_16h00_-_16h10_gmt_20260828.mp3?dl=1",
-  "page_title": "Journal en français facile 2026-08-29",
+  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202609/journal_francais_facile_16h00_-_16h10_gmt_20260908.mp3?dl=1",
+  "page_title": "Journal en français facile 2026-09-09",
   "items": [
     {
-      "title_zh": "尼泊爾洪災",
-      "fr": "Une crue dévastatrice a frappé le Népal et le Tibet chinois mercredi, faisant près de 600 morts et 2 500 disparus. Un lac formé par les débris menace de déborder, aggravant le risque d’inondations supplémentaires. Plus de 1 400 secouristes, drones et chiens de recherche sont mobilisés, mais l’accès reste difficile à cause de l’altitude et des routes coupées.",
-      "zh": "一場毀滅性的洪水於週三襲擊尼泊爾與中國西藏，造成近600人死亡、2500人失蹤。由碎屑形成的湖泊可能溢出，增加再次洪水的風險。超過1400名救援人員、無人機與搜救犬投入救援，但因海拔高、道路中斷，行動仍相當困難。",
-      "vocab": "crue（洪水）／déverser（傾瀉）／secouristes（救援人員）／drones（無人機）／débris（碎屑}",
+      "title_zh": "以色列殖民制裁",
+      "fr": "Douze pays, dont le Royaume‑Uni, la France, le Canada, l’Espagne et la Norvège, ont décidé d’interdire l’achat de produits provenant des colonies israéliennes en six jordanie. Israël a réagi en fermant le consulat britannique à Jérusalem et en interdisant l’entrée de plusieurs personnalités britanniques. Les sanctions visent spécifiquement fruits et légumes, afin de mettre fin à l’expansion illégale.",
+      "zh": "十二个国家，包括英国、法国、加拿大、西班牙和挪威，决定禁止购买来自以色列在西岸殖民地的产品。以色列回应，关闭了耶路撒冷的英国领事馆，并禁止多名英国人士入境。制裁专门针对水果和蔬菜，旨在制止非法扩张。",
+      "vocab": "colonies israéliennes（以色列殖民地）／sanctions（制裁）／six jordanie（西岸）／consulat（领事馆）／interdire（禁止）",
       "time": null
     },
     {
-      "title_zh": "烏克蘭撤離",
-      "fr": "Dans la ville ukrainienne de Kershon, les frappes russes sur les infrastructures s’intensifient, provoquant des coupures d’électricité et de chauffage. Le gouverneur a appelé les habitants, surtout les familles et les personnes âgées, à évacuer avant l’hiver. Depuis juillet, plus de 170 bombes guidées et 1 700 drones kamikazes ont été largués contre la population civile.",
-      "zh": "在烏克蘭城市克爾松，俄羅斯對基礎設施的空襲愈發激烈，導致電力與暖氣中斷。州長呼籲居民，特別是家庭和老人，在冬季來臨前撤離。自七月以來，已有超過170枚導彈與1700架自殺式無人機投向平民。",
-      "vocab": "frappes（空襲）／infrastructures（基礎設施）／évacuer（撤離）／coupures（停電）／kamikazes（自殺式無人機}",
+      "title_zh": "乌克兰谈判",
+      "fr": "Le président ukrainien Volodymyr Zelensky souhaite relancer les négociations avec la Russie et les États‑Unis en septembre, après la visite de deux représentants de Donald Trump à Kiev et Moscou. Malgré l’arrivée de ces diplomates, la Russie a de nouveau bombardé l’Ukraine, accentuant l’urgence de trouver une solution pacifique.",
+      "zh": "乌克兰总统泽连斯基希望在九月重新启动与俄罗斯和美国的谈判，继两名特朗普代表访问基辅和莫斯科后。尽管这些外交官到来，俄罗斯仍再次轰炸乌克兰，凸显寻找和平解决方案的紧迫性。",
+      "vocab": "négociations（谈判）／russie（俄罗斯）／président ukrainien（乌克兰总统）／bombardé（轰炸）／émeutes（骚乱）",
       "time": null
     },
     {
-      "title_zh": "格陵蘭賠償",
-      "fr": "Le Parlement danois a adopté une loi d’indemnisation pour les femmes groenlandaises victimes d’une campagne de stérilisation forcée entre les années 1960 et 1990. Chaque survivante recevra 40 000 euros. Le texte a été voté à la majorité, avec une centaine de voix pour et une dizaine contre, marquant une reconnaissance historique du scandale.",
-      "zh": "丹麥議會通過了一項賠償法案，補償1960至1990年間遭受強制絕育的格陵蘭女性。每位倖存者將獲得40,000歐元。法案以壓倒性多數通過，約有百票贊成、十票反對，象徵對這一歷史醜聞的正式承認。",
-      "vocab": "indemnisation（賠償）／stérilisation（絕育）／survivante（倖存者）／législation（立法）／scandale（醜聞}",
+      "title_zh": "肯尼亚外商驱逐",
+      "fr": "Au Kenya, le président William Ruto a d’abord annoncé l’expulsion des commerçants étrangers sans permis, puis a offert un délai de 90 jours pour se régulariser. Cette annonce a provoqué la panique parmi les ressortissants, qui se sont précipités à l’ambassade de Nairobi pour tenter de rentrer rapidement.",
+      "zh": "在肯尼亚，威廉·鲁托总统最初宣布驱逐无工作许可的外国商人，随后提供90天的时间以便合法化。此举引发了外籍人士的恐慌，他们急忙前往内罗毕大使馆，试图尽快返回。",
+      "vocab": "expulsion（驱逐）／commerçants étrangers（外商）／permis de travail（工作许可）／panique（恐慌）／Nairobi（内罗毕）",
       "time": null
     },
     {
-      "title_zh": "印尼森林火災",
-      "fr": "L’Indonésie intensifie ses efforts pour combattre les incendies de forêt qui génèrent d’importantes fumées, affectant plus de 5 millions de personnes. Cet été, 13 500 patients ont été traités pour des infections respiratoires et plus de 5 millions de masques distribués. Plusieurs écoles ont dû fermer, tandis que le ministère de la santé poursuit la lutte contre les brûlures.",
-      "zh": "印尼加大力度撲滅森林大火，濃煙影響逾500萬人。今夏已有13,500名患者因呼吸道感染就醫，並發放超過500萬個口罩。多所學校被迫停課，衛生部持續對抗火災帶來的健康危機。",
-      "vocab": "incendies（火災）／fumées（煙霧）／infections respiratoires（呼吸道感染）／masques（口罩）／fermer（關閉）}",
+      "title_zh": "埃菲尔铁塔重开",
+      "fr": "La Tour Eiffel a rouvert après une journée de mobilisation du personnel, qui protestait contre la décision de réserver l’accès à un groupe hindou sans inclure les femmes. Le maire de Paris a annoncé deux enquêtes pour comprendre les circonstances et la situation reste controversée.",
+      "zh": "埃菲尔铁塔在员工动员一天后重新开放，员工抗议未将女性纳入印度教团体的参观安排。巴黎市长宣布将展开两项调查以了解情况，事态仍备受争议。",
+      "vocab": "mobilisation（动员）／tour Eiffel（埃菲尔铁塔）／groupe hindou（印度教团体）／exclusion（排除）／enquête（调查）",
       "time": null
     },
     {
-      "title_zh": "冰島歐盟公投",
-      "fr": "Les Islandais se prononceront demain par référendum sur l’adhésion à l’Union européenne. Le scrutin est serré : les sondages montrent une société divisée entre partisans d’une intégration européenne et ceux qui redoutent les contraintes. Le vote intervient alors que le président américain Trump a évoqué la prise du Groenland, ravivant les inquiétudes sécuritaires.",
-      "zh": "冰島民眾將於明日舉行公投，決定是否加入歐盟。民調顯示社會分歧明顯，支持歐洲一體化者與擔憂約束的民眾勢均力敵。投票同時發生在美國總統特朗普提及奪取格陵蘭的言論後，安全顧慮再度升溫。",
-      "vocab": "référendum（公投）／adhésion（加入）／sondages（民調）／contraintes（約束）／souverain（主權)",
+      "title_zh": "法国学生成绩",
+      "fr": "Les résultats de l’enquête PISA montrent que les élèves français obtiennent les scores les plus faibles jamais enregistrés, avec une baisse de 16 points en mathématiques et de 4 points en sciences. Les autorités considèrent ces chiffres comme alarmants, soulignant l’impact des réseaux sociaux sur les performances scolaires.",
+      "zh": "PISA调查显示，法国学生的成绩创历史新低，数学下降16分，科学下降4分。政府认为这些数字令人担忧，强调社交网络对学习成绩的影响。",
+      "vocab": "PISA（PISA）／scor（分数）／mathématiques（数学）／sciences（科学）／réseaux sociaux（社交网络）",
       "time": null
     }
   ],
-  "generated_at": "2026-08-29T10:49:15.548Z"
+  "generated_at": "2026-09-09T08:41:22.049Z"
 }
