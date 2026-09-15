@@ -1,44 +1,51 @@
 {
-  "date": "2026-09-09",
+  "date": "2026-09-15",
   "source_url": "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/",
-  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202609/journal_francais_facile_16h00_-_16h10_gmt_20260908.mp3?dl=1",
-  "page_title": "Journal en français facile 2026-09-09",
+  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202609/journal_francais_facile_16h00_-_16h10_gmt_20260914.mp3?dl=1",
+  "page_title": "Journal en français facile 2026-09-15",
   "items": [
     {
-      "title_zh": "以色列殖民制裁",
-      "fr": "Douze pays, dont le Royaume‑Uni, la France, le Canada, l’Espagne et la Norvège, ont décidé d’interdire l’achat de produits provenant des colonies israéliennes en six jordanie. Israël a réagi en fermant le consulat britannique à Jérusalem et en interdisant l’entrée de plusieurs personnalités britanniques. Les sanctions visent spécifiquement fruits et légumes, afin de mettre fin à l’expansion illégale.",
-      "zh": "十二个国家，包括英国、法国、加拿大、西班牙和挪威，决定禁止购买来自以色列在西岸殖民地的产品。以色列回应，关闭了耶路撒冷的英国领事馆，并禁止多名英国人士入境。制裁专门针对水果和蔬菜，旨在制止非法扩张。",
-      "vocab": "colonies israéliennes（以色列殖民地）／sanctions（制裁）／six jordanie（西岸）／consulat（领事馆）／interdire（禁止）",
+      "title_zh": "俄軍襲擊烏克列車",
+      "fr": "Une frappe russe sur un train près de la frontière polonaise a provoqué des condamnations européennes. La haute représentante de l'UE, Kaja Kallas, affirme que Moscou cherche à intimider les alliés de l'Ukraine. Elle appelle à la fermeté pour éviter la soumission de Kyiv, tandis que les attaques ciblent aussi les stations-service.",
+      "zh": "俄軍襲擊靠近波蘭邊境的烏克列車，引發歐洲各國譴責。歐盟外交政策高級代表卡拉斯表示，莫斯科意圖威嚇烏克蘭的盟友。她呼籲保持堅定立場，以免基輔屈服，同時指出俄軍也頻繁攻擊加油站。",
+      "vocab": "frappe（打擊）／frontière（邊境）／intimider（威嚇）／alliés（盟友）／fermeté（堅定）",
       "time": null
     },
     {
-      "title_zh": "乌克兰谈判",
-      "fr": "Le président ukrainien Volodymyr Zelensky souhaite relancer les négociations avec la Russie et les États‑Unis en septembre, après la visite de deux représentants de Donald Trump à Kiev et Moscou. Malgré l’arrivée de ces diplomates, la Russie a de nouveau bombardé l’Ukraine, accentuant l’urgence de trouver une solution pacifique.",
-      "zh": "乌克兰总统泽连斯基希望在九月重新启动与俄罗斯和美国的谈判，继两名特朗普代表访问基辅和莫斯科后。尽管这些外交官到来，俄罗斯仍再次轰炸乌克兰，凸显寻找和平解决方案的紧迫性。",
-      "vocab": "négociations（谈判）／russie（俄罗斯）／président ukrainien（乌克兰总统）／bombardé（轰炸）／émeutes（骚乱）",
+      "title_zh": "加油站防空措施強化",
+      "fr": "À Kiev, les employés de stations-service renforcent leurs mesures de sécurité face aux drones russes. Ils doivent évacuer en moins d'une minute lors des alertes. Le Premier ministre ukrainien annonce un système d'alerte automatisé pour protéger ces infrastructures vitales contre les frappes intensifiées.",
+      "zh": "在基輔，加油站員工面對俄軍無人機威脅，加強安全措施。空襲警報響起時，他們必須在一分鐘內撤離。烏克蘭總理宣布將建立自動化警報系統，以保護這些關鍵基礎設施免受加劇的襲擊。",
+      "vocab": "évacuer（撤離）／alerte（警報）／automatisé（自動化的）／infrastructures（基礎設施）／vitaux（至關重要的）",
       "time": null
     },
     {
-      "title_zh": "肯尼亚外商驱逐",
-      "fr": "Au Kenya, le président William Ruto a d’abord annoncé l’expulsion des commerçants étrangers sans permis, puis a offert un délai de 90 jours pour se régulariser. Cette annonce a provoqué la panique parmi les ressortissants, qui se sont précipités à l’ambassade de Nairobi pour tenter de rentrer rapidement.",
-      "zh": "在肯尼亚，威廉·鲁托总统最初宣布驱逐无工作许可的外国商人，随后提供90天的时间以便合法化。此举引发了外籍人士的恐慌，他们急忙前往内罗毕大使馆，试图尽快返回。",
-      "vocab": "expulsion（驱逐）／commerçants étrangers（外商）／permis de travail（工作许可）／panique（恐慌）／Nairobi（内罗毕）",
+      "title_zh": "阿馬兩國關係回暖",
+      "fr": "Le Premier ministre algérien est en visite officielle au Mali pour consolider le rapprochement entre les deux pays voisins. Après plus d'un an de tensions, Alger et Bamako cherchent à rétablir un dialogue direct afin de tourner la page et améliorer leurs relations diplomatiques.",
+      "zh": "阿爾及利亞總理對馬里進行官方訪問，旨在鞏固兩國鄰邦間的關係。在經歷超過一年的緊張局勢後，阿爾及爾與巴馬科尋求恢復直接對話，以翻過過去的一頁並改善雙邊外交關係。",
+      "vocab": "rapprochement（接近）／tensions（緊張）／dialogue（對話）／consolider（鞏固）／diplomatiques（外交的）",
       "time": null
     },
     {
-      "title_zh": "埃菲尔铁塔重开",
-      "fr": "La Tour Eiffel a rouvert après une journée de mobilisation du personnel, qui protestait contre la décision de réserver l’accès à un groupe hindou sans inclure les femmes. Le maire de Paris a annoncé deux enquêtes pour comprendre les circonstances et la situation reste controversée.",
-      "zh": "埃菲尔铁塔在员工动员一天后重新开放，员工抗议未将女性纳入印度教团体的参观安排。巴黎市长宣布将展开两项调查以了解情况，事态仍备受争议。",
-      "vocab": "mobilisation（动员）／tour Eiffel（埃菲尔铁塔）／groupe hindou（印度教团体）／exclusion（排除）／enquête（调查）",
+      "title_zh": "人權組織指控以色列",
+      "fr": "L'ONG israélienne B'Tselem accuse Israël de vouloir éliminer le peuple palestinien. Son rapport cite l'apartheid, la violence et le nettoyage ethnique comme mécanismes clés. L'organisation dénonce la saisie de terres et l'isolement économique, tandis que le ministère israélien reste silencieux.",
+      "zh": "以色列人權組織B'Tselem指控以色列意圖消滅巴勒斯坦人民。其報告指出種族隔離、暴力及種族清洗是關鍵機制。該組織譴責土地沒收與經濟孤立，而以色列外交部目前保持沉默。",
+      "vocab": "éliminer（消滅）／apartheid（種族隔離）／mécanismes（機制）／saisie（沒收）／silencieux（沉默的）",
       "time": null
     },
     {
-      "title_zh": "法国学生成绩",
-      "fr": "Les résultats de l’enquête PISA montrent que les élèves français obtiennent les scores les plus faibles jamais enregistrés, avec une baisse de 16 points en mathématiques et de 4 points en sciences. Les autorités considèrent ces chiffres comme alarmants, soulignant l’impact des réseaux sociaux sur les performances scolaires.",
-      "zh": "PISA调查显示，法国学生的成绩创历史新低，数学下降16分，科学下降4分。政府认为这些数字令人担忧，强调社交网络对学习成绩的影响。",
-      "vocab": "PISA（PISA）／scor（分数）／mathématiques（数学）／sciences（科学）／réseaux sociaux（社交网络）",
+      "title_zh": "埃特納火山噴發",
+      "fr": "L'Etna, plus haut volcan actif d'Europe, crache de la lave et des cendres depuis plusieurs jours. Cette éruption spectaculaire a contraint la suspension des vols à l'aéroport de Catane en Sicile, affectant les arrivées et les départs de ce cinquième aéroport italien par trafic.",
+      "zh": "歐洲最高活躍火山埃特納火山已連續數日噴發熔岩與火山灰。這場壯觀的噴發迫使西西里島卡塔尼亞機場暫停航班，影響了該機場（意大利第五大繁忙機場）的進出港航班。",
+      "vocab": "volcan（火山）／lave（熔岩）／cendres（火山灰）／suspension（暫停）／affectant（影響）",
+      "time": null
+    },
+    {
+      "title_zh": "法廣員工罷工抗議",
+      "fr": "Les salariés de Radio France sont en grève pour protester contre l'arrivée de Charles Sapin, responsable du magazine d'extrême droite Valeurs Actuelles. Les syndicats exigent son retrait, dénonçant la banalisation du racisme, tandis que la direction invoque le pluralisme.",
+      "zh": "法國廣播公司員工罷工，抗議極右翼雜誌《當代價值》負責人夏爾·薩潘加入節目。工會要求撤換他，譴責這將使種族主義正常化，而管理層則以多元論為由辯護。",
+      "vocab": "grève（罷工）／protester（抗議）／extrême droite（極右翼）／banalisation（正常化）／pluralisme（多元論）",
       "time": null
     }
   ],
-  "generated_at": "2026-09-09T08:41:22.049Z"
+  "generated_at": "2026-09-15T09:18:05.388Z"
 }
