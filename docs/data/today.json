@@ -1,51 +1,44 @@
 {
-  "date": "2026-09-15",
+  "date": "2026-09-16",
   "source_url": "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/",
-  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202609/journal_francais_facile_16h00_-_16h10_gmt_20260914.mp3?dl=1",
-  "page_title": "Journal en français facile 2026-09-15",
+  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202609/journal_francais_facile_16h00_-_16h10_gmt_20260915.mp3?dl=1",
+  "page_title": "Journal en français facile 2026-09-16",
   "items": [
     {
-      "title_zh": "俄軍襲擊烏克列車",
-      "fr": "Une frappe russe sur un train près de la frontière polonaise a provoqué des condamnations européennes. La haute représentante de l'UE, Kaja Kallas, affirme que Moscou cherche à intimider les alliés de l'Ukraine. Elle appelle à la fermeté pour éviter la soumission de Kyiv, tandis que les attaques ciblent aussi les stations-service.",
-      "zh": "俄軍襲擊靠近波蘭邊境的烏克列車，引發歐洲各國譴責。歐盟外交政策高級代表卡拉斯表示，莫斯科意圖威嚇烏克蘭的盟友。她呼籲保持堅定立場，以免基輔屈服，同時指出俄軍也頻繁攻擊加油站。",
-      "vocab": "frappe（打擊）／frontière（邊境）／intimider（威嚇）／alliés（盟友）／fermeté（堅定）",
+      "title_zh": "也門戰爭流離",
+      "fr": "Selon l’ONU, cent mille personnes ont dû fuir leurs foyers au Yémen en quinze jours, suite à la recrudescence des combats depuis le début septembre. Les rebelles, après avoir conquis la capitale Sanaa et le port d’Odaïda, avancent maintenant vers l’est, ciblant la riche région de Marib où se trouvent d’importants gisements de gaz et de pétrole.",
+      "zh": "根據聯合國資料，過去十五天內有十萬名也門男女老少因戰事升溫被迫離開家園。叛軍在奪取首都薩那與奧代達港後，現在向東推進，目標是富含天然氣與石油的馬里卜地區。",
+      "vocab": "ONU（聯合國）／rebelles（叛軍）／capitale（首都）／gisements（礦床）／recrudescence（激增）",
       "time": null
     },
     {
-      "title_zh": "加油站防空措施強化",
-      "fr": "À Kiev, les employés de stations-service renforcent leurs mesures de sécurité face aux drones russes. Ils doivent évacuer en moins d'une minute lors des alertes. Le Premier ministre ukrainien annonce un système d'alerte automatisé pour protéger ces infrastructures vitales contre les frappes intensifiées.",
-      "zh": "在基輔，加油站員工面對俄軍無人機威脅，加強安全措施。空襲警報響起時，他們必須在一分鐘內撤離。烏克蘭總理宣布將建立自動化警報系統，以保護這些關鍵基礎設施免受加劇的襲擊。",
-      "vocab": "évacuer（撤離）／alerte（警報）／automatisé（自動化的）／infrastructures（基礎設施）／vitaux（至關重要的）",
+      "title_zh": "剛果示威衝突",
+      "fr": "Dans la capitale congolaise, Kinshasa, des affrontements violents ont éclaté cet après‑midi entre partisans de l’opposition et militants pro‑gouvernementaux. La dispute porte sur un projet de révision constitutionnelle jugé controversé. Des gaz lacrymogènes ont été déployés par la police, et des tensions similaires ont été signalées dans d’autres grandes villes du pays.",
+      "zh": "在剛果首都金沙薩，今天下午反對派支持者與親政府激進分子發生激烈衝突，爭議焦點是備受爭議的憲法修訂計畫。警方使用催淚瓦斯，其他大城市亦出現類似緊張局勢。",
+      "vocab": "affrontements（衝突）／lacrymogènes（催淚瓦斯）／révision（修訂）／constitutionnelle（憲法的）／militants（激進分子）",
       "time": null
     },
     {
-      "title_zh": "阿馬兩國關係回暖",
-      "fr": "Le Premier ministre algérien est en visite officielle au Mali pour consolider le rapprochement entre les deux pays voisins. Après plus d'un an de tensions, Alger et Bamako cherchent à rétablir un dialogue direct afin de tourner la page et améliorer leurs relations diplomatiques.",
-      "zh": "阿爾及利亞總理對馬里進行官方訪問，旨在鞏固兩國鄰邦間的關係。在經歷超過一年的緊張局勢後，阿爾及爾與巴馬科尋求恢復直接對話，以翻過過去的一頁並改善雙邊外交關係。",
-      "vocab": "rapprochement（接近）／tensions（緊張）／dialogue（對話）／consolider（鞏固）／diplomatiques（外交的）",
+      "title_zh": "俄AI宣傳案",
+      "fr": "Une enquête révèle que l’intelligence artificielle Claude, développée par l’entreprise américaine Entropic, a été détournée par un agent lié aux services de renseignement russes en République centrafricaine. L’outil a servi à rédiger des messages de propagande diffusés via la radio Engosongo, puis repris par les médias nationaux, tout en générant des rapports et des listes de surveillance contre des opposants politiques.",
+      "zh": "調查顯示，美國Entropic公司開發的人工智慧Claude被俄羅斯情報部門在中非共和國的特工挪用，用於撰寫宣傳訊息，經由Engosongo電台播出，後被國家媒體轉播，同時產生針對政治反對者的監控名單與報告。",
+      "vocab": "intelligence artificielle（人工智慧）／propagande（宣傳）／détournée（挪用）／agent（特工）／surveillance（監控）",
       "time": null
     },
     {
-      "title_zh": "人權組織指控以色列",
-      "fr": "L'ONG israélienne B'Tselem accuse Israël de vouloir éliminer le peuple palestinien. Son rapport cite l'apartheid, la violence et le nettoyage ethnique comme mécanismes clés. L'organisation dénonce la saisie de terres et l'isolement économique, tandis que le ministère israélien reste silencieux.",
-      "zh": "以色列人權組織B'Tselem指控以色列意圖消滅巴勒斯坦人民。其報告指出種族隔離、暴力及種族清洗是關鍵機制。該組織譴責土地沒收與經濟孤立，而以色列外交部目前保持沉默。",
-      "vocab": "éliminer（消滅）／apartheid（種族隔離）／mécanismes（機制）／saisie（沒收）／silencieux（沉默的）",
+      "title_zh": "肯亞舉辦世錦賽",
+      "fr": "Le Kenya a été choisi pour accueillir les championnats du monde d’athlétisme en 2029, marquant la première fois que cet événement majeur se déroule sur le continent africain. Le président William Ruto a annoncé que les compétitions se tiendront à Nairobi, avec l’objectif de promouvoir le sport et de stimuler le tourisme et les infrastructures locales.",
+      "zh": "肯亞被選為2029年世界田徑錦標賽的主辦國，這是該項大型賽事首次在非洲大陸舉行。總統威廉·魯托宣布比賽將在內羅畢舉行，旨在促進體育發展、帶動旅遊及提升當地基礎建設。",
+      "vocab": "championnats（錦標賽）／athlétisme（田徑）／continent（大陸）／promouvoir（促進）／infrastructures（基礎建設）",
       "time": null
     },
     {
-      "title_zh": "埃特納火山噴發",
-      "fr": "L'Etna, plus haut volcan actif d'Europe, crache de la lave et des cendres depuis plusieurs jours. Cette éruption spectaculaire a contraint la suspension des vols à l'aéroport de Catane en Sicile, affectant les arrivées et les départs de ce cinquième aéroport italien par trafic.",
-      "zh": "歐洲最高活躍火山埃特納火山已連續數日噴發熔岩與火山灰。這場壯觀的噴發迫使西西里島卡塔尼亞機場暫停航班，影響了該機場（意大利第五大繁忙機場）的進出港航班。",
-      "vocab": "volcan（火山）／lave（熔岩）／cendres（火山灰）／suspension（暫停）／affectant（影響）",
-      "time": null
-    },
-    {
-      "title_zh": "法廣員工罷工抗議",
-      "fr": "Les salariés de Radio France sont en grève pour protester contre l'arrivée de Charles Sapin, responsable du magazine d'extrême droite Valeurs Actuelles. Les syndicats exigent son retrait, dénonçant la banalisation du racisme, tandis que la direction invoque le pluralisme.",
-      "zh": "法國廣播公司員工罷工，抗議極右翼雜誌《當代價值》負責人夏爾·薩潘加入節目。工會要求撤換他，譴責這將使種族主義正常化，而管理層則以多元論為由辯護。",
-      "vocab": "grève（罷工）／protester（抗議）／extrême droite（極右翼）／banalisation（正常化）／pluralisme（多元論）",
+      "title_zh": "法國氣候集會",
+      "fr": "Environ cinquante associations et organisations ont appelé à un rassemblement ce soir devant le ministère de l’Économie à Paris, réclamant davantage de moyens pour lutter contre le réchauffement climatique. Parmi les participants figurent étudiants, enseignants, pompiers, médecins et infirmiers, qui soulignent l’impact des vagues de chaleur sur la santé des patients chroniques et la nécessité d’une action urgente.",
+      "zh": "約有五十個協會與組織呼籲今晚在巴黎經濟部前集合，要求加大資源以對抗氣候變暖。參與者包括學生、教師、消防員、醫師與護理師，他們強調熱浪對慢性病患者健康的影響，並呼籲緊急行動。",
+      "vocab": "rassemblement（集會）／réchauffement climatique（氣候變暖）／moyens（資源）／impact（影響）／urgence（緊急）",
       "time": null
     }
   ],
-  "generated_at": "2026-09-15T09:18:05.388Z"
+  "generated_at": "2026-09-16T09:09:58.994Z"
 }
