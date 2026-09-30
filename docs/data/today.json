@@ -1,44 +1,44 @@
 {
-  "date": "2026-09-16",
+  "date": "2026-09-30",
   "source_url": "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/",
-  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202609/journal_francais_facile_16h00_-_16h10_gmt_20260915.mp3?dl=1",
-  "page_title": "Journal en français facile 2026-09-16",
+  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202609/journal_francais_facile_16h00_-_16h10_gmt_20260929.mp3?dl=1",
+  "page_title": "Journal en français facile 2026-09-30",
   "items": [
     {
-      "title_zh": "也門戰爭流離",
-      "fr": "Selon l’ONU, cent mille personnes ont dû fuir leurs foyers au Yémen en quinze jours, suite à la recrudescence des combats depuis le début septembre. Les rebelles, après avoir conquis la capitale Sanaa et le port d’Odaïda, avancent maintenant vers l’est, ciblant la riche région de Marib où se trouvent d’importants gisements de gaz et de pétrole.",
-      "zh": "根據聯合國資料，過去十五天內有十萬名也門男女老少因戰事升溫被迫離開家園。叛軍在奪取首都薩那與奧代達港後，現在向東推進，目標是富含天然氣與石油的馬里卜地區。",
-      "vocab": "ONU（聯合國）／rebelles（叛軍）／capitale（首都）／gisements（礦床）／recrudescence（激增）",
+      "title_zh": "西班牙住房危機",
+      "fr": "Face à la crise du logement en Espagne, le gouvernement de Pedro Sánchez propose des décrets pour protéger les locataires. Ces mesures visent à prolonger les protections contre les expulsions, réglementer les locations saisonnières et limiter les achats par des fonds d'investissement. L'opposition rejette ces propositions, tandis que les manifestants réclament des loyers plus abordables et la fin des expulsions sans relogement.",
+      "zh": "面對西班牙的住房危機，佩德羅·桑切斯政府提出法令以保護租客。這些措施旨在延長對驅逐的保護、規範短期租賃並限制投資基金的購買。反對派拒絕這些提案，而示威者則要求更合理的租金及結束無安置的驅逐。",
+      "vocab": "logement（住房）／expulsion（驅逐）／loyer（租金）／décret（法令）",
       "time": null
     },
     {
-      "title_zh": "剛果示威衝突",
-      "fr": "Dans la capitale congolaise, Kinshasa, des affrontements violents ont éclaté cet après‑midi entre partisans de l’opposition et militants pro‑gouvernementaux. La dispute porte sur un projet de révision constitutionnelle jugé controversé. Des gaz lacrymogènes ont été déployés par la police, et des tensions similaires ont été signalées dans d’autres grandes villes du pays.",
-      "zh": "在剛果首都金沙薩，今天下午反對派支持者與親政府激進分子發生激烈衝突，爭議焦點是備受爭議的憲法修訂計畫。警方使用催淚瓦斯，其他大城市亦出現類似緊張局勢。",
-      "vocab": "affrontements（衝突）／lacrymogènes（催淚瓦斯）／révision（修訂）／constitutionnelle（憲法的）／militants（激進分子）",
+      "title_zh": "愛沙尼亞指控俄",
+      "fr": "L'Estonia accuse la Russie d'être responsable d'un incendie criminel sur son territoire, ciblant une entreprise de fabrication de drones. Le Premier ministre affirme que cette conclusion repose sur les informations de ses propres services de renseignement. Moscou rejette ces accusations, les qualifiant d'infondées, tandis que Tallinn maintient que les services de sécurité russes ont organisé cette mise à feu.",
+      "zh": "愛沙尼亞指控俄羅斯對其境內一起針對無人機製造企業的縱火案負責。總理表示此結論基於其情報機構的資訊。莫斯科拒絕這些指控，稱其無根據，而塔林則堅持認為是俄羅斯安全部門組織了這場縱火。",
+      "vocab": "incendie（火災）／drones（無人機）／accusations（指控）／infondées（無根據的）",
       "time": null
     },
     {
-      "title_zh": "俄AI宣傳案",
-      "fr": "Une enquête révèle que l’intelligence artificielle Claude, développée par l’entreprise américaine Entropic, a été détournée par un agent lié aux services de renseignement russes en République centrafricaine. L’outil a servi à rédiger des messages de propagande diffusés via la radio Engosongo, puis repris par les médias nationaux, tout en générant des rapports et des listes de surveillance contre des opposants politiques.",
-      "zh": "調查顯示，美國Entropic公司開發的人工智慧Claude被俄羅斯情報部門在中非共和國的特工挪用，用於撰寫宣傳訊息，經由Engosongo電台播出，後被國家媒體轉播，同時產生針對政治反對者的監控名單與報告。",
-      "vocab": "intelligence artificielle（人工智慧）／propagande（宣傳）／détournée（挪用）／agent（特工）／surveillance（監控）",
+      "title_zh": "海地聯合國任務",
+      "fr": "Le Conseil de sécurité de l'ONU a décidé de prolonger de six mois la mission chargée de lutter contre les gangs en Haïti, jusqu'au 31 mars 2027. Les Nations Unies demandent également une meilleure protection des enfants recrutés par les groupes armés et appellent à améliorer la sécurité pour permettre l'organisation d'élections libres et régulières dans le pays.",
+      "zh": "聯合國安理會決定將海地打擊幫派的任務延長六個月，至2027年3月31日止。聯合國還要求更好地保護被武裝團體招募的兒童，並呼籲改善安全狀況，以確保該國能舉行自由且定期的選舉。",
+      "vocab": "prolonger（延長）／gangs（幫派）／recrutés（招募的）／élections（選舉）",
       "time": null
     },
     {
-      "title_zh": "肯亞舉辦世錦賽",
-      "fr": "Le Kenya a été choisi pour accueillir les championnats du monde d’athlétisme en 2029, marquant la première fois que cet événement majeur se déroule sur le continent africain. Le président William Ruto a annoncé que les compétitions se tiendront à Nairobi, avec l’objectif de promouvoir le sport et de stimuler le tourisme et les infrastructures locales.",
-      "zh": "肯亞被選為2029年世界田徑錦標賽的主辦國，這是該項大型賽事首次在非洲大陸舉行。總統威廉·魯托宣布比賽將在內羅畢舉行，旨在促進體育發展、帶動旅遊及提升當地基礎建設。",
-      "vocab": "championnats（錦標賽）／athlétisme（田徑）／continent（大陸）／promouvoir（促進）／infrastructures（基礎建設）",
+      "title_zh": "泰國洪災救援",
+      "fr": "Au moins 23 personnes sont mortes dans les inondations qui frappent la Thaïlande. À Bangkok, bien que les pluies aient cessé, plusieurs quartiers restent sous les eaux. L'armée et des bénévoles distribuent des repas et de l'aide aux sinistrés. Les dommages économiques sont estimés à 180 millions d'euros, et les autorités s'inquiètent de l'intensité croissante de ces catastrophes.",
+      "zh": "泰國洪災已造成至少23人死亡。曼谷雖已停雨，但多個社區仍被淹沒。軍隊與志願者正向災民分發食物和援助。經濟損失估計達1.8億歐元，當局擔憂此類災難的強度日益增加。",
+      "vocab": "inondations（洪水）／sinistrés（災民）／bénévoles（志願者）／dommages（損失）",
       "time": null
     },
     {
-      "title_zh": "法國氣候集會",
-      "fr": "Environ cinquante associations et organisations ont appelé à un rassemblement ce soir devant le ministère de l’Économie à Paris, réclamant davantage de moyens pour lutter contre le réchauffement climatique. Parmi les participants figurent étudiants, enseignants, pompiers, médecins et infirmiers, qui soulignent l’impact des vagues de chaleur sur la santé des patients chroniques et la nécessité d’une action urgente.",
-      "zh": "約有五十個協會與組織呼籲今晚在巴黎經濟部前集合，要求加大資源以對抗氣候變暖。參與者包括學生、教師、消防員、醫師與護理師，他們強調熱浪對慢性病患者健康的影響，並呼籲緊急行動。",
-      "vocab": "rassemblement（集會）／réchauffement climatique（氣候變暖）／moyens（資源）／impact（影響）／urgence（緊急）",
+      "title_zh": "法國公務員罷工",
+      "fr": "Plus de 300 000 fonctionnaires ont manifesté en France pour exiger de meilleurs salaires et plus de moyens. Cette grève s'accompagne d'une mobilisation des lycéens qui bloquent des établissements scolaires. Les élèves réclament des classes moins chargées et de meilleures conditions d'étude, tandis que le gouvernement prépare un nouveau budget.",
+      "zh": "超過30萬名法國公務員示威，要求提高薪資和增加資源。此次罷工伴隨著高中生封鎖學校的行動。學生要求減少班級人數並改善學習條件，而政府正準備新的預算案。",
+      "vocab": "fonctionnaires（公務員）／manifestants（示威者）／salaires（薪資）／lycéens（高中生）",
       "time": null
     }
   ],
-  "generated_at": "2026-09-16T09:09:58.994Z"
+  "generated_at": "2026-09-30T10:18:57.738Z"
 }
