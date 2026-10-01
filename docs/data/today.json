@@ -1,44 +1,37 @@
 {
-  "date": "2026-09-30",
+  "date": "2026-10-01",
   "source_url": "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/",
-  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202609/journal_francais_facile_16h00_-_16h10_gmt_20260929.mp3?dl=1",
-  "page_title": "Journal en français facile 2026-09-30",
+  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202609/journal_francais_facile_16h00_-_16h10_gmt_20260930.mp3?dl=1",
+  "page_title": "Journal en français facile 2026-10-01",
   "items": [
     {
-      "title_zh": "西班牙住房危機",
-      "fr": "Face à la crise du logement en Espagne, le gouvernement de Pedro Sánchez propose des décrets pour protéger les locataires. Ces mesures visent à prolonger les protections contre les expulsions, réglementer les locations saisonnières et limiter les achats par des fonds d'investissement. L'opposition rejette ces propositions, tandis que les manifestants réclament des loyers plus abordables et la fin des expulsions sans relogement.",
-      "zh": "面對西班牙的住房危機，佩德羅·桑切斯政府提出法令以保護租客。這些措施旨在延長對驅逐的保護、規範短期租賃並限制投資基金的購買。反對派拒絕這些提案，而示威者則要求更合理的租金及結束無安置的驅逐。",
-      "vocab": "logement（住房）／expulsion（驅逐）／loyer（租金）／décret（法令）",
+      "title_zh": "飛機緊急降落",
+      "fr": "Un avion Fly Dubai, partant de Dubaï vers Tel Aviv, a dû atterrir d'urgence en Arabie Saoudite après une altercation entre le commandant de bord et le copilote. Les deux pilotes ont été hospitalisés, tandis que les 174 passagers, majoritairement israéliens, sont sains et saufs. Les autorités enquêtent sur les circonstances, sans confirmer d'attaque terroriste.",
+      "zh": "飛機從迪拜飛往特拉維夫途中，因機長與副駕駛衝突，迫降沙烏地阿拉伯。兩名飛行員住院，174名乘客（大多以色列人）安全無恙。當局正在調查，尚未確認是否為恐怖襲擊。",
+      "vocab": "altercation（衝突）／hospitalisés（住院）／sains et saufs（安全）／enquêter（調查）／terroriste（恐怖主義者）",
       "time": null
     },
     {
-      "title_zh": "愛沙尼亞指控俄",
-      "fr": "L'Estonia accuse la Russie d'être responsable d'un incendie criminel sur son territoire, ciblant une entreprise de fabrication de drones. Le Premier ministre affirme que cette conclusion repose sur les informations de ses propres services de renseignement. Moscou rejette ces accusations, les qualifiant d'infondées, tandis que Tallinn maintient que les services de sécurité russes ont organisé cette mise à feu.",
-      "zh": "愛沙尼亞指控俄羅斯對其境內一起針對無人機製造企業的縱火案負責。總理表示此結論基於其情報機構的資訊。莫斯科拒絕這些指控，稱其無根據，而塔林則堅持認為是俄羅斯安全部門組織了這場縱火。",
-      "vocab": "incendie（火災）／drones（無人機）／accusations（指控）／infondées（無根據的）",
+      "title_zh": "死刑暫停",
+      "fr": "Christa Païk, condamnée à mort aux États-Unis, a vu son exécution suspendue à la dernière minute à Nashville. Le tribunal a accepté un sursis après un appel soulignant des traumatismes d'enfance et des abus non pris en compte lors de son procès. Elle reste la première femme en attente d'exécution depuis 2000, et son cas suscite un débat sur la peine de mort.",
+      "zh": "Christa Païk 被判死刑的美國人，因上訴指出童年創傷與虐待未被考慮，執行被最後一刻暫停。她成為2000年以來首位等待執行的女性，案件引發對死刑的討論。",
+      "vocab": "condamnée（被判）／suspension（暫停）／sursis（暫緩）／traumatismes（創傷）／abus（虐待）／peine de mort（死刑）",
       "time": null
     },
     {
-      "title_zh": "海地聯合國任務",
-      "fr": "Le Conseil de sécurité de l'ONU a décidé de prolonger de six mois la mission chargée de lutter contre les gangs en Haïti, jusqu'au 31 mars 2027. Les Nations Unies demandent également une meilleure protection des enfants recrutés par les groupes armés et appellent à améliorer la sécurité pour permettre l'organisation d'élections libres et régulières dans le pays.",
-      "zh": "聯合國安理會決定將海地打擊幫派的任務延長六個月，至2027年3月31日止。聯合國還要求更好地保護被武裝團體招募的兒童，並呼籲改善安全狀況，以確保該國能舉行自由且定期的選舉。",
-      "vocab": "prolonger（延長）／gangs（幫派）／recrutés（招募的）／élections（選舉）",
+      "title_zh": "呼籲冷靜",
+      "fr": "Le président français Emmanuel Macron a appelé au calme face aux mobilisations des lycées en France. Il a reconnu les difficultés des élèves mais a condamné les violences et les blocages. Macron a souligné que la démocratie permet des débats légitimes, mais que la violence n’est jamais justifiée, appelant à la retenue de tous les acteurs politiques.",
+      "zh": "法國總統馬克龍呼籲在全國高中學生示威中保持冷靜，承認學生困難但譴責暴力與阻塞，強調民主允許合法辯論，但暴力永不正當，呼籲所有政治人物保持克制。",
+      "vocab": "mobilisations（示威）／lycées（高中）／condamné（譴責）／violences（暴力）／démocratie（民主）／retenue（克制）",
       "time": null
     },
     {
-      "title_zh": "泰國洪災救援",
-      "fr": "Au moins 23 personnes sont mortes dans les inondations qui frappent la Thaïlande. À Bangkok, bien que les pluies aient cessé, plusieurs quartiers restent sous les eaux. L'armée et des bénévoles distribuent des repas et de l'aide aux sinistrés. Les dommages économiques sont estimés à 180 millions d'euros, et les autorités s'inquiètent de l'intensité croissante de ces catastrophes.",
-      "zh": "泰國洪災已造成至少23人死亡。曼谷雖已停雨，但多個社區仍被淹沒。軍隊與志願者正向災民分發食物和援助。經濟損失估計達1.8億歐元，當局擔憂此類災難的強度日益增加。",
-      "vocab": "inondations（洪水）／sinistrés（災民）／bénévoles（志願者）／dommages（損失）",
-      "time": null
-    },
-    {
-      "title_zh": "法國公務員罷工",
-      "fr": "Plus de 300 000 fonctionnaires ont manifesté en France pour exiger de meilleurs salaires et plus de moyens. Cette grève s'accompagne d'une mobilisation des lycéens qui bloquent des établissements scolaires. Les élèves réclament des classes moins chargées et de meilleures conditions d'étude, tandis que le gouvernement prépare un nouveau budget.",
-      "zh": "超過30萬名法國公務員示威，要求提高薪資和增加資源。此次罷工伴隨著高中生封鎖學校的行動。學生要求減少班級人數並改善學習條件，而政府正準備新的預算案。",
-      "vocab": "fonctionnaires（公務員）／manifestants（示威者）／salaires（薪資）／lycéens（高中生）",
+      "title_zh": "走私案審判",
+      "fr": "Six passeurs ont été jugés en France pour avoir tenté de faire traverser illégalement la Manche à des migrants contre rémunération. Le bateau, lancé depuis la France en novembre 2021, n’a jamais atteint l’Angleterre et a coulé, emportant 31 morts. Les accusés ont reçu des peines de 6 à 10 ans de prison.",
+      "zh": "六名走私者因非法帶領移民渡英吉利海峽被法國法庭審判。船於2021年11月從法國起航，未抵達英國即沉沒，造成31人死亡。被告被判處6至10年監禁。",
+      "vocab": "passeurs（走私者）／traverser（渡過）／Manche（英吉利海峽）／rémunération（報酬）／naufrage（沉沒）／peines（刑罰）",
       "time": null
     }
   ],
-  "generated_at": "2026-09-30T10:18:57.738Z"
+  "generated_at": "2026-10-01T10:50:17.230Z"
 }
