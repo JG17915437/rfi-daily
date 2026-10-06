@@ -1,37 +1,44 @@
 {
-  "date": "2026-10-01",
+  "date": "2026-10-06",
   "source_url": "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/",
-  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202609/journal_francais_facile_16h00_-_16h10_gmt_20260930.mp3?dl=1",
-  "page_title": "Journal en français facile 2026-10-01",
+  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202610/journal_francais_facile_16h00_-_16h10_gmt_20261005.mp3?dl=1",
+  "page_title": "Journal en français facile 2026-10-06",
   "items": [
     {
-      "title_zh": "飛機緊急降落",
-      "fr": "Un avion Fly Dubai, partant de Dubaï vers Tel Aviv, a dû atterrir d'urgence en Arabie Saoudite après une altercation entre le commandant de bord et le copilote. Les deux pilotes ont été hospitalisés, tandis que les 174 passagers, majoritairement israéliens, sont sains et saufs. Les autorités enquêtent sur les circonstances, sans confirmer d'attaque terroriste.",
-      "zh": "飛機從迪拜飛往特拉維夫途中，因機長與副駕駛衝突，迫降沙烏地阿拉伯。兩名飛行員住院，174名乘客（大多以色列人）安全無恙。當局正在調查，尚未確認是否為恐怖襲擊。",
-      "vocab": "altercation（衝突）／hospitalisés（住院）／sains et saufs（安全）／enquêter（調查）／terroriste（恐怖主義者）",
+      "title_zh": "西班牙提前选举",
+      "fr": "Le Premier ministre espagnol Pedro Sánchez a annoncé la convocation d'élections législatives anticipées pour le 29 novembre, après le rejet par le parlement de ses deux projets de loi visant à résoudre la crise du logement. Cette décision, prise à un moment où son parti est à la traîne dans les sondages et face à des scandales de corruption, vise à mobiliser les électeurs sur le logement.",
+      "zh": "西班牙首相佩德罗·桑切斯宣布将于11月29日举行提前议会选举，原因是议会否决了他提出的两项解决住房危机的法案。此举在其政党民调落后、腐败丑闻缠身的背景下，旨在动员选民关注住房问题。",
+      "vocab": "crise du logement（住房危机）／rejet（否决）／scandales de corruption（腐败丑闻）／mobiliser（动员）／élections anticipées（提前选举）",
       "time": null
     },
     {
-      "title_zh": "死刑暫停",
-      "fr": "Christa Païk, condamnée à mort aux États-Unis, a vu son exécution suspendue à la dernière minute à Nashville. Le tribunal a accepté un sursis après un appel soulignant des traumatismes d'enfance et des abus non pris en compte lors de son procès. Elle reste la première femme en attente d'exécution depuis 2000, et son cas suscite un débat sur la peine de mort.",
-      "zh": "Christa Païk 被判死刑的美國人，因上訴指出童年創傷與虐待未被考慮，執行被最後一刻暫停。她成為2000年以來首位等待執行的女性，案件引發對死刑的討論。",
-      "vocab": "condamnée（被判）／suspension（暫停）／sursis（暫緩）／traumatismes（創傷）／abus（虐待）／peine de mort（死刑）",
+      "title_zh": "法国高中暴力",
+      "fr": "En France, les lycéens continuent leurs mobilisations malgré la fermeture de centaines d'établissements. Des incidents violents ont été signalés, dont la perte d'une main d'un adolescent de 15 ans. Les forces de l'ordre ont été critiquées pour des pratiques brutales, et la Ligue des droits de l'homme dénonce l'ampleur de la pression exercée sur les jeunes manifestants.",
+      "zh": "法国高中生继续示威，数百所学校停课。近日发生暴力事件，其中一名15岁少年失去一只手。警方被指使用暴力，且人权组织谴责对青年示威者的强硬手段。",
+      "vocab": "mobilisation（动员）／violence（暴力）／force de l'ordre（执法机关）／pratiques brutales（暴力手段）／Ligue des droits de l'homme（人权联盟）",
       "time": null
     },
     {
-      "title_zh": "呼籲冷靜",
-      "fr": "Le président français Emmanuel Macron a appelé au calme face aux mobilisations des lycées en France. Il a reconnu les difficultés des élèves mais a condamné les violences et les blocages. Macron a souligné que la démocratie permet des débats légitimes, mais que la violence n’est jamais justifiée, appelant à la retenue de tous les acteurs politiques.",
-      "zh": "法國總統馬克龍呼籲在全國高中學生示威中保持冷靜，承認學生困難但譴責暴力與阻塞，強調民主允許合法辯論，但暴力永不正當，呼籲所有政治人物保持克制。",
-      "vocab": "mobilisations（示威）／lycées（高中）／condamné（譴責）／violences（暴力）／démocratie（民主）／retenue（克制）",
+      "title_zh": "刚果埃博拉爆发",
+      "fr": "L'épidémie d'hépatite Ebola en République démocratique du Congo a atteint 8 544 cas confirmés, dont 4 114 décès, dans sept provinces. Le territoire de Mont‑Bassa reste l'épicentre, où 18 personnes sont décédées récemment. Les autorités locales renforcent les mesures de quarantaine et de surveillance pour contenir la propagation du virus.",
+      "zh": "刚果民主共和国的埃博拉疫情已确认8,544例病例，其中4,114例死亡，涉及七个省份。蒙巴萨地区仍是疫情中心，最近有18人死亡。当地当局加强隔离和监测措施，以遏制病毒传播。",
+      "vocab": "épidémie（疫情）／cas confirmés（确诊病例）／quarantaine（隔离）／propagation（传播）／virus（病毒）",
       "time": null
     },
     {
-      "title_zh": "走私案審判",
-      "fr": "Six passeurs ont été jugés en France pour avoir tenté de faire traverser illégalement la Manche à des migrants contre rémunération. Le bateau, lancé depuis la France en novembre 2021, n’a jamais atteint l’Angleterre et a coulé, emportant 31 morts. Les accusés ont reçu des peines de 6 à 10 ans de prison.",
-      "zh": "六名走私者因非法帶領移民渡英吉利海峽被法國法庭審判。船於2021年11月從法國起航，未抵達英國即沉沒，造成31人死亡。被告被判處6至10年監禁。",
-      "vocab": "passeurs（走私者）／traverser（渡過）／Manche（英吉利海峽）／rémunération（報酬）／naufrage（沉沒）／peines（刑罰）",
+      "title_zh": "塞内加洪灾",
+      "fr": "Au Sénégal, des pluies torrentielles ont provoqué d'importantes inondations, touchant plusieurs régions et causant des pertes humaines. Le gouvernement a lancé un plan d'urgence et prévoit de nouvelles pluies. Les autorités travaillent à la reconstruction des infrastructures et à la distribution d'aide aux victimes.",
+      "zh": "塞内加遭遇暴雨引发大规模洪水，数个地区受灾，造成人员伤亡。政府已启动紧急计划，预计还会有降雨。相关部门正致力于重建基础设施并向受害者提供援助。",
+      "vocab": "pluie torrentielles（暴雨）／inondations（洪水）／plan d'urgence（紧急计划）／infrastructures（基础设施）／victimes（受害者）",
+      "time": null
+    },
+    {
+      "title_zh": "巴西选举与股市",
+      "fr": "Le premier tour de l'élection présidentielle brésilienne a vu le fils de l'ex-président Jair Bolsonaro, Flavio Bolsonaro, prendre l'avantage avec 47 % des voix, contre 45 % pour l'actuel président Lula. La Bourse de São Paulo a bondi de 8 % en réaction, tandis que les analystes surveillent le second tour prévu dans trois semaines.",
+      "zh": "巴西总统大选首轮结果显示，前总统贾伊尔·博尔索纳罗之子弗拉维奥·博尔索纳罗以47%领先，现任总统卢拉获得45%。圣保罗股市因结果上涨8%，分析师正关注三周后举行的第二轮选举。",
+      "vocab": "élection présidentielle（总统选举）／bourse（股市）／avantage（优势）／second tour（第二轮）／analystes（分析师）",
       "time": null
     }
   ],
-  "generated_at": "2026-10-01T10:50:17.230Z"
+  "generated_at": "2026-10-06T11:08:38.319Z"
 }
