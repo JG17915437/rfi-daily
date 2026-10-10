@@ -1,44 +1,44 @@
 {
-  "date": "2026-10-06",
+  "date": "2026-10-10",
   "source_url": "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/",
-  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202610/journal_francais_facile_16h00_-_16h10_gmt_20261005.mp3?dl=1",
-  "page_title": "Journal en français facile 2026-10-06",
+  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202610/journal_francais_facile_16h00_-_16h10_gmt_20261009.mp3?dl=1",
+  "page_title": "Journal en français facile 2026-10-10",
   "items": [
     {
-      "title_zh": "西班牙提前选举",
-      "fr": "Le Premier ministre espagnol Pedro Sánchez a annoncé la convocation d'élections législatives anticipées pour le 29 novembre, après le rejet par le parlement de ses deux projets de loi visant à résoudre la crise du logement. Cette décision, prise à un moment où son parti est à la traîne dans les sondages et face à des scandales de corruption, vise à mobiliser les électeurs sur le logement.",
-      "zh": "西班牙首相佩德罗·桑切斯宣布将于11月29日举行提前议会选举，原因是议会否决了他提出的两项解决住房危机的法案。此举在其政党民调落后、腐败丑闻缠身的背景下，旨在动员选民关注住房问题。",
-      "vocab": "crise du logement（住房危机）／rejet（否决）／scandales de corruption（腐败丑闻）／mobiliser（动员）／élections anticipées（提前选举）",
+      "title_zh": "諾貝爾和平獎頒發",
+      "fr": "Le comité Nobel a décerné le prix Nobel de la paix 2026 à Navi Pile, avocate sud‑africaine de 85 ans. Elle a longtemps défendu les droits humains et présidé une enquête de l’ONU sur Gaza. La cérémonie a eu lieu à Oslo, puis à Nuremberg, rappelant le tribunal des nazis.",
+      "zh": "諾貝爾委員會將2026年和平獎頒給85歲的南非律師兼法官Navi Pile。她長期捍衛人權，曾主持聯合國對加沙的調查。頒獎儀式在奧斯陸舉行，後續在紐倫堡舉行，呼應二戰審判的歷史。",
+      "vocab": "comité（委員會）／décerné（授予）／avocate（律師）／enquête（調查）／tribunal（法庭）",
       "time": null
     },
     {
-      "title_zh": "法国高中暴力",
-      "fr": "En France, les lycéens continuent leurs mobilisations malgré la fermeture de centaines d'établissements. Des incidents violents ont été signalés, dont la perte d'une main d'un adolescent de 15 ans. Les forces de l'ordre ont été critiquées pour des pratiques brutales, et la Ligue des droits de l'homme dénonce l'ampleur de la pression exercée sur les jeunes manifestants.",
-      "zh": "法国高中生继续示威，数百所学校停课。近日发生暴力事件，其中一名15岁少年失去一只手。警方被指使用暴力，且人权组织谴责对青年示威者的强硬手段。",
-      "vocab": "mobilisation（动员）／violence（暴力）／force de l'ordre（执法机关）／pratiques brutales（暴力手段）／Ligue des droits de l'homme（人权联盟）",
+      "title_zh": "也門戰爭危機",
+      "fr": "RFI met en lumière le conflit yéménite qui dure depuis douze ans. Les combats opposent les rebelles houthis aux forces gouvernementales soutenues par l’Arabie saoudite. Plus de la moitié de la population a besoin d’aide humanitaire, les infrastructures civiles sont détruites et l’inflation rend la vie intenable.",
+      "zh": "RFI聚焦也門持續十二年的衝突。胡塞叛軍與沙特支持的政府軍激戰，超過半數民眾需要人道援助，基礎設施被毀，通貨膨脹使生活難以維持。",
+      "vocab": "conflit（衝突）／rebelles（叛軍）／humanitaire（人道）／infrastructures（基礎設施）／inflation（通貨膨脹）",
       "time": null
     },
     {
-      "title_zh": "刚果埃博拉爆发",
-      "fr": "L'épidémie d'hépatite Ebola en République démocratique du Congo a atteint 8 544 cas confirmés, dont 4 114 décès, dans sept provinces. Le territoire de Mont‑Bassa reste l'épicentre, où 18 personnes sont décédées récemment. Les autorités locales renforcent les mesures de quarantaine et de surveillance pour contenir la propagation du virus.",
-      "zh": "刚果民主共和国的埃博拉疫情已确认8,544例病例，其中4,114例死亡，涉及七个省份。蒙巴萨地区仍是疫情中心，最近有18人死亡。当地当局加强隔离和监测措施，以遏制病毒传播。",
-      "vocab": "épidémie（疫情）／cas confirmés（确诊病例）／quarantaine（隔离）／propagation（传播）／virus（病毒）",
+      "title_zh": "毛里塔尼亞政府辭職",
+      "fr": "Le Premier ministre mauritanien Mokhtar Uldaddiaye a présenté la démission de son gouvernement après la publication d’un rapport accablant sur les incendies de deux centrales électriques en août. Le rapport incrimine le ministre de l’Énergie pour des négligences de suivi, provoquant d’importantes coupures de courant à travers le pays.",
+      "zh": "毛里塔尼亞總理Mokhtar Uldaddiaye在兩座電廠八月大火報告曝光後，提交政府辭呈。報告指能源部長監管失職，導致全國大規模停電。",
+      "vocab": "démission（辭職）／rapport（報告）／incrimine（指控）／négligences（疏忽）／coupures（斷電）",
       "time": null
     },
     {
-      "title_zh": "塞内加洪灾",
-      "fr": "Au Sénégal, des pluies torrentielles ont provoqué d'importantes inondations, touchant plusieurs régions et causant des pertes humaines. Le gouvernement a lancé un plan d'urgence et prévoit de nouvelles pluies. Les autorités travaillent à la reconstruction des infrastructures et à la distribution d'aide aux victimes.",
-      "zh": "塞内加遭遇暴雨引发大规模洪水，数个地区受灾，造成人员伤亡。政府已启动紧急计划，预计还会有降雨。相关部门正致力于重建基础设施并向受害者提供援助。",
-      "vocab": "pluie torrentielles（暴雨）／inondations（洪水）／plan d'urgence（紧急计划）／infrastructures（基础设施）／victimes（受害者）",
+      "title_zh": "颶風伊薩斯逼近",
+      "fr": "L’ouragan Isaías, classé catégorie 3 avec des vents de 195 km/h, menace la côte sud des États‑Unis. Les prévisions annoncent des vagues puissantes et de fortes pluies pour la Floride, l’Alabama et le Mississippi. Les autorités ont ordonné l’évacuation des zones côtières afin de prévenir d’éventuels dégâts.",
+      "zh": "颶風伊薩斯已升至3級，風速達195公里每小時，威脅美國南部海岸。預計將給佛羅里達、阿拉巴馬和密西西比帶來巨浪和大雨，當局已下令沿海居民撤離。",
+      "vocab": "ouragan（颶風）／catégorie（等級）／vents（風速）／évacuation（撤離）／dégâts（損害）",
       "time": null
     },
     {
-      "title_zh": "巴西选举与股市",
-      "fr": "Le premier tour de l'élection présidentielle brésilienne a vu le fils de l'ex-président Jair Bolsonaro, Flavio Bolsonaro, prendre l'avantage avec 47 % des voix, contre 45 % pour l'actuel président Lula. La Bourse de São Paulo a bondi de 8 % en réaction, tandis que les analystes surveillent le second tour prévu dans trois semaines.",
-      "zh": "巴西总统大选首轮结果显示，前总统贾伊尔·博尔索纳罗之子弗拉维奥·博尔索纳罗以47%领先，现任总统卢拉获得45%。圣保罗股市因结果上涨8%，分析师正关注三周后举行的第二轮选举。",
-      "vocab": "élection présidentielle（总统选举）／bourse（股市）／avantage（优势）／second tour（第二轮）／analystes（分析师）",
+      "title_zh": "法國高中生抗議",
+      "fr": "En France, près de 150 lycées ont fermé suite aux manifestations d’élèves contre la hausse des frais d’inscription et le manque de professeurs. Le basketteur Victor Wembanyama a exprimé son soutien, déclarant vouloir défendre les droits des jeunes. Le gouvernement a annoncé le déploiement de 3000 professeurs remplaçants.",
+      "zh": "法國近150所高中因學生抗議學費上漲與教師短缺而停課。籃球明星Victor Wembanyama表態支持，稱願為青年權益發聲。政府回應，緊急派遣3000名代課教師。",
+      "vocab": "lycées（高中）／manifestations（抗議）／frais d’inscription（註冊費）／basketteur（籃球運動員）／remplaçants（代課教師）",
       "time": null
     }
   ],
-  "generated_at": "2026-10-06T11:08:38.319Z"
+  "generated_at": "2026-10-10T10:30:51.421Z"
 }
