@@ -1,44 +1,51 @@
 {
-  "date": "2026-10-10",
+  "date": "2026-10-15",
   "source_url": "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/",
-  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202610/journal_francais_facile_16h00_-_16h10_gmt_20261009.mp3?dl=1",
-  "page_title": "Journal en français facile 2026-10-10",
+  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202610/journal_francais_facile_16h00_-_16h10_gmt_20261014.mp3?dl=1",
+  "page_title": "Journal en français facile 2026-10-15",
   "items": [
     {
-      "title_zh": "諾貝爾和平獎頒發",
-      "fr": "Le comité Nobel a décerné le prix Nobel de la paix 2026 à Navi Pile, avocate sud‑africaine de 85 ans. Elle a longtemps défendu les droits humains et présidé une enquête de l’ONU sur Gaza. La cérémonie a eu lieu à Oslo, puis à Nuremberg, rappelant le tribunal des nazis.",
-      "zh": "諾貝爾委員會將2026年和平獎頒給85歲的南非律師兼法官Navi Pile。她長期捍衛人權，曾主持聯合國對加沙的調查。頒獎儀式在奧斯陸舉行，後續在紐倫堡舉行，呼應二戰審判的歷史。",
-      "vocab": "comité（委員會）／décerné（授予）／avocate（律師）／enquête（調查）／tribunal（法庭）",
+      "title_zh": "土政府強控電視台",
+      "fr": "En Turquie, la police a pris le contrôle de la chaîne Aljazeera TV à Istanbul, accusée de blanchiment d'argent. Cette chaîne critique régulièrement le président Erdoğan. Son directeur dénonce une atteinte grave à la liberté de la presse, affirmant que le pouvoir cherche à imposer une seule voix médiatique.",
+      "zh": "在土耳其，警方以洗錢罪名控制了伊斯坦布的Aljazeera電視台。該台經常批評埃爾多安總統。其總監譴責此舉嚴重侵犯新聞自由，並指稱政府試圖在媒體領域強加單一聲音。",
+      "vocab": "contrôle（控制）／blanchiment（洗錢）／atteinte（侵犯）／médiatique（媒體的）",
       "time": null
     },
     {
-      "title_zh": "也門戰爭危機",
-      "fr": "RFI met en lumière le conflit yéménite qui dure depuis douze ans. Les combats opposent les rebelles houthis aux forces gouvernementales soutenues par l’Arabie saoudite. Plus de la moitié de la population a besoin d’aide humanitaire, les infrastructures civiles sont détruites et l’inflation rend la vie intenable.",
-      "zh": "RFI聚焦也門持續十二年的衝突。胡塞叛軍與沙特支持的政府軍激戰，超過半數民眾需要人道援助，基礎設施被毀，通貨膨脹使生活難以維持。",
-      "vocab": "conflit（衝突）／rebelles（叛軍）／humanitaire（人道）／infrastructures（基礎設施）／inflation（通貨膨脹）",
+      "title_zh": "葉門胡塞襲擊沙烏地",
+      "fr": "Les rebelles houthis du Yémen, soutenus par l'Iran, revendiquent des frappes contre un site pétrolier d'Aramco et l'aéroport de Riyad en Arabie saoudite. Les dégâts éventuels ne sont pas encore confirmés, mais ces attaques multiplient les tensions dans la région.",
+      "zh": "受伊朗支持的葉門胡塞武裝聲稱對沙烏地阿拉伯的阿美石油公司設施及利雅得機場發動了襲擊。目前尚未確認具體損失，但這些攻擊加劇了該地區的緊張局勢。",
+      "vocab": "rebelles（叛軍）／revendiquent（聲稱）／frappes（襲擊）／tensions（緊張局勢）",
       "time": null
     },
     {
-      "title_zh": "毛里塔尼亞政府辭職",
-      "fr": "Le Premier ministre mauritanien Mokhtar Uldaddiaye a présenté la démission de son gouvernement après la publication d’un rapport accablant sur les incendies de deux centrales électriques en août. Le rapport incrimine le ministre de l’Énergie pour des négligences de suivi, provoquant d’importantes coupures de courant à travers le pays.",
-      "zh": "毛里塔尼亞總理Mokhtar Uldaddiaye在兩座電廠八月大火報告曝光後，提交政府辭呈。報告指能源部長監管失職，導致全國大規模停電。",
-      "vocab": "démission（辭職）／rapport（報告）／incrimine（指控）／négligences（疏忽）／coupures（斷電）",
+      "title_zh": "尼日爾油井洩漏",
+      "fr": "Au Niger, une éruption de pétrole brut a provoqué une marée noire à Agadem. Le ministère qualifie l'incident de gravité exceptionnelle. Une enquête indépendante est ouverte pour déterminer les causes, tandis que les autorités tentent de maîtriser la situation et sécuriser les puits voisins.",
+      "zh": "在尼日爾，Agadem發生原油噴發導致油輪。石油部稱此事件性質極為嚴重。當局已啟動獨立調查以查明原因，並努力控制局勢及確保鄰近油井的安全。",
+      "vocab": "éruption（噴發）／marée noire（油輪）／gravité（嚴重性）／enquête（調查）",
       "time": null
     },
     {
-      "title_zh": "颶風伊薩斯逼近",
-      "fr": "L’ouragan Isaías, classé catégorie 3 avec des vents de 195 km/h, menace la côte sud des États‑Unis. Les prévisions annoncent des vagues puissantes et de fortes pluies pour la Floride, l’Alabama et le Mississippi. Les autorités ont ordonné l’évacuation des zones côtières afin de prévenir d’éventuels dégâts.",
-      "zh": "颶風伊薩斯已升至3級，風速達195公里每小時，威脅美國南部海岸。預計將給佛羅里達、阿拉巴馬和密西西比帶來巨浪和大雨，當局已下令沿海居民撤離。",
-      "vocab": "ouragan（颶風）／catégorie（等級）／vents（風速）／évacuation（撤離）／dégâts（損害）",
+      "title_zh": "教宗術後恢復中",
+      "fr": "Le pape Léon XIV se repose dans un hôpital à Rome après une opération pour un cancer du poumon. Les médecins attendent les résultats d'analyse pour vérifier si la maladie s'est propagée. Selon le Vatican, le pape a déjà commencé à marcher et à faire des exercices respiratoires.",
+      "zh": "教宗良十四世因肺癌手術後正在羅馬醫院休息。醫生正等待分析結果以確認癌症是否擴散。梵蒂岡表示，教宗已開始行走並進行呼吸練習。",
+      "vocab": "opération（手術）／cancer（癌症）／propagé（擴散）／respiratoires（呼吸的）",
       "time": null
     },
     {
-      "title_zh": "法國高中生抗議",
-      "fr": "En France, près de 150 lycées ont fermé suite aux manifestations d’élèves contre la hausse des frais d’inscription et le manque de professeurs. Le basketteur Victor Wembanyama a exprimé son soutien, déclarant vouloir défendre les droits des jeunes. Le gouvernement a annoncé le déploiement de 3000 professeurs remplaçants.",
-      "zh": "法國近150所高中因學生抗議學費上漲與教師短缺而停課。籃球明星Victor Wembanyama表態支持，稱願為青年權益發聲。政府回應，緊急派遣3000名代課教師。",
-      "vocab": "lycées（高中）／manifestations（抗議）／frais d’inscription（註冊費）／basketteur（籃球運動員）／remplaçants（代課教師）",
+      "title_zh": "法國學生持續抗議",
+      "fr": "En France, des lycées et universités restent bloqués après cinq jours de mobilisation. Emmanuel Macron condamne les violences tout en reconnaissant les inquiétudes des jeunes. Il demande au gouvernement des réponses concrètes, tandis que les organisateurs appellent à poursuivre le mouvement samedi.",
+      "zh": "在法國，經過五天的動員，部分中學和大學仍被封鎖。馬克龍總統譴責暴力行為，同時承認年輕人的擔憂。他要求政府提出具體解決方案，而組織者呼籲週六繼續運動。",
+      "vocab": "bloqués（封鎖）／condamne（譴責）／inquiétudes（擔憂）／concrètes（具體的）",
+      "time": null
+    },
+    {
+      "title_zh": "諾貝爾獎得主訪談",
+      "fr": "Navi Pillay, lauréate du prix Nobel de la paix 2026, était l'invitée du journal. La magistrate sud-africaine maintient sa conclusion selon laquelle Israël commet un génocide à Gaza, affirmant que son rapport repose sur des faits vérifiés par une commission indépendante.",
+      "zh": "2026年諾貝爾和平獎得主納維·皮萊接受節目採訪。這位南非法官堅持其結論，認為以色列在加薩犯下種族滅絕，並強調其報告基於獨立委員會核實的事實。",
+      "vocab": "lauréate（獲獎者）／magistrate（法官）／génocide（種族滅絕）／commission（委員會）",
       "time": null
     }
   ],
-  "generated_at": "2026-10-10T10:30:51.421Z"
+  "generated_at": "2026-10-15T08:55:44.448Z"
 }
