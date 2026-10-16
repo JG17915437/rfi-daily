@@ -1,51 +1,44 @@
 {
-  "date": "2026-10-15",
+  "date": "2026-10-16",
   "source_url": "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/",
-  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202610/journal_francais_facile_16h00_-_16h10_gmt_20261014.mp3?dl=1",
-  "page_title": "Journal en français facile 2026-10-15",
+  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202610/journal_francais_facile_16h00_-_16h10_gmt_20261015.mp3?dl=1",
+  "page_title": "Journal en français facile 2026-10-16",
   "items": [
     {
-      "title_zh": "土政府強控電視台",
-      "fr": "En Turquie, la police a pris le contrôle de la chaîne Aljazeera TV à Istanbul, accusée de blanchiment d'argent. Cette chaîne critique régulièrement le président Erdoğan. Son directeur dénonce une atteinte grave à la liberté de la presse, affirmant que le pouvoir cherche à imposer une seule voix médiatique.",
-      "zh": "在土耳其，警方以洗錢罪名控制了伊斯坦布的Aljazeera電視台。該台經常批評埃爾多安總統。其總監譴責此舉嚴重侵犯新聞自由，並指稱政府試圖在媒體領域強加單一聲音。",
-      "vocab": "contrôle（控制）／blanchiment（洗錢）／atteinte（侵犯）／médiatique（媒體的）",
+      "title_zh": "烏克蘭尋求制裁俄羅斯",
+      "fr": "Le président ukrainien Volodymyr Zelensky s’est rendu à Bruxelles pour rencontrer le secrétaire général de l’OTAN et plusieurs dirigeants de l’Union européenne. Il veut renforcer la pression diplomatique et économique sur la Russie, notamment en relançant les frappes contre les raffineries russes, après la fin de la trêve énergétique annoncée par Washington.",
+      "zh": "烏克蘭總統澤連斯基前往布魯塞爾，與北約秘書長及多位歐盟領袖會面，旨在加大對俄羅斯的外交與經濟壓力，尤其在美國宣布能源停火結束後，重新對俄羅斯煉油廠發動攻擊。",
+      "vocab": "président（總統）／rencontre（會面）／pression（壓力）／raffinerie（煉油廠）／trêve（停火）",
       "time": null
     },
     {
-      "title_zh": "葉門胡塞襲擊沙烏地",
-      "fr": "Les rebelles houthis du Yémen, soutenus par l'Iran, revendiquent des frappes contre un site pétrolier d'Aramco et l'aéroport de Riyad en Arabie saoudite. Les dégâts éventuels ne sont pas encore confirmés, mais ces attaques multiplient les tensions dans la région.",
-      "zh": "受伊朗支持的葉門胡塞武裝聲稱對沙烏地阿拉伯的阿美石油公司設施及利雅得機場發動了襲擊。目前尚未確認具體損失，但這些攻擊加劇了該地區的緊張局勢。",
-      "vocab": "rebelles（叛軍）／revendiquent（聲稱）／frappes（襲擊）／tensions（緊張局勢）",
+      "title_zh": "阿爾巴尼亞街頭抗議",
+      "fr": "À Tirana, la capitale albanaise, les manifestants réclament la démission du Premier ministre depuis trois jours consécutifs. Les affrontements avec la police se sont intensifiés, faisant plusieurs blessés. Le mouvement, qui dure depuis plus de quatre mois, s’inscrit dans une crise politique profonde et une demande de réformes.",
+      "zh": "在阿爾巴尼亞首都地拉那，示威者連續三天要求總理下台，與警察的衝突升級，造成多人受傷。這場已持續超過四個月的運動反映出深層的政治危機與改革訴求。",
+      "vocab": "manifestants（抗議者）／démission（辭職）／police（警察）／blessés（受傷）／réformes（改革）",
       "time": null
     },
     {
-      "title_zh": "尼日爾油井洩漏",
-      "fr": "Au Niger, une éruption de pétrole brut a provoqué une marée noire à Agadem. Le ministère qualifie l'incident de gravité exceptionnelle. Une enquête indépendante est ouverte pour déterminer les causes, tandis que les autorités tentent de maîtriser la situation et sécuriser les puits voisins.",
-      "zh": "在尼日爾，Agadem發生原油噴發導致油輪。石油部稱此事件性質極為嚴重。當局已啟動獨立調查以查明原因，並努力控制局勢及確保鄰近油井的安全。",
-      "vocab": "éruption（噴發）／marée noire（油輪）／gravité（嚴重性）／enquête（調查）",
+      "title_zh": "剛果埃博拉危機",
+      "fr": "En République démocratique du Congo, l’épidémie d’Ebola a fait plus de 4000 morts en cinq mois, la plus meurtrière de l’histoire du pays. L’UNICEF a mis en place douze crèches attachées aux centres de traitement pour prendre en charge les enfants dont les parents sont hospitalisés, afin de limiter la propagation.",
+      "zh": "在剛果民主共和國，埃博拉疫情在五個月內造成超過四千人死亡，成為該國史上最致命的疫情。聯合國兒童基金會在治療中心旁設立十二間托兒所，照顧父母住院的兒童，以減少病毒傳播。",
+      "vocab": "épidémie（疫情）／mortel（致命）／crèche（托兒所）／traitement（治療）／propagation（傳播）",
       "time": null
     },
     {
-      "title_zh": "教宗術後恢復中",
-      "fr": "Le pape Léon XIV se repose dans un hôpital à Rome après une opération pour un cancer du poumon. Les médecins attendent les résultats d'analyse pour vérifier si la maladie s'est propagée. Selon le Vatican, le pape a déjà commencé à marcher et à faire des exercices respiratoires.",
-      "zh": "教宗良十四世因肺癌手術後正在羅馬醫院休息。醫生正等待分析結果以確認癌症是否擴散。梵蒂岡表示，教宗已開始行走並進行呼吸練習。",
-      "vocab": "opération（手術）／cancer（癌症）／propagé（擴散）／respiratoires（呼吸的）",
+      "title_zh": "法國學校抗議",
+      "fr": "Le ministre de l’Éducation a reçu aujourd’hui plusieurs lycéens pour discuter de leurs revendications : plus d’enseignants, des classes moins surchargées, de meilleurs bâtiments et une réforme de la plateforme Parcoursup. Les jeunes dénoncent aussi le scandale du périscolaire, où des violences physiques, psychologiques et sexuelles sont trop fréquentes.",
+      "zh": "教育部長今天會見多名高中生，討論他們的訴求：增派教師、減少班級負荷、改善校舍以及改革 Parcoursup 平台。學生同時譴責課外活動中的身心與性暴力問題日益嚴重。",
+      "vocab": "ministre（部長）／lycéens（高中生）／revendications（訴求）／surcharge（超載）／périscolaire（課外）／violences（暴力）",
       "time": null
     },
     {
-      "title_zh": "法國學生持續抗議",
-      "fr": "En France, des lycées et universités restent bloqués après cinq jours de mobilisation. Emmanuel Macron condamne les violences tout en reconnaissant les inquiétudes des jeunes. Il demande au gouvernement des réponses concrètes, tandis que les organisateurs appellent à poursuivre le mouvement samedi.",
-      "zh": "在法國，經過五天的動員，部分中學和大學仍被封鎖。馬克龍總統譴責暴力行為，同時承認年輕人的擔憂。他要求政府提出具體解決方案，而組織者呼籲週六繼續運動。",
-      "vocab": "bloqués（封鎖）／condamne（譴責）／inquiétudes（擔憂）／concrètes（具體的）",
-      "time": null
-    },
-    {
-      "title_zh": "諾貝爾獎得主訪談",
-      "fr": "Navi Pillay, lauréate du prix Nobel de la paix 2026, était l'invitée du journal. La magistrate sud-africaine maintient sa conclusion selon laquelle Israël commet un génocide à Gaza, affirmant que son rapport repose sur des faits vérifiés par une commission indépendante.",
-      "zh": "2026年諾貝爾和平獎得主納維·皮萊接受節目採訪。這位南非法官堅持其結論，認為以色列在加薩犯下種族滅絕，並強調其報告基於獨立委員會核實的事實。",
-      "vocab": "lauréate（獲獎者）／magistrate（法官）／génocide（種族滅絕）／commission（委員會）",
+      "title_zh": "扎克伯格買城堡",
+      "fr": "Mark Zuckerberg, le fondateur de Facebook, a acquis un château néogothique du XIXᵉ siècle dans le comté de Waterford, en Irlande, pour 51 millions d’euros. La propriété de 1 500 m², entourée de 180 hectares, deviendra sa résidence secondaire lorsqu’il se rendra à Dublin, où se trouve le siège européen de Meta.",
+      "zh": "Facebook 創辦人馬克·扎克伯格以 5100 萬歐元在愛爾蘭沃特福德郡購得一座 19 世紀新哥特式城堡，佔地 1500 平方米、周圍 180 公頃，將作為他前往都柏林（Meta 歐洲總部所在地）時的第二居所。",
+      "vocab": "fondateur（創始人）／château（城堡）／néogothique（新哥特式）／comté（郡）／résidence（住宅）",
       "time": null
     }
   ],
-  "generated_at": "2026-10-15T08:55:44.448Z"
+  "generated_at": "2026-10-16T08:46:44.161Z"
 }
