@@ -1,44 +1,51 @@
 {
-  "date": "2026-10-16",
+  "date": "2026-10-22",
   "source_url": "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/",
-  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202610/journal_francais_facile_16h00_-_16h10_gmt_20261015.mp3?dl=1",
-  "page_title": "Journal en français facile 2026-10-16",
+  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202610/journal_francais_facile_16h00_-_16h10_gmt_20261021.mp3?dl=1",
+  "page_title": "Journal en français facile 2026-10-22",
   "items": [
     {
-      "title_zh": "烏克蘭尋求制裁俄羅斯",
-      "fr": "Le président ukrainien Volodymyr Zelensky s’est rendu à Bruxelles pour rencontrer le secrétaire général de l’OTAN et plusieurs dirigeants de l’Union européenne. Il veut renforcer la pression diplomatique et économique sur la Russie, notamment en relançant les frappes contre les raffineries russes, après la fin de la trêve énergétique annoncée par Washington.",
-      "zh": "烏克蘭總統澤連斯基前往布魯塞爾，與北約秘書長及多位歐盟領袖會面，旨在加大對俄羅斯的外交與經濟壓力，尤其在美國宣布能源停火結束後，重新對俄羅斯煉油廠發動攻擊。",
-      "vocab": "président（總統）／rencontre（會面）／pression（壓力）／raffinerie（煉油廠）／trêve（停火）",
+      "title_zh": "巴黎新宵禁",
+      "fr": "Un couvre‑feu partiel, de 23 h à 6 h, est instauré à Paris après les émeutes du week‑end ; les syndicats demandent une grève le 5 novembre.",
+      "zh": "巴黎在週末騷亂後實施23時至次日6時的局部宵禁，工會要求於11月5日罷工。",
+      "vocab": "couvre‑feu（宵禁）／émeutes（騷亂）／syndicats（工會）／grève（罷工）／instaurer（實施）",
       "time": null
     },
     {
-      "title_zh": "阿爾巴尼亞街頭抗議",
-      "fr": "À Tirana, la capitale albanaise, les manifestants réclament la démission du Premier ministre depuis trois jours consécutifs. Les affrontements avec la police se sont intensifiés, faisant plusieurs blessés. Le mouvement, qui dure depuis plus de quatre mois, s’inscrit dans une crise politique profonde et une demande de réformes.",
-      "zh": "在阿爾巴尼亞首都地拉那，示威者連續三天要求總理下台，與警察的衝突升級，造成多人受傷。這場已持續超過四個月的運動反映出深層的政治危機與改革訴求。",
-      "vocab": "manifestants（抗議者）／démission（辭職）／police（警察）／blessés（受傷）／réformes（改革）",
+      "title_zh": "阿爾巴尼亞教師抗議",
+      "fr": "À Tirana, des centaines d’enseignants manifestent contre les violences policières envers les jeunes et dénoncent la répression du mouvement.",
+      "zh": "在地拉那，數百名教師抗議警方對青年的暴力，譴責運動遭受鎮壓。",
+      "vocab": "enseignants（教師）／manifestent（示威）／violences policières（警察暴力）／répression（鎮壓）／mouvement（運動）",
       "time": null
     },
     {
-      "title_zh": "剛果埃博拉危機",
-      "fr": "En République démocratique du Congo, l’épidémie d’Ebola a fait plus de 4000 morts en cinq mois, la plus meurtrière de l’histoire du pays. L’UNICEF a mis en place douze crèches attachées aux centres de traitement pour prendre en charge les enfants dont les parents sont hospitalisés, afin de limiter la propagation.",
-      "zh": "在剛果民主共和國，埃博拉疫情在五個月內造成超過四千人死亡，成為該國史上最致命的疫情。聯合國兒童基金會在治療中心旁設立十二間托兒所，照顧父母住院的兒童，以減少病毒傳播。",
-      "vocab": "épidémie（疫情）／mortel（致命）／crèche（托兒所）／traitement（治療）／propagation（傳播）",
+      "title_zh": "烏克蘭談判重啟",
+      "fr": "Moscou se dit prête à reprendre les pourparlers avec Kiev et Washington en novembre, tandis que Kiev réclame un cesse‑feu temporaire.",
+      "zh": "莫斯科表示願於十一月重啟與基輔及華盛頓的談判，基輔則要求暫時停火。",
+      "vocab": "reprendre（重新開始）／pourparlers（談判）／cesse‑feu（停火）／temporaire（暫時的）／reclamer（要求）",
       "time": null
     },
     {
-      "title_zh": "法國學校抗議",
-      "fr": "Le ministre de l’Éducation a reçu aujourd’hui plusieurs lycéens pour discuter de leurs revendications : plus d’enseignants, des classes moins surchargées, de meilleurs bâtiments et une réforme de la plateforme Parcoursup. Les jeunes dénoncent aussi le scandale du périscolaire, où des violences physiques, psychologiques et sexuelles sont trop fréquentes.",
-      "zh": "教育部長今天會見多名高中生，討論他們的訴求：增派教師、減少班級負荷、改善校舍以及改革 Parcoursup 平台。學生同時譴責課外活動中的身心與性暴力問題日益嚴重。",
-      "vocab": "ministre（部長）／lycéens（高中生）／revendications（訴求）／surcharge（超載）／périscolaire（課外）／violences（暴力）",
+      "title_zh": "巴西總統選戰",
+      "fr": "Le second tour brésilien approche ; Lula et Flavio Bolsonaro se disputent le Minas Gerais, état clé avec le deuxième plus grand électorat du pays.",
+      "zh": "巴西總統第二輪投票臨近，盧拉與弗拉維奧·博爾索納羅爭奪關鍵州米納斯吉拉斯，該州擁有全國第二大選民。",
+      "vocab": "second tour（第二輪）／candidats（候選人）／état clé（關鍵州）／électorat（選民）／disputer（爭奪）",
       "time": null
     },
     {
-      "title_zh": "扎克伯格買城堡",
-      "fr": "Mark Zuckerberg, le fondateur de Facebook, a acquis un château néogothique du XIXᵉ siècle dans le comté de Waterford, en Irlande, pour 51 millions d’euros. La propriété de 1 500 m², entourée de 180 hectares, deviendra sa résidence secondaire lorsqu’il se rendra à Dublin, où se trouve le siège européen de Meta.",
-      "zh": "Facebook 創辦人馬克·扎克伯格以 5100 萬歐元在愛爾蘭沃特福德郡購得一座 19 世紀新哥特式城堡，佔地 1500 平方米、周圍 180 公頃，將作為他前往都柏林（Meta 歐洲總部所在地）時的第二居所。",
-      "vocab": "fondateur（創始人）／château（城堡）／néogothique（新哥特式）／comté（郡）／résidence（住宅）",
+      "title_zh": "奈及利亞埃博拉",
+      "fr": "Le Nigeria confirme son premier cas d’Ebola, la quatrième nation africaine touchée, avec une quarantaine de contacts identifiés.",
+      "zh": "奈及利亞確認首例埃博拉，成為非洲第四個受影響國家，已確定約40名密切接觸者。",
+      "vocab": "confirmer（確認）／cas（病例）／Ebola（埃博拉）／quarantaine（四十）／contact（接觸者）",
+      "time": null
+    },
+    {
+      "title_zh": "Getty破產重組",
+      "fr": "Getty Images déclare faillite afin de renégocier 270 millions de dollars de dette avec ses créanciers, dans le cadre d’une restructuration financière.",
+      "zh": "Getty Images宣布破產，旨與債權人重新協商2.7億美元債務，進行財務重組。",
+      "vocab": "déclarer（宣布）／faillite（破產）／renégocier（重新談判）／dette（債務）／créanciers（債權人）",
       "time": null
     }
   ],
-  "generated_at": "2026-10-16T08:46:44.161Z"
+  "generated_at": "2026-10-22T09:12:29.893Z"
 }
