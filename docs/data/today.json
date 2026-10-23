@@ -1,51 +1,37 @@
 {
-  "date": "2026-10-22",
+  "date": "2026-10-23",
   "source_url": "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/",
-  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202610/journal_francais_facile_16h00_-_16h10_gmt_20261021.mp3?dl=1",
-  "page_title": "Journal en français facile 2026-10-22",
+  "audio_url": "https://aod-fle.akamaized.net/rfi/francais/audio/jff/202610/journal_francais_facile_16h00_-_16h10_gmt_20261022.mp3?dl=1",
+  "page_title": "Journal en français facile 2026-10-23",
   "items": [
     {
-      "title_zh": "巴黎新宵禁",
-      "fr": "Un couvre‑feu partiel, de 23 h à 6 h, est instauré à Paris après les émeutes du week‑end ; les syndicats demandent une grève le 5 novembre.",
-      "zh": "巴黎在週末騷亂後實施23時至次日6時的局部宵禁，工會要求於11月5日罷工。",
-      "vocab": "couvre‑feu（宵禁）／émeutes（騷亂）／syndicats（工會）／grève（罷工）／instaurer（實施）",
+      "title_zh": "獲獎國際刑事法院",
+      "fr": "Le Parlement européen a décerné le prix Sakharov à la Cour pénale internationale, soulignant son rôle dans la défense des droits de l'homme. Cette récompense, remise à Strasbourg, est perçue comme un soutien face aux sanctions américaines et à l'attaque de l'administration Trump. Le vote a été majoritairement favorable, marquant une victoire symbolique pour l'État de droit.",
+      "zh": "歐洲議會頒發薩卡洛夫獎給國際刑事法院，強調其在人權保護中的角色。此獎項於斯特拉斯堡頒發，被視為對美國制裁及特朗普政府攻擊的支持。投票大多贊成，象徵性地為法治贏得勝利。",
+      "vocab": "Parlement européen（歐洲議會）／prix Sakharov（薩卡洛夫獎）／Cour pénale internationale（國際刑事法院）／droits de l'homme（人權）／sanctions américaines（美國制裁）／administration Trump（特朗普政府）",
       "time": null
     },
     {
-      "title_zh": "阿爾巴尼亞教師抗議",
-      "fr": "À Tirana, des centaines d’enseignants manifestent contre les violences policières envers les jeunes et dénoncent la répression du mouvement.",
-      "zh": "在地拉那，數百名教師抗議警方對青年的暴力，譴責運動遭受鎮壓。",
-      "vocab": "enseignants（教師）／manifestent（示威）／violences policières（警察暴力）／répression（鎮壓）／mouvement（運動）",
+      "title_zh": "兩名歐洲公民解救",
+      "fr": "Deux ressortissantes européennes, Eva Gretzmareur et Claudia Haupt, ont été libérées après près de deux ans de captivité au Niger. Leur secouru par les forces libyennes de l'Est a permis leur retour à Benghazi, où elles sont accueillies en bonne santé. Les gouvernements suisse et autrichien ont exprimé leur gratitude envers les autorités libyennes.",
+      "zh": "兩名歐洲公民，Eva Gretzmareur 和 Claudia Haupt，於尼日爾被綁架近兩年後被解救。由東利比亞軍隊協助，她們在班加西被接待並健康返回。瑞士和奧地利政府對利比亞當局表示感謝。",
+      "vocab": "ressortissantes européennes（歐洲公民）／captivité（被綁架）／Niger（尼日爾）／forces libyennes（利比亞軍隊）／Benghazi（班加西）／gratitude（感謝）",
       "time": null
     },
     {
-      "title_zh": "烏克蘭談判重啟",
-      "fr": "Moscou se dit prête à reprendre les pourparlers avec Kiev et Washington en novembre, tandis que Kiev réclame un cesse‑feu temporaire.",
-      "zh": "莫斯科表示願於十一月重啟與基輔及華盛頓的談判，基輔則要求暫時停火。",
-      "vocab": "reprendre（重新開始）／pourparlers（談判）／cesse‑feu（停火）／temporaire（暫時的）／reclamer（要求）",
+      "title_zh": "Chamanda 病毒首例",
+      "fr": "Un homme décédé à Lyon a été infecté par le virus Chamanda, une maladie auparavant limitée aux animaux d'élevage en Afrique et en Asie. C'est la première fois que ce virus est détecté chez un humain, provoquant des complications cérébrales fatales. Les autorités enquêtent sur la transmission et assurent qu'il n'y a pas de risque sanitaire général.",
+      "zh": "在里昂，一名男子因感染 Chamanda 病毒而死亡，該病毒此前僅在非洲和亞洲的畜牧動物中出現。這是首次在人體中檢測到此病毒，導致致命腦部併發症。當局正在調查傳播途徑，並保證不會對公眾造成健康風險。",
+      "vocab": "virus Chamanda（Chamanda 病毒）／animaux d'élevage（畜牧動物）／complications cérébrales（腦部併發症）／enquête（調查）／risque sanitaire（健康風險）",
       "time": null
     },
     {
-      "title_zh": "巴西總統選戰",
-      "fr": "Le second tour brésilien approche ; Lula et Flavio Bolsonaro se disputent le Minas Gerais, état clé avec le deuxième plus grand électorat du pays.",
-      "zh": "巴西總統第二輪投票臨近，盧拉與弗拉維奧·博爾索納羅爭奪關鍵州米納斯吉拉斯，該州擁有全國第二大選民。",
-      "vocab": "second tour（第二輪）／candidats（候選人）／état clé（關鍵州）／électorat（選民）／disputer（爭奪）",
-      "time": null
-    },
-    {
-      "title_zh": "奈及利亞埃博拉",
-      "fr": "Le Nigeria confirme son premier cas d’Ebola, la quatrième nation africaine touchée, avec une quarantaine de contacts identifiés.",
-      "zh": "奈及利亞確認首例埃博拉，成為非洲第四個受影響國家，已確定約40名密切接觸者。",
-      "vocab": "confirmer（確認）／cas（病例）／Ebola（埃博拉）／quarantaine（四十）／contact（接觸者）",
-      "time": null
-    },
-    {
-      "title_zh": "Getty破產重組",
-      "fr": "Getty Images déclare faillite afin de renégocier 270 millions de dollars de dette avec ses créanciers, dans le cadre d’une restructuration financière.",
-      "zh": "Getty Images宣布破產，旨與債權人重新協商2.7億美元債務，進行財務重組。",
-      "vocab": "déclarer（宣布）／faillite（破產）／renégocier（重新談判）／dette（債務）／créanciers（債權人）",
+      "title_zh": "示威活動受限",
+      "fr": "Suite aux violences lors des mobilisations du 10 octobre, les autorités françaises ont limité les manifestations prévues ce samedi. Seules les rassemblements organisés par les syndicats sont autorisés, tandis que la préfecture a annulé l'interdiction initiale pour les étudiants. Le président Macron a appelé à des parcours alternatifs pour protéger les centres-villes et les commerces.",
+      "zh": "因10月10日示威暴力，法國當局限制本週六的示威活動。僅允許工會組織的集會，學生集會的禁令已被取消。總統馬克龍呼籲設置替代路線，以保護市中心和商業區。",
+      "vocab": "violences（暴力）／mobilisations（示威）／préfecture（省政府）／syndicats（工會）／parcours alternatifs（替代路線）／centres-villes（市中心）",
       "time": null
     }
   ],
-  "generated_at": "2026-10-22T09:12:29.893Z"
+  "generated_at": "2026-10-23T09:09:32.748Z"
 }
